@@ -61,6 +61,6 @@ development transcript. Its Git history begins with the public release tree.
 
 ## Citation
 
-Please cite the archived release using `CITATION.cff`. The repository is
-`https://github.com/s6ygleee/torus-node-lean4`; the archival DOI is added to
-the citation metadata after the Zenodo deposit.
+Please cite the archived release, doi:[10.5281/zenodo.23863514](https://doi.org/10.5281/zenodo.23863514); the
+citation metadata are in `CITATION.cff`. The DOI [10.5281/zenodo.23863513](https://doi.org/10.5281/zenodo.23863513) always resolves to the latest
+version. The repository is `https://github.com/s6ygleee/torus-node-lean4`.

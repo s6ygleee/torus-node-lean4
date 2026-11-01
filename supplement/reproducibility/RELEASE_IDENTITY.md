@@ -8,5 +8,5 @@ The ZIP digest is kept in a detached sidecar because putting it inside the ZIP
 would create a circular hash. The in-archive manifest covers every payload
 file and is regenerated after the final build.
 
-The DOI is intentionally absent until Zenodo has minted it. No placeholder or
-unrelated DOI is used.
+Zenodo archived the v1.0.0 release under doi:10.5281/zenodo.23863514; the concept DOI
+10.5281/zenodo.23863513 resolves to the latest version.
