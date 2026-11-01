@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+EXPORTER="$ROOT/tools/_lean4export/.lake/build/bin/lean4export"
+NANODA="$ROOT/tools/_nanoda/target/release/nanoda_bin"
+EXPORT="$ROOT/report/nanoda_export.txt"
+CONFIG="$ROOT/report/nanoda_config.json"
+MODULE="${NANODA_MODULE:-PaperVerifier}"
+
+[ -x "$EXPORTER" ] || { echo "lean4export missing. Run scripts/setup_nanoda.sh" >&2; exit 2; }
+[ -x "$NANODA" ] || { echo "nanoda missing. Run scripts/setup_nanoda.sh" >&2; exit 2; }
+
+cd "$ROOT"
+lake build
+lake env "$EXPORTER" "$MODULE" > "$EXPORT"
+cat > "$CONFIG" <<JSON
+{
+  "export_file_path": "$EXPORT",
+  "use_stdin": false,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound",
+    "Lean.trustCompiler"
+  ],
+  "unpermitted_axiom_hard_error": true,
+  "nat_extension": true,
+  "string_extension": true,
+  "print_success_message": true
+}
+JSON
+"$NANODA" "$CONFIG"

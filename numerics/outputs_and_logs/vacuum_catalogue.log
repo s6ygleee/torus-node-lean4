@@ -1,0 +1,109 @@
+(1)-(2) coupling-matched vacua with massless hypercharge: 300; geometric EWSB (Higgs tachyon) with colour safe: 300; and no extra massless U(1): 156
+(A) 2-loop re-matching of the 156 one-loop vacua: k_Y within 2 %: 76 ; median mismatch 2.38 %, best 0.711 %
+(B1b) axion vacua decay-constant (mu*) range: 1.59e+10 .. 9.32e+15 GeV; with mu* >= 1e17 (compatible with f = rotor ordering scale ~ 1/eps): 0
+(B1) axion: 2-loop survivors with a QCD axion: 60 ; E/N histogram {"0.667":28,"0.167":4,"1.667":8,"-0.333":4,"-1.333":4,"1.333":12}
+     f = 1e+14 GeV: m_a = 5.70e-8 eV, |g_agg| = 1.46e-17 GeV^-1 (E/N = 0.667), theta_i for Omega_a h^2 = 0.12: 6.4e-2
+     f = 1e+16 GeV: m_a = 5.70e-10 eV, |g_agg| = 1.46e-19 GeV^-1 (E/N = 0.667), theta_i for Omega_a h^2 = 0.12: 4.4e-3
+     f = 1e+18 GeV: m_a = 5.70e-12 eV, |g_agg| = 1.46e-21 GeV^-1 (E/N = 0.667), theta_i for Omega_a h^2 = 0.12: 3.0e-4
+(B2) rotor Goldstone f = 3.9e+19 GeV: rate T^5/f^4 = H only at T ~ 5.7e+19 GeV -> not thermalised after reheating below it: Delta N_eff ~ 0 (<= 0.026 even if once thermal); derivative coupling -> no 1/r force
+(B2) rotor Goldstone f = 1.0e+18 GeV: rate T^5/f^4 = H only at T ~ 4.3e+17 GeV -> not thermalised after reheating below it: Delta N_eff ~ 0 (<= 0.026 even if once thermal); derivative coupling -> no 1/r force
+(B3) Zprime mass ~ 3.2e+10 GeV: rho shift ~ (M_Z/M_Zp)^2 = 8.1e-18 (bound ~1e-4)
+(B3) Zprime mass ~ 6.6e+14 GeV: rho shift ~ (M_Z/M_Zp)^2 = 1.9e-26 (bound ~1e-4)
+(B3) Zprime mass ~ 3.0e+18 GeV: rho shift ~ (M_Z/M_Zp)^2 = 9.2e-34 (bound ~1e-4)
+PASS  2-loop matching survives in 76 vacua; extra interactions consistent with bounds (axion DM needs a small initial angle)
+Yukawa rank scan leading-order Yukawa ranks (number of generations massive at leading order) over 76 survivor vacua:
+   up 2 / down 2 / lepton 1 / nu 1 : 52
+   up 3 / down 3 / lepton 3 / nu 3 : 24
+   full rank 3 everywhere: 24 ; hierarchical (some rank < 3): 52
+
+Vacuum catalogue per-vacuum catalogue (76 vacua)
+cols: #, mu*[GeV], 1/a2(mu*), 1/a3(mu*), kY err, ranks u/d/e/nu, nu class, E/N, m_a[eV], |g_agg|[1/GeV]
+V01 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V02 8.13e+10 39.76 31.81 0.71% 2/2/1/1 nu-rank1 0.167 7.01e-5 2.51e-14
+V03 1.07e+13 42.19 37.29 1.74% 2/2/1/1 nu-rank1 1.667 5.31e-7 2.74e-17
+V04 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 1.667 5.82e-6 3.00e-16
+V05 2.47e+15 44.90 43.39 1.68% 2/2/1/1 nu-rank1 0.667 2.30e-9 5.88e-19
+V06 1.37e+12 41.17 34.98 1.71% 2/2/1/1 nu-rank1 0.667 4.15e-6 1.06e-15
+V07 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 0.667 5.82e-6 1.49e-15
+V08 1.57e+15 44.67 42.87 1.61% 2/2/1/1 nu-rank1 0.667 3.64e-9 9.30e-19
+V09 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 -0.333 5.82e-6 2.67e-15
+V10 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 -1.333 5.82e-6 3.86e-15
+V11 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V12 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V13 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V14 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V15 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 -1.333 5.82e-6 3.86e-15
+V16 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 -0.333 5.82e-6 2.67e-15
+V17 2.47e+15 44.90 43.39 1.68% 2/2/1/1 nu-rank1 0.667 2.30e-9 5.88e-19
+V18 1.37e+12 41.17 34.98 1.71% 2/2/1/1 nu-rank1 0.667 4.15e-6 1.06e-15
+V19 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 0.667 5.82e-6 1.49e-15
+V20 1.57e+15 44.67 42.87 1.61% 2/2/1/1 nu-rank1 0.667 3.64e-9 9.30e-19
+V21 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 1.667 5.82e-6 3.00e-16
+V22 1.07e+13 42.19 37.29 1.74% 2/2/1/1 nu-rank1 1.667 5.31e-7 2.74e-17
+V23 8.13e+10 39.76 31.81 0.71% 2/2/1/1 nu-rank1 0.167 7.01e-5 2.51e-14
+V24 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V25 9.32e+15 45.56 44.87 1.45% 3/3/3/3 nu-rank3 0.667 6.12e-10 1.56e-19
+V26 3.43e+14 43.92 41.17 1.85% 3/3/3/3 nu-rank3 1.333 1.66e-8 1.99e-18
+V27 5.45e+11 40.71 33.94 1.67% 3/3/3/3 nu-rank3 1.333 1.04e-5 1.25e-15
+V28 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V29 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V30 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V31 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V32 3.43e+14 43.92 41.17 1.85% 3/3/3/3 nu-rank3 1.333 1.66e-8 1.99e-18
+V33 5.45e+11 40.71 33.94 1.67% 3/3/3/3 nu-rank3 1.333 1.04e-5 1.25e-15
+V34 9.32e+15 45.56 44.87 1.45% 3/3/3/3 nu-rank3 0.667 6.12e-10 1.56e-19
+V35 4.15e+15 45.16 43.97 1.72% 3/3/3/3 nu-rank3 1.333 1.37e-9 1.64e-19
+V36 4.15e+15 45.16 43.97 1.72% 3/3/3/3 nu-rank3 1.333 1.37e-9 1.64e-19
+V37 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V38 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V39 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V40 8.13e+10 39.76 31.81 0.71% 2/2/1/1 nu-rank1 0.167 7.01e-5 2.51e-14
+V41 1.07e+13 42.19 37.29 1.74% 2/2/1/1 nu-rank1 1.667 5.31e-7 2.74e-17
+V42 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 1.667 5.82e-6 3.00e-16
+V43 2.47e+15 44.90 43.39 1.68% 2/2/1/1 nu-rank1 0.667 2.30e-9 5.88e-19
+V44 1.37e+12 41.17 34.98 1.71% 2/2/1/1 nu-rank1 0.667 4.15e-6 1.06e-15
+V45 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 0.667 5.82e-6 1.49e-15
+V46 1.57e+15 44.67 42.87 1.61% 2/2/1/1 nu-rank1 0.667 3.64e-9 9.30e-19
+V47 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 -0.333 5.82e-6 2.67e-15
+V48 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 -1.333 5.82e-6 3.86e-15
+V49 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V50 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V51 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V52 4.36e+14 44.04 41.44 1.79% 2/2/1/1 nu-rank1 no QCD axion
+V53 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 -1.333 5.82e-6 3.86e-15
+V54 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 -0.333 5.82e-6 2.67e-15
+V55 2.47e+15 44.90 43.39 1.68% 2/2/1/1 nu-rank1 0.667 2.30e-9 5.88e-19
+V56 1.37e+12 41.17 34.98 1.71% 2/2/1/1 nu-rank1 0.667 4.15e-6 1.06e-15
+V57 9.80e+11 41.00 34.60 1.82% 2/2/1/1 nu-rank1 0.667 5.82e-6 1.49e-15
+V58 1.57e+15 44.67 42.87 1.61% 2/2/1/1 nu-rank1 0.667 3.64e-9 9.30e-19
+V59 9.80e+11 41.00 34.60 1.04% 2/2/1/1 nu-rank1 1.667 5.82e-6 3.00e-16
+V60 1.07e+13 42.19 37.29 1.74% 2/2/1/1 nu-rank1 1.667 5.31e-7 2.74e-17
+V61 8.13e+10 39.76 31.81 0.71% 2/2/1/1 nu-rank1 0.167 7.01e-5 2.51e-14
+V62 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V63 9.32e+15 45.56 44.87 1.45% 3/3/3/3 nu-rank3 0.667 6.12e-10 1.56e-19
+V64 3.43e+14 43.92 41.17 1.85% 3/3/3/3 nu-rank3 1.333 1.66e-8 1.99e-18
+V65 5.45e+11 40.71 33.94 1.67% 3/3/3/3 nu-rank3 1.333 1.04e-5 1.25e-15
+V66 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V67 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V68 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V69 4.92e+13 42.95 39.00 1.31% 3/3/3/3 nu-rank3 no QCD axion
+V70 3.43e+14 43.92 41.17 1.85% 3/3/3/3 nu-rank3 1.333 1.66e-8 1.99e-18
+V71 5.45e+11 40.71 33.94 1.67% 3/3/3/3 nu-rank3 1.333 1.04e-5 1.25e-15
+V72 9.32e+15 45.56 44.87 1.45% 3/3/3/3 nu-rank3 0.667 6.12e-10 1.56e-19
+V73 4.15e+15 45.16 43.97 1.72% 3/3/3/3 nu-rank3 1.333 1.37e-9 1.64e-19
+V74 4.15e+15 45.16 43.97 1.72% 3/3/3/3 nu-rank3 1.333 1.37e-9 1.64e-19
+V75 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+V76 1.59e+10 38.95 29.98 0.79% 2/2/1/1 nu-rank1 0.667 3.58e-4 9.14e-14
+
+neutrino classes: {"nu-rank1":52,"nu-rank3":24}
+  nu-rank1: only m3 massive at LO -> normal ordering forced, m1 ~ 0: sum m_nu = 0.0588 eV, m_beta = 0.0088 eV, m_bb = 0 (Dirac)
+  nu-rank3: m1 free; sum >= 0.0588 (NO) or >= 0.1007 (IO); m_bb = 0 (Dirac)
+mu* range 1.59e+10 .. 9.32e+15 GeV; 1/alpha_2(mu*) range 38.95 .. 45.56
+
+axion vacua: 60; m_a range 6.12e-10 .. 3.58e-4 eV
+  |E/N - 1.92| >= DFSZ value 0.747: 40/60
+  in ADMX DFSZ-sensitive window 2.66-4.2 ueV: 4 (of which >= DFSZ strength: 4)
+  m_a in [1e-11, 1e-8) eV: 16  DMRadio-m3 / ABRACADABRA / CASPEr (future)
+  m_a in [1e-8, 1e-6) eV: 8  DMRadio / ADMX-low (future)
+  m_a in [1e-6, 4e-5) eV: 24  ADMX / CAPP / HAYSTAC (running)
+  m_a in [4e-5, 1e-3) eV: 12  MADMAX / ALPHA (future)

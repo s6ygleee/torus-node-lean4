@@ -1,0 +1,15 @@
+{
+  "eta": "[0.400768588829647 +/- 2.43e-16]",
+  "C_phys": "[1.39541466238936 +/- 3.43e-15]",
+  "e6": "[0.0242437755590801 +/- 4.69e-17]",
+  "x6": "[0.743719430396854 +/- 8.33e-16]",
+  "x8": "[0.249339628773744 +/- 2.72e-16]",
+  "total": "[0.99305905917060 +/- 2.00e-15]",
+  "threshold": "[1.40843770603762 +/- 5.01e-15]",
+  "ward_margin": "[0.013023043648268 +/- 4.27e-16]",
+  "recurrence_margin": "[0.00694094082940 +/- 2.00e-15]",
+  "strict_ward_pass": true,
+  "strict_recurrence_pass": true,
+  "precision_bits": 128,
+  "scope": "finite interval arithmetic only; interacting transfer lemma remains open"
+}

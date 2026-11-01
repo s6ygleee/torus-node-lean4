@@ -1,0 +1,15 @@
+Lepton circulant fit Gaussian disk rule lepton circulant fit (log mass ratios, observed m_e/m_tau = 2.876e-4, m_mu/m_tau = 5.946e-2)
+  resid 1.97e-29: kappa = 0.5724, y = 0.92315, w = 0.24287 -> m_e/m_tau = 2.8759e-04, m_mu/m_tau = 5.9464e-02
+  resid 3.65e-29: kappa = 0.5724, y = 0.44508, w = 0.24287 -> m_e/m_tau = 2.8759e-04, m_mu/m_tau = 5.9464e-02
+  resid 5.54e-29: kappa = 0.5724, y = 0.11858, w = 0.24286 -> m_e/m_tau = 2.8759e-04, m_mu/m_tau = 5.9464e-02
+  resid 9.01e-29: kappa = 0.5724, y = 0.82040, w = 0.24286 -> m_e/m_tau = 2.8759e-04, m_mu/m_tau = 5.9464e-02
+  resid 2.50e-28: kappa = 0.5724, y = 0.65324, w = 0.24287 -> m_e/m_tau = 2.8759e-04, m_mu/m_tau = 5.9464e-02
+  check w = 0: ratios [0.04321123 0.04321123] (two lightest degenerate expected when w = 0 -> needs Wilson-line phase)
+  exact fits found from 400 starts: 382; y is a flat direction (singular values independent of y) -> effectively 2 parameters (kappa, w) for 2 ratios: discrete fit, no charged-lepton prediction
+
+Lepton circulant fit neutrino circulant with kappa = 0.5724 (shared torus-2 area), scan of w'
+  NO solution w' = 0.339507: m1 = 0.005 meV, m2 = 8.614 meV, m3 = 50.15 meV, sum = 58.8 meV, m_beta ~ 8.52 meV, m_bb = 0 (Dirac)
+  NO solution w' = 0.660493: m1 = 0.005 meV, m2 = 8.614 meV, m3 = 50.15 meV, sum = 58.8 meV, m_beta ~ 8.52 meV, m_bb = 0 (Dirac)
+  IO pattern (two heavy nearly degenerate): 2 solutions
+   w' ~ 0.4985: light/heavy = 3.227e-05, mid/heavy = 0.9837
+   w' ~ 0.5013: light/heavy = 3.231e-05, mid/heavy = 0.9864

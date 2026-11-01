@@ -1,0 +1,5 @@
+xi=0: S(k) ~ alpha|k|^2 I + beta k k^T with alpha=4.0000, beta=-4.0000, max residual 3.74e-8 (k=0.02)
+xi=0.5: S(k) ~ alpha|k|^2 I + beta k k^T with alpha=4.0001, beta=13.9979, max residual 7.79e-7 (k=0.02)
+xi=1: S(k) ~ alpha|k|^2 I + beta k k^T with alpha=4.0001, beta=31.9957, max residual 1.59e-6 (k=0.02)
+xi=2: S(k) ~ alpha|k|^2 I + beta k k^T with alpha=4.0002, beta=67.9914, max residual 3.20e-6 (k=0.02)
+Feynman-like gauge weight xi* = 0.11112: alpha = 4.00003, beta = -5.35e-13 -> effective operator = alpha |k|^2 I_4 (4 decoupled scalar Laplacians)

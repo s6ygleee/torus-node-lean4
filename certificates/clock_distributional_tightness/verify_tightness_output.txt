@@ -1,0 +1,5 @@
+s=1.01, truncated E||T||_H^-s^2=38.44959365
+s=1.10, truncated E||T||_H^-s^2=30.01076586
+s=1.50, truncated E||T||_H^-s^2=11.87798777
+s=2.00, truncated E||T||_H^-s^2=5.08149536
+analytic convergence threshold: s>1

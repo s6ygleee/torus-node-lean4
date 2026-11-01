@@ -1,0 +1,4 @@
+(1) non-root DP: continuation(empty) <= 0.964928020537 at alpha_test=0.1525  -> ADMISSIBLE (64s)
+(2) root constant C_root <= 1.973165
+(5a) KP sum <= 8.5984e-5  vs a = 0.005  -> OK
+(5b) eps_F <= 4.9383e-4;  c' <= 0.314661  -> CERTIFIED MASSLESS (c' < 1)  [beta=1.614, s=0.1075, alpha_test=0.1525, a=0.005, b=0.1, N0=12] (141s)

@@ -1,0 +1,17 @@
+|Omega_k|=3e-12, k=0.25: dalpha/alpha per Hubble radius 4.33e-07, CMB-sky alpha dipole 1.34e-06, G dipole 1.9e-06..4.4e-06
+|Omega_k|=3e-12, k=0.57: dalpha/alpha per Hubble radius 9.87e-07, CMB-sky alpha dipole 3.06e-06, G dipole 4.3e-06..1.0e-05
+|Omega_k|=3e-12, k=0.96: dalpha/alpha per Hubble radius 1.66e-06, CMB-sky alpha dipole 5.15e-06, G dipole 7.2e-06..1.7e-05
+|Omega_k|=1e-12, k=0.25: dalpha/alpha per Hubble radius 2.50e-07, CMB-sky alpha dipole 7.75e-07, G dipole 1.1e-06..2.6e-06
+|Omega_k|=1e-12, k=0.57: dalpha/alpha per Hubble radius 5.70e-07, CMB-sky alpha dipole 1.77e-06, G dipole 2.5e-06..5.8e-06
+|Omega_k|=1e-12, k=0.96: dalpha/alpha per Hubble radius 9.60e-07, CMB-sky alpha dipole 2.98e-06, G dipole 4.2e-06..9.8e-06
+|Omega_k|=1e-11, k=0.25: dalpha/alpha per Hubble radius 7.91e-07, CMB-sky alpha dipole 2.45e-06, G dipole 3.4e-06..8.1e-06
+|Omega_k|=1e-11, k=0.57: dalpha/alpha per Hubble radius 1.80e-06, CMB-sky alpha dipole 5.59e-06, G dipole 7.8e-06..1.8e-05
+|Omega_k|=1e-11, k=0.96: dalpha/alpha per Hubble radius 3.04e-06, CMB-sky alpha dipole 9.41e-06, G dipole 1.3e-05..3.1e-05
+|Omega_k|=1e-10, k=0.25: dalpha/alpha per Hubble radius 2.50e-06, CMB-sky alpha dipole 7.75e-06, G dipole 1.1e-05..2.6e-05
+|Omega_k|=1e-10, k=0.57: dalpha/alpha per Hubble radius 5.70e-06, CMB-sky alpha dipole 1.77e-05, G dipole 2.5e-05..5.8e-05
+|Omega_k|=1e-10, k=0.96: dalpha/alpha per Hubble radius 9.60e-06, CMB-sky alpha dipole 2.98e-05, G dipole 4.2e-05..9.8e-05
+quasar alpha dipole ~1e-5 (claimed, contested) would imply |Omega_k| = ['1.7e-10', '3.2e-11', '1.1e-11']
+UHECR: eta needed to touch GZK kinematics at 1e20 eV ~ 1.3e-06
+D4 crystal quartic anisotropy c4=0.01: eta ~ 3.2  -> exceeds UHECR scale by 2.5e+06
+D4 crystal quartic anisotropy c4=0.1: eta ~ 32.2  -> exceeds UHECR scale by 2.5e+07
+stochastic (Poisson) local dispersion fluctuation at 1e20 eV ~ (E/Lambda)^2 = 2.2e-14 (zero mean); GZK sensitivity m_p^2/E^2 = 8.8e-23

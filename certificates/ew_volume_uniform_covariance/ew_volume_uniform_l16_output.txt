@@ -1,0 +1,5 @@
+Arb blocks: 4096, max ball radius of row sums R = 2.99e-12; per-entry error bound eps = 2.99e-12
+certified: Gamma_16(0) in [0.128442469, 0.128442469], B_16 <= 7.260041057 (midpoint 7.260039530)
+sum_z|Gamma_inf| <= 1.0816, Gamma_inf(0) >= 0.12811, B_inf <= 8.442, sup_(L>=16) B_L <= 8.464
+L < 16: B_2, B_4, B_8 Arb ; B_6, B_10, B_12, B_14 by the same verified pipeline at those L (run with L argument) or by the bound above
+exit 0

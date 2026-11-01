@@ -1,0 +1,37 @@
+# TeX dependency lock for the six finite model PDF entry points.
+# Verified Windows release environment:
+distribution=MiKTeX
+distribution_version=25.12
+engine=xetex
+engine_version=4.16
+format=xelatex
+documentclass=article
+
+# Portable GNU/Linux reference snapshot.  This immutable TeX Live tree plus
+# the package/font list below is the supported non-Windows reconstruction.
+texlive_repository=https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2026/tlnet-final
+
+# Local, archived with the source (not fetched from CTAN):
+local=jheppub.sty
+
+# TeX Live packages required by the source tree:
+package=adjustbox
+package=amscls
+package=amsmath
+package=booktabs
+package=caption
+package=enumitem
+package=etoolbox
+package=fontspec
+package=koma-script
+package=kotex-utf
+package=latex
+package=longtable
+package=mathtools
+package=supertabular
+package=tikz
+package=xstring
+
+# Required system fonts used by the Korean source:
+font=Noto Sans CJK KR
+font=Noto Serif CJK KR

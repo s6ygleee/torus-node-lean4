@@ -1,0 +1,4 @@
+q degree 5; Sturm chain length 6; sign changes at 0+: 1, at +inf: 1 -> # roots of q in (0,inf) = 0
+sign q(0+) = 1, leading sign = 1
+CERTIFIED: f(u) strictly increasing on (0,inf) -> every blocking step contracts for EVERY lambda > 0 (source rational data); IR ratio -> 1/2 (f ~ c u)
+IR slope check: f(u)/u -> |B_perp|/(A sqrt 24) ; UV limit f -> |C_perp|/|C| = 0.0357

@@ -1,0 +1,20 @@
+  check (chi-ratio<=30 best, original match2): e = 4.76e-5, mu = 6.568e+8, physOK = true, chi = 28.969,15.276,19.196
+Coupling-matching sector 1.59e+10 (8): exact solutions 3712, min M_* for chi-ratio<=10/30/100: 2.08e+9 / 6.58e+8 / 5.98e+8, M_* in [5.928e+8, 1.205e+19], chi* = 179.446,94.749,95.066, |e| = 6.2e-14
+  check (chi-ratio<=30 best, original match2): e = 5.30e-5, mu = 6.400e+8, physOK = true, chi = 14.251,29.965,19.358
+Coupling-matching sector 8.13e+10 (4): exact solutions 1555, min M_* for chi-ratio<=10/30/100: 1.63e+9 / 6.41e+8 / 5.97e+8, M_* in [5.927e+8, 1.183e+19], chi* = 68.500,144.658,95.066, |e| = 2.5e-14
+  check (chi-ratio<=30 best, original match2): e = 2.00e-5, mu = 7.693e+8, physOK = true, chi = 13.400,28.056,9.638
+Coupling-matching sector 9.80e+11 (12): exact solutions 3844, min M_* for chi-ratio<=10/30/100: 1.29e+10 / 7.70e+8 / 6.12e+8, M_* in [5.954e+8, 1.219e+19], chi* = 98.491,207.961,53.748, |e| = 5.8e-14
+  check (chi-ratio<=30 best, original match2): e = 4.96e-5, mu = 8.400e+8, physOK = true, chi = 13.400,28.362,9.638
+Coupling-matching sector 1.07e+13 (4): exact solutions 1357, min M_* for chi-ratio<=10/30/100: 3.36e+10 / 8.42e+8 / 6.18e+8, M_* in [5.965e+8, 1.182e+19], chi* = 98.491,208.005,53.748, |e| = 1.7e-14
+  check (chi-ratio<=30 best, original match2): e = 2.53e-5, mu = 8.383e+8, physOK = true, chi = 28.311,19.662,24.192
+Coupling-matching sector 4.92e+13 (8): exact solutions 2875, min M_* for chi-ratio<=10/30/100: 6.19e+9 / 8.39e+8 / 6.12e+8, M_* in [6.044e+8, 1.035e+19], chi* = 134.705,94.749,95.066, |e| = 2.4e-14
+  check (chi-ratio<=30 best, original match2): e = 5.06e-6, mu = 8.485e+8, physOK = true, chi = 23.773,16.665,27.221
+Coupling-matching sector 3.43e+14 (4): exact solutions 1593, min M_* for chi-ratio<=10/30/100: 1.00e+10 / 8.49e+8 / 6.10e+8, M_* in [6.058e+8, 1.184e+19], chi* = 134.685,94.749,95.066, |e| = 1.9e-14
+  check (chi-ratio<=30 best, original match2): e = 3.32e-6, mu = 2.009e+9, physOK = true, chi = 13.260,26.391,4.015
+Coupling-matching sector 4.36e+14 (8): exact solutions 2175, min M_* for chi-ratio<=10/30/100: 1.04e+11 / 2.01e+9 / 6.67e+8, M_* in [6.222e+8, 1.168e+19], chi* = 98.919,208.404,20.661, |e| = 4.7e-14
+  check (chi-ratio<=30 best, original match2): e = 2.00e-5, mu = 7.693e+8, physOK = true, chi = 13.400,28.056,9.638
+Coupling-matching sector 2.47e+15 (4): exact solutions 1553, min M_* for chi-ratio<=10/30/100: 1.29e+10 / 7.70e+8 / 6.12e+8, M_* in [5.955e+8, 1.175e+19], chi* = 98.491,207.962,53.748, |e| = 3.6e-14
+  check (chi-ratio<=30 best, original match2): e = 4.06e-5, mu = 2.479e+9, physOK = true, chi = 10.816,28.451,11.181
+Coupling-matching sector 4.15e+15 (4): exact solutions 976, min M_* for chi-ratio<=10/30/100: 4.70e+11 / 2.48e+9 / 6.74e+8, M_* in [6.110e+8, 1.217e+19], chi* = 79.891,224.628,77.282, |e| = 9.5e-15
+  check (chi-ratio<=30 best, original match2): e = 2.79e-5, mu = 9.027e+8, physOK = true, chi = 23.858,16.665,27.221
+Coupling-matching sector 9.32e+15 (4): exact solutions 1539, min M_* for chi-ratio<=10/30/100: 1.50e+10 / 9.04e+8 / 6.12e+8, M_* in [6.070e+8, 1.182e+19], chi* = 134.700,94.749,95.066, |e| = 4.0e-14

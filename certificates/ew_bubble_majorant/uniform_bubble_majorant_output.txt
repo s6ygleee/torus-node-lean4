@@ -1,0 +1,36 @@
+{
+  "L": 16,
+  "max_row_sum_ball_radius": 2.992450235969981e-12,
+  "fft_plus_ball_error": 2.9934005647666426e-12,
+  "gamma0_periodic_mid": 0.12844246911962134,
+  "max_periodic_offdiag_mid": 0.01786805994757684,
+  "max_periodic_offdiag_upper": 0.01786805995057024,
+  "CT_m": 0.58,
+  "CT_constant": 1.6227106514975245,
+  "worst_image_remainder": 0.015671649763496748,
+  "worst_image_representative": [
+    0,
+    0,
+    0,
+    8
+  ],
+  "max_offdiag_infinite_upper": 0.03353970971406699,
+  "pointwise_max_offdiag_infinite_upper": 0.018219259866561477,
+  "pointwise_max_witness": [
+    0,
+    15,
+    0,
+    0
+  ],
+  "offdiag_l1_infinite_upper": 0.9536000000000001,
+  "Kirr_uniform_upper": 0.03198346718333428,
+  "Kirr_pointwise_uniform_upper": 0.017373886208753027,
+  "Kirr_required_for_rectangle": 0.05240844755670968,
+  "fixed6_upper": 0.45810785223158046,
+  "fixed8": 0.24933962877374427,
+  "fixed_total_upper": 0.7074474810053247,
+  "fixed6_pointwise_upper": 0.24885087193282798,
+  "fixed_total_pointwise_upper": 0.4981905007065722,
+  "invariant_rectangle_pass": true,
+  "scope": "uniform bubble-moment majorant using the global constants of ew_interval_certificate; BKAR combinatorial transfer is separate"
+}

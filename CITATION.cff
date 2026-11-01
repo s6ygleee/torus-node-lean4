@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this formalisation or data, please cite the archived release."
+title: "Torus-Node Model: Lean 4 formalisation and reproducibility data"
+type: software
+authors:
+  - family-names: "Lee"
+    given-names: "Youngik (Tom)"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/s6ygleee/torus-node-lean4"
+url: "https://github.com/s6ygleee/torus-node-lean4"
+abstract: >-
+  Lean 4 formalisation, verification tables, retained calculation scripts,
+  fixed outputs, and interval fixtures for the torus-node model. The
+  continuum interfaces remain conditional on the premises stated in the
+  verification supplement.
+keywords:
+  - Lean 4
+  - formal verification
+  - mathematical physics
+  - torus-node model
+  - reproducibility

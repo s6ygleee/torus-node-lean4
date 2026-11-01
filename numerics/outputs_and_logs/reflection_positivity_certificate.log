@@ -1,0 +1,3 @@
+L=6: component sites n=648; residual bound r = 4.368e-12 (< 1 required); inverse error bound e = ||M^-1 - X||_2 <= 6.669e-12
+Gram 90x90: trace 2.007e-1, total shift e + c = 6.673e-12; Cholesky of K - shift*I SUCCEEDED (min pivot 1.519e-4)
+VERIFIED: lambda_min(K_true) > 0  ->  site-reflection positivity certified for this finite D4 box (error-bounded floating point)

@@ -1,0 +1,2 @@
+L=6 (component sites 648, 90 test points in x1 in [1,2]) D4 matter (RP expected): Gram min eig 3.581e-5, max 1.135e-1, asym 5.2e-18
+L=6 (component sites 648, 90 test points in x1 in [1,2]) control with |dx1|=2 hops: Gram min eig -4.033e-4, max 1.169e-1, asym 1.1e-3

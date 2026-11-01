@@ -1,0 +1,161 @@
+% =====================================================================
+\section{Formal verification and Lean correspondence}\label{app:lean}
+The formal counterpart is checked against a Lean~4 project using mathlib. It is
+kept in the public repository \url{https://github.com/s6ygleee/torus-node-lean4}
+and intended for archival on Zenodo (DOI: \ZenodoDOI)~\cite{TorusLean2026}. The
+Yang--Mills follow-up paper has its own formalisation, released with that paper.
+The project verifies explicitly listed
+subclaims; they are not a machine-checked proof of every statement in this
+paper.
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture}[scale=1.02,transform shape,
+  node distance=0.55cm and 0.50cm,
+  leanstep/.style={draw=black!80,thick,rounded corners=2pt,align=center,
+    text width=3.55cm,minimum height=1.45cm,inner sep=3pt,font=\scriptsize},
+  leanbranch/.style={draw=black!80,thick,rounded corners=2pt,align=center,
+    text width=4.75cm,minimum height=2.05cm,inner sep=3pt,font=\scriptsize},
+  leanwide/.style={draw=black!80,thick,rounded corners=2pt,align=center,
+    text width=9.80cm,minimum height=0.80cm,inner sep=3pt,font=\scriptsize},
+  leanarrow/.style={-{Stealth[length=2.5mm,width=1.8mm]},thick,black!80},
+  leandash/.style={-{Stealth[length=2.5mm,width=1.8mm]},thick,dashed,black!65}
+]
+\node[leanstep] (statement) {1. Reader-facing claim\\theorem, lemma, or finite calculation};
+\node[leanstep,right=of statement] (objects) {2. Formal objects and assumptions\\source, $D_4/S_4$ data, fields, action, and stated hypotheses};
+\node[leanstep,right=of objects] (derivation) {3. Internal derivation\\definitions, algebraic lemmas, and finite dependencies};
+\draw[leanarrow] (statement)--(objects);
+\draw[leanarrow] (objects)--(derivation);
+
+\node[leanbranch,below=0.75cm of objects,xshift=-2.45cm] (finite) {4a. Exact finite verification\\$D_4/S_4$ algebra, dimension, gauge covariance, EW masses, positivity, anomalies, and enumeration};
+\node[leanbranch,right=0.50cm of finite] (conditional) {4b. Conditional interface verification\\source push-forward, homogenisation, Ward/Hodge/Rellich estimates, and OS premises};
+\draw[leanarrow] (derivation.south) -- ++(0,-0.37cm) -| (finite.north);
+\draw[leanarrow] (derivation.south) -- ++(0,-0.37cm) -| (conditional.north);
+
+\node[leanwide,below=0.75cm of finite,xshift=2.62cm] (checks) {5. Verification checks\\Lean elaboration and build, no-placeholder and dependency/axiom checks, statement mapping, and separately tracked independent review};
+\draw[leanarrow] (finite.south) -- ++(0,-0.37cm) -| (checks.north);
+\draw[leanarrow] (conditional.south) -- ++(0,-0.37cm) -| (checks.north);
+
+\node[leanwide,below=of checks] (class) {6. Evidence classification\\exact finite counterpart; conditional result under stated premises; external theorem or certified computation; or open interface};
+\draw[leanarrow] (checks)--(class);
+\node[leanwide,below=of class] (record) {7. Reader-facing record\\the paper gives the mathematical statement and proof; the supplement gives the exact lookup key and reproducibility data};
+\draw[leanarrow] (class)--(record);
+\draw[leandash] (checks.east) ++(0.05cm,0) -- ++(0.72cm,0) node[right,align=left,text width=2.3cm,font=\scriptsize] {independent checks, tracked separately};
+\end{tikzpicture}
+\caption{Categorised verification path.  The formal work proceeds from a reader-facing mathematical claim to the finite objects and assumptions on which it depends, then to internal derivations.  Exact finite statements and conditional interface statements are kept as separate branches before the machine checks and the final evidence classification.  A successful build certifies only the listed formal statements and their dependencies; it does not convert an external theorem or an open source--continuum interface into an internally proved result.}
+\label{fig:lean-verification-flow}
+\end{figure}
+
+The formalisation has a conditional scope: it covers the listed Lean statements
+and their dependencies, but it does not formalise every assertion in the paper.
+Two independent machine checks support those statements.  The first is the Lean
+kernel itself, run during the build.  The second replays the compiled
+declarations outside Lean: every project module is exported with
+\texttt{lean4export} and re-checked by the independent type checker
+\mbox{nanoda}, in bounded batches of modules together with all of their
+transitive dependencies.  All 84 project modules were checked in eleven batches; nanoda reported no
+type-checking errors.  Neither check decides whether a Lean
+statement says the same thing as the surrounding prose; that correspondence is
+reviewed separately and still requires human approval.
+
+The formal record has the following content.
+\begin{itemize}[leftmargin=*]
+\item The Lean~4.32.1 project builds without errors, and the placeholder,
+  dependency, axiom and statement-mapping checks pass for all 296 inventory
+  declarations.  The inventory lists formal statements; it is not the count of
+  results in the paper.
+\item The main paper contains 112 theorem-like environments: 4 explicit
+  hypotheses and 108 other environments, namely 10 definitions and 98 results,
+  each result with a local proof.  Of these 108 environments, 12 are formalised
+  exactly, 54 through a finite or conditional core, and 38 through formalised
+  lemmas or cited external results; the four results on confinement under
+  the window hypothesis in the Yang--Mills interface section have no Lean
+  counterpart, and the four hypotheses are not formalised.
+  The classification is complete, so every stated result has a recorded formal
+  status.
+\item The only axioms reported for the audited declarations are the standard
+  Lean axioms \texttt{propext}, \texttt{Classical.choice} and
+  \texttt{Quot.sound}.  An external mathematical theorem used in a proof is
+  therefore an explicit hypothesis of the corresponding Lean statement, not a
+  hidden axiom.
+\item The Yang--Mills follow-up is a separate project with its own build and
+  checks; it is not part of the present verification count.
+\end{itemize}
+The formalisation therefore checks the listed formal statements and their
+machine dependencies.  The source-to-continuum bridge and the remaining
+certified numerical-to-analytic interfaces are open obligations rather than
+hidden assumptions.
+
+Each row begins with a reader-facing mathematical statement.  The second
+column gives the exact machine lookup key used by the corresponding Lean
+checker.  Namespaces and qualified identifiers such as
+\texttt{TorusModel.FiniteCompletion.*} are repository-local implementation names, not
+mathematical notation or physical model names.  They are retained verbatim
+only so that the formal correspondence can be reproduced; the first column
+is the authoritative description for readers of the theory.
+
+\clearpage
+{\scriptsize\TableStart
+\tablecaption{Correspondence between reader-facing statements and formal counterparts.}
+\tablehead{\toprule\TableHeader Reader-facing statement & Formal counterpart (exact lookup key)\\\midrule}
+\begin{supertabular}{P{0.30\textwidth}@{\hspace{0.35em}} P{0.64\textwidth}}
+\multicolumn{2}{l}{\emph{Part I} (namespace \texttt{TorusModel})}\\
+Lemma (D4 quartic and layers) & \texttt{D4.root\_card}, \texttt{D4.weighted\_root\_sum\_Q4}, \texttt{D4.cosine\_series\_eq}, \texttt{D4.quartic\_formula}, \texttt{D4.d4\_cosine\_quartic\_coefficient}, \texttt{TorusModel.D4\_quartic\_isotropic}, \texttt{TorusModel.D4\_layers\_core}\\
+\TableRowRule
+Definition/proposition (wave law) & \texttt{TorusModel.wave\_law}, \texttt{TorusModel.wave\_law\_area\_scaling}\\
+\TableRowRule
+Spacetime coordinate dimension core & \texttt{TorusModel.dim\_four}\\
+\TableRowRule
+Finite Gaussian electroweak lower-bound statement & \texttt{TorusModel.EWC\_gaussian}\\
+\TableRowRule
+Finite history-renormalisation contraction & \texttt{TorusModel.history\_RG\_contraction}\\
+\TableRowRule
+Finite physical-time lift & \texttt{TorusModel.lift\_S2}\\
+\TableRowRule
+Finite common-light-cone statement & \texttt{TorusModel.common\_lightcone}\\
+\TableRowRule
+Poisson--Lorentz expectation statement & \texttt{TorusModel.poisson\_lorentz}\\
+\TableRowRule
+Annealed reflection-positivity statement & \texttt{TorusModel.annealed\_RP}\\
+\TableRowRule
+Conditional high-density homogenisation certificate & \texttt{TorusModel.high\_density\_homogenisation\_conditional}; algebraic ingredients \texttt{TorusModel.vertex\_addition}, \texttt{TorusModel.Q3\_lower}\\
+\TableRowRule
+Finite reflection-positivity Gram inequality & \texttt{TorusModel.FiniteCompletion.gram\_quadratic\_nonneg}\\
+\TableRowRule
+Finite electroweak bath and local Gaussian realisation & {\scriptsize \texttt{TorusModel.FiniteCompletion.bath\_memory\_quadratic\_nonneg}, \texttt{TorusModel.FiniteCompletion.bath\_memory\_eq\_gram}}\\
+\TableRowRule
+Finite plaquette gauge covariance & {\scriptsize \texttt{TorusModel.FiniteCompletion.plaquette\_gauge\_transform}}\\
+\TableRowRule
+Tree-level electroweak $\rho$ relation & \texttt{TorusModel.EW1.mass\_ratio\_cosTheta}\\
+\TableRowRule
+Theorem 6.13 (Chirality, charges and anomalies) & \texttt{three\_generations}, \texttt{anomaly\_traces}, \texttt{anomaly\_traces\_three\_generations}, \texttt{charge\_quantization}, \texttt{bifundamental\_hypercharge}, \texttt{green\_schwarz\_cancellation}\\
+\TableRowRule
+Lemma 8.4 (Gauss-law lemma) & \texttt{GL.GL\_core}, \texttt{GL.GL\_massless}, \texttt{GL.not\_summable}, \texttt{GL.psd\_lower\_bound\_kernel}, \texttt{GL.gauss\_range\_subset\_kernel}, \texttt{GL.continuous\_fourier}, \texttt{GL.summable\_fourierTerm}\\
+\TableRowRule
+Lemma 8.9 (Rank-one defect) & \texttt{HWD.rank\_one\_energy\_update}\\
+\TableRowRule
+Lemma 8.12 (Holonomies of holes decouple) & \texttt{HC.weight\_invariant}, \texttt{HC.curvature\_observable\_indep}, \texttt{HC.rational\_kernel\_subtorus\_closed}, \texttt{HC.rational\_kernel\_subtorus\_in\_kernel}, \texttt{HC.integer\_torus\_image\_closed}, \texttt{HC.compact\_torus\_image\_closed}, \texttt{HC.ker\_closed\_in\_finite\_dimension}, \texttt{HC.integer\_torus\_map\_comp}, \texttt{HC.integer\_torus\_map\_comp\_eq\_zero}, \texttt{HC.product\_measure\_expectation\_factor}, \texttt{HC.conditional\_probability\_eq\_addHaar}\\
+\TableRowRule
+Theorem 8.14 (Isotropy) & {\scriptsize \texttt{TorusModel.Q2.exists\_separating}, \texttt{TorusModel.Q2.offdiag\_zero}, \texttt{TorusModel.Q2.equal\_diagonal\_of\_transitive}, \texttt{TorusModel.Q2.scalar\_of\_invariant}, \texttt{TorusModel.Q2.pairAction\_transitive}, \texttt{TorusModel.Q2.finAction\_transitive}, \texttt{TorusModel.Q2.equal\_diagonal\_of\_pair\_permutation}, \texttt{TorusModel.Q2.pair\_scalar\_of\_invariant}}\\
+ & {\scriptsize \texttt{TorusModel.Q2.scalar\_of\_concrete\_invariant}, \texttt{TorusModel.Q2.isotropic\_positive\_of\_concrete\_invariant}, \texttt{TorusModel.Q2.expectation\_comp\_measurableEquiv}, \texttt{TorusModel.Q2.covariance\_sign\_invariant}, \texttt{TorusModel.Q2.covariance\_permutation\_invariant}, \texttt{TorusModel.Q2.isotropic\_positive\_of\_poisson\_symmetry}}\\
+\TableRowRule
+Theorem 9.1 (Structure of partial breaking) & \texttt{EW1.stabilizer\_iff}, \texttt{EW1.W\_mass}, \texttt{EW1.Z\_mass}, \texttt{EW1.photon\_massless}, \texttt{EW1.massForm\_eq\_zero\_iff}, \texttt{EW1.lieMatrix\_action\_eq}\\
+\TableRowRule
+Main logical chain & \texttt{Integration.l1\_chain}, \texttt{Integration.l1\_chain\_from\_symmetry}\\
+\bottomrule
+\end{supertabular}}
+\paragraph{External results and formal boundary.}
+Osterwalder--Schrader reconstruction, Osterwalder--Seiler reflection
+positivity, Lovelock's classification, R\'enyi's Poisson characterisation,
+the Poisson mapping theorem, the Kolmogorov cylinder-extension theorem,
+Prokhorov tightness, Koteck\'y--Preiss, Fröhlich--Spencer,
+Akcoglu--Krengel, Armstrong--Venkatraman, Penrose--Pisztora,
+Antal--Pisztora, Liggett--Schonmann--Stacey, Timár, Dobrushin, Föllmer,
+Jentzsch--Perron--Frobenius and Atiyah--Singer/Riemann--Roch are explicit
+external inputs~\cite{OS1973,OS1975,OS1978,Lovelock1971,Renyi1967,Kingman1993,Kallenberg2002,KP1986,FS1982,AK1981,AV2023,PP1996,AP1996,LSS1997,Timar2013,Dobrushin1968,Foellmer1982,Jentzsch1912,AtiyahSinger1968,Hall2015,Kallen1952,Lehmann1954}, never hidden as \texttt{axiom}. Their hypotheses and the
+conclusions imported at each use are stated in the main paper and its
+proof-dependency appendix. The Yang--Mills follow-up paper gives the
+paper-level proofs of the Dobrushin boundary-influence theorem and the
+two-point total-variation lemma. Certified computations (interval thresholds,
+Sturm sequences, integer kernels) and conditional statements are the next
+layers of the formalisation. Numerical results are not formalised.

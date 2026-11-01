@@ -1,0 +1,17 @@
+Crossing-kernel check k pd: min Gram eigenvalue of exp(-lambda(l_a+l_b)(s-t)^2) over 300 random sets of 30 points
+  hard cutoff 1[d<=1.5] (Rips)            : min eigenvalue -5.043e+00  -> NOT PD
+  exponential exp(-d)                     : min eigenvalue -8.652e-01  -> NOT PD
+  Gaussian exp(-d^2)                      : min eigenvalue -2.505e+00  -> NOT PD
+  power 1/d^2                             : min eigenvalue -1.672e+00  -> NOT PD
+  constant (control)                      : min eigenvalue -3.380e-15  -> PD (numerically)
+  smoothed cutoff 1/(1+exp(8(d-1.5)))     : min eigenvalue -3.487e+00  -> NOT PD
+  remark: for lambda = f(l_a) f(l_b) (exponential profile), exp(-f_a f_b (s-t)^2) is PD iff the map
+          (l, s) -> sqrt(f(l)) s embeds into a Gaussian-kernel feature space consistently; numerical test above.
+
+edge-length formulation (crossing-edge length = plane variable, 0212-type):
+  hard cutoff 1[d<=1.5] (Rips)            : min relative eigenvalue +1.640e-07  -> PD
+  exponential exp(-d)                     : min relative eigenvalue +2.251e-06  -> PD
+  Gaussian exp(-d^2)                      : min relative eigenvalue +1.042e-07  -> PD
+  power 1/d^2                             : min relative eigenvalue +4.030e-05  -> PD
+  constant (control)                      : min relative eigenvalue +1.897e-07  -> PD
+  smoothed cutoff 1/(1+exp(8(d-1.5)))     : min relative eigenvalue +9.622e-07  -> PD

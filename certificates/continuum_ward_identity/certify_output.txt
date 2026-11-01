@@ -1,0 +1,20 @@
+{"progress":0,"pairs":2080,"seconds":0.022}
+{"progress":500,"pairs":2080,"seconds":2.043}
+{"progress":1000,"pairs":2080,"seconds":3.796}
+{"progress":1500,"pairs":2080,"seconds":5.67}
+{"progress":2000,"pairs":2080,"seconds":7.375}
+{
+  "run": 339,
+  "quadrature": [
+    -0.0006542900910215817,
+    -0.0006542900903772295
+  ],
+  "analytic_error": 0.000012036254195587017,
+  "continuum": [
+    -0.0006663263452171688,
+    -0.0006422538361816424
+  ],
+  "checks": "PASS",
+  "seconds": 7.66,
+  "global_completion": false
+}

@@ -1,0 +1,4 @@
+Embeddability-kernel check Cayley-Menger embeddability kernel K(a,b) = E_c[1{embeddable}] across the reflection plane
+  uniform crossing lengths [0.3,1.5]: min eigenvalue -5.924e-01, max +7.769e+00, noise scale ~1.9e-01 -> NOT PSD
+  Poisson-Rips-like (density of |x-y| in 4D ball, r_c = 1.5): min eigenvalue -1.084e+00, max +1.587e+01, noise scale ~1.9e-01 -> NOT PSD
+  control (hard |a-b| <= 0.3, no averaging): min eigenvalue -1.788e+00 -> NOT PSD

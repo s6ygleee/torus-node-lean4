@@ -1,0 +1,20 @@
+Axion dark matter axion DM without inflation (averaged misalignment angle)
+  [harmonic] 100% DM at f = 3.24e+11 GeV, m_a = 17.6 ueV
+  [anharmonic x2.15] 100% DM at f = 1.68e+11 GeV, m_a = 33.9 ueV
+  vacuum  mult   f[GeV]     m_a[ueV]   E/N     |g_agg|/|g_DFSZ|  Omega_a/Omega_DM (harm .. anharm)   verdict
+  V1    8   1.59e+10         358   +0.667    1.68            0.03 .. 0.064            subdominant axion (other DM needed)
+  V2    4   8.13e+10        70.1   +0.167    2.35            0.2 .. 0.43            axion can be all DM
+  V3    4   5.45e+11        10.5   +1.333    0.79            1.8 .. 3.9            axion can be all DM
+  V4    4   9.80e+11        5.82   +1.667    0.34            3.6 .. 7.8            overproduces DM -> excluded (no dilution in model)
+  V5    4   9.80e+11        5.82   +0.667    1.68            3.6 .. 7.8            overproduces DM -> excluded (no dilution in model)
+  V6    4   9.80e+11        5.82   -0.333    3.02            3.6 .. 7.8            overproduces DM -> excluded (no dilution in model)
+  V7    4   9.80e+11        5.82   -1.333    4.36            3.6 .. 7.8            overproduces DM -> excluded (no dilution in model)
+  V8    4   1.37e+12        4.16   +0.667    1.68            5.4 .. 12            overproduces DM -> excluded (no dilution in model)
+  V9    4   1.07e+13       0.533   +1.667    0.34            59 .. 1.3e+02            overproduces DM -> excluded (no dilution in model)
+  V10    8   4.92e+13   -          no QCD axion: theta_QCD unexplained -> needs |theta| < 1e-10 (nEDM)   disfavoured
+  V11    4   3.43e+14      0.0166   +1.333    0.79            3.4e+03 .. 7.3e+03            overproduces DM -> excluded (no dilution in model)
+  V12    8   4.36e+14   -          no QCD axion: theta_QCD unexplained -> needs |theta| < 1e-10 (nEDM)   disfavoured
+  V13    4   1.57e+15     0.00363   +0.667    1.68            2e+04 .. 4.3e+04            overproduces DM -> excluded (no dilution in model)
+  V14    4   2.47e+15     0.00231   +0.667    1.68            3.4e+04 .. 7.3e+04            overproduces DM -> excluded (no dilution in model)
+  V15    4   4.15e+15     0.00137   +1.333    0.79            6.2e+04 .. 1.3e+05            overproduces DM -> excluded (no dilution in model)
+  V16    4   9.32e+15    0.000612   +0.667    1.68            1.6e+05 .. 3.4e+05            overproduces DM -> excluded (no dilution in model)

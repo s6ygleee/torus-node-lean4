@@ -1,0 +1,6 @@
+max ||[L_g, R_h]|| = 0
+u=8: identity error ||(T-E(T)) - sum a_g L_g D_cperp|| = 1.13e-16;  rel. operator defect = 1.363e-2;  f(u) = 1.362e-2;  ratio defect/f = 1.000
+u=2: identity error ||(T-E(T)) - sum a_g L_g D_cperp|| = 1.09e-16;  rel. operator defect = 5.998e-3;  f(u) = 5.998e-3;  ratio defect/f = 1.000
+u=0.5: identity error ||(T-E(T)) - sum a_g L_g D_cperp|| = 4.48e-17;  rel. operator defect = 1.845e-3;  f(u) = 1.845e-3;  ratio defect/f = 1.000
+u=0.125: identity error ||(T-E(T)) - sum a_g L_g D_cperp|| = 7.32e-17;  rel. operator defect = 4.893e-4;  f(u) = 4.893e-4;  ratio defect/f = 1.000
+u=0.03125: identity error ||(T-E(T)) - sum a_g L_g D_cperp|| = 5.99e-17;  rel. operator defect = 1.242e-4;  f(u) = 1.242e-4;  ratio defect/f = 1.000

@@ -1,0 +1,34 @@
+import PaperVerifier.TorusModel.Node
+import PaperVerifier.TorusModel.FinitePoisson
+import PaperVerifier.TorusModel.PoissonPointProcess
+import PaperVerifier.TorusModel.FiniteConfiguration
+import PaperVerifier.TorusModel.FiniteRenyi
+import PaperVerifier.TorusModel.SourceWeight
+import PaperVerifier.TorusModel.SourceMoments
+import PaperVerifier.TorusModel.SourceReflections
+import PaperVerifier.TorusModel.SourceAxis
+import PaperVerifier.TorusModel.SourceIrreducible
+import PaperVerifier.TorusModel.SourceGenerator
+import PaperVerifier.TorusModel.SourceLayers
+import PaperVerifier.TorusModel.SourceNoGo
+import PaperVerifier.TorusModel.FiniteSource
+import PaperVerifier.TorusModel.D4
+import PaperVerifier.TorusModel.D4Roots
+import PaperVerifier.TorusModel.D4ChartCompatibility
+import PaperVerifier.TorusModel.D4ChartAreaUpdate
+import PaperVerifier.TorusModel.HeckeD4Comparison
+import PaperVerifier.TorusModel.ModelDefinitions
+import PaperVerifier.TorusModel.D4SourceWrappers
+import PaperVerifier.TorusModel.FiniteGaussianPartition
+import PaperVerifier.TorusModel.ClockIncrementBound
+import PaperVerifier.TorusModel.ClockRegularity
+import PaperVerifier.TorusModel.FiniteGibbsModel
+import PaperVerifier.TorusModel.GeneralGibbsMeasure
+import PaperVerifier.TorusModel.FiniteCompletion
+import PaperVerifier.TorusModel.MinimalCompletion
+import PaperVerifier.TorusModel.OpenHypothesisInterfaces
+import PaperVerifier.TorusModel.ConditionalProofBoundaries
+
+/-! Section 3: Poisson source, D4 moves and the canonical finite model.
+
+Aggregator module: imports every Lean file formalising this part of the paper. -/

@@ -1,0 +1,6 @@
+finite source cardinality: |H*|=7, |D*|=49
+right-S4 commutator max: 0.000e+00
+same-measure semigroup residual: 5.113e-16
+clock mean norm: 0.000e+00, second moment V=0.841978370716751
+Gram RP minimum eigenvalue: 1.000e+00
+PASS: finite source push-forward, RP, and same-measure time blocking

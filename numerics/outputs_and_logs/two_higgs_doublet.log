@@ -1,0 +1,26 @@
+Two-Higgs-doublet checks (A) 2HDM D-term quartics from M_* = 1.59e10 to Lambda = 6.8e17 (one loop, type II)
+  mu = 1.59e+10: l1 = +0.1210 l2 = +0.1210 l3 = +0.0401 l4 = -0.1611  flat-direction l3+l4+sqrt(l1l2) = +0.00000
+  mu = 5.34e+11: l1 = +0.1238 l2 = +0.1137 l3 = +0.0430 l4 = -0.1521  flat-direction l3+l4+sqrt(l1l2) = +0.00962
+  mu = 1.79e+13: l1 = +0.1263 l2 = +0.1090 l3 = +0.0455 l4 = -0.1432  flat-direction l3+l4+sqrt(l1l2) = +0.01971
+  mu = 6.03e+14: l1 = +0.1288 l2 = +0.1062 l3 = +0.0476 l4 = -0.1345  flat-direction l3+l4+sqrt(l1l2) = +0.03006
+  mu = 2.02e+16: l1 = +0.1311 l2 = +0.1048 l3 = +0.0493 l4 = -0.1260  flat-direction l3+l4+sqrt(l1l2) = +0.04054
+  mu = 6.80e+17: l1 = +0.1334 l2 = +0.1045 l3 = +0.0507 l4 = -0.1177  flat-direction l3+l4+sqrt(l1l2) = +0.05106
+  minimum stability margin +0.00000 at mu = 1.59e+10 (l2 = +0.1210, flat = +0.00000)
+  verdict: bounded below at all scales M_* .. Lambda
+
+Two-Higgs-doublet checks (B) primordial seed scale
+  single-clock seed with r = 0.036: energy scale V^(1/4) = 1.41e+16 GeV
+  single-clock seed with r = 0.01: energy scale V^(1/4) = 1.02e+16 GeV
+  single-clock seed with r = 0.001: energy scale V^(1/4) = 5.75e+15 GeV
+  node-scale thermal (area-law) seed: P ~ (l_P/eps)^4 / (1 - T/T_H) >= 9.5e-06  vs 2.1e-9 -> too large by >= 5e+03
+  required string/node length for this mechanism: eps >= 148 l_P (model: 18 l_P)
+
+Two-Higgs-doublet checks (C) rolling-modulus dark energy vs alpha drift
+  w = -0.95, k = 0.25: |alpha_dot/alpha| ~ 5.5e-12 /yr  (clock bound ~1e-18 /yr: excess 6e+06)
+  w = -0.95, k = 0.96: |alpha_dot/alpha| ~ 2.1e-11 /yr  (clock bound ~1e-18 /yr: excess 2e+07)
+  w = -0.9, k = 0.25: |alpha_dot/alpha| ~ 7.8e-12 /yr  (clock bound ~1e-18 /yr: excess 8e+06)
+  w = -0.9, k = 0.96: |alpha_dot/alpha| ~ 3.0e-11 /yr  (clock bound ~1e-18 /yr: excess 3e+07)
+  w = -0.75, k = 0.25: |alpha_dot/alpha| ~ 1.2e-11 /yr  (clock bound ~1e-18 /yr: excess 1e+07)
+  w = -0.75, k = 0.96: |alpha_dot/alpha| ~ 4.8e-11 /yr  (clock bound ~1e-18 /yr: excess 5e+07)
+  verdict: within the model any dark-energy dynamics carried by node-shape moduli is excluded by alpha constancy;
+  w = -1 is therefore the prediction of the model (a 5 sigma DESI-type w0 > -1 would falsify the model).

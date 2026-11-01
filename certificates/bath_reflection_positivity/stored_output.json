@@ -1,0 +1,12 @@
+{
+  "run": 909,
+  "d4_roots": 24,
+  "d4_positive_pairs": 12,
+  "d4_symbol_min_grid": 0.15,
+  "bath_min_eigenvalues": [5.2831764373254744e-05,4.9230174059751084e-05,3.613009170685064e-05,1.837557769493959e-05,6.165474035547038e-06],
+  "bath_row_norm_omega0": 0.07737965846153846,
+  "bath_psd_test": "PASS for omega 0,0.2,0.5,1,2",
+  "combined_min_eigenvalue": 6.165474035547038e-06,
+  "combined_negative_modes": 0,
+  "scope": "finite source-facing certificate; raw Rips equality open"
+}

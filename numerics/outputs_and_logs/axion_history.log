@@ -1,0 +1,20 @@
+Axion history (a) domain-wall branches (3.43e14 [N_DW 3], 4.15e15 [N_DW 1.5-3], 9.32e15 [N_DW 6]); f_a = M_*
+  f [GeV]    m_a [ueV]   f_mis        min bias for DM<=1   quality ceiling   window
+  5.91e+08     9651.2   0.001-0.001  3.83e-15-3.83e-15   3.25e-15       closed
+  1.02e+09     5599.5   0.001-0.003  1.97e-14-1.97e-14   3.25e-15       closed
+  1.75e+09     3248.7   0.002-0.005  1.01e-13-1.01e-13   3.25e-15       closed
+  3.02e+09     1884.9   0.004-0.009  5.18e-13-5.18e-13   3.25e-15       closed
+  5.21e+09     1093.6   0.008-0.017  2.66e-12-2.72e-12   3.25e-15       closed
+  8.98e+09      634.5   0.015-0.033  1.40e-11-1.43e-11   3.25e-15       closed
+  1.55e+10      368.1   0.029-0.062  7.33e-11-7.85e-11   3.25e-15       closed
+  2.67e+10      213.6   0.054-0.117  3.94e-10-4.52e-10   3.25e-15       closed
+  4.60e+10      123.9   0.102-0.220  2.22e-09-2.99e-09   3.25e-15       closed
+
+Axion history (b) selected axion mass range: m_a = 124 - 9651 ueV  (f_a = 4.6e10 ... 5.9e8 GeV)
+  ADMX/CAPP/HAYSTAC (operating)                    1-40 ueV : no overlap
+  MADMAX (projected)                               40-400 ueV : overlap [124-400]
+  ALPHA (projected)                                35-400 ueV : overlap [124-400]
+  BREAD (projected)                                1000-100000 ueV : overlap [1000-9651]
+  IAXO (helioscope, mass-independent below ~1e4)   0.001-10000 ueV : overlap [124-9651]
+  E/N = 1.333: |g_agg| = 1.5e-14 .. 1.2e-12 GeV^-1 (KSVZ-like band; IAXO reach ~ 1e-12 for m_a < ~10 meV)
+  E/N = 0.667: |g_agg| = 3.2e-14 .. 2.5e-12 GeV^-1 (KSVZ-like band; IAXO reach ~ 1e-12 for m_a < ~10 meV)

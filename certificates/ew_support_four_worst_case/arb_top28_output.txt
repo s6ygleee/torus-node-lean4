@@ -1,0 +1,6 @@
+{
+  "precision_bits": 256,
+  "records_certified": 28,
+  "all_eta_lt_1": true,
+  "all_tail_N15_lt_target": true
+}

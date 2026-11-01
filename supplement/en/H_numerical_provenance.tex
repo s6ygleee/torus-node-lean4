@@ -1,0 +1,110 @@
+% =====================================================================
+\section{Provenance of numerical outputs}\label{app:provenance}
+Each numerical output reported in the paper is listed below with the
+computation that produced it and its evidence class. Every computation named
+here is distributed with its script, inputs and stored output, and the
+locked runner of the reproducibility package re-runs it and compares the result
+with the stored output. Table~\ref{tab:locators} at the end of this appendix
+gives the file names. The arguments themselves are given in the main paper.
+The evidence classes are exact finite computation, input-dependent numerical
+estimate, numerical diagnostic, and finite consistency check.
+\par\vspace{0.7em}
+{\small
+\TableStart
+\tablecaption{Provenance of reported numerical outputs: computation and evidence class.}
+\tablehead{\toprule\TableHeader Reported quantity & Computation & Evidence class\\\midrule}
+\begin{supertabular}{P{0.30\textwidth}@{\hspace{0.35em}} P{0.40\textwidth}@{\hspace{0.35em}} P{0.22\textwidth}}
+76 vacua and 16 distinct rows & vacuum catalogue: enumeration of the finite catalogue & exact finite computation\\
+\TableRowRule
+V1 $M_*$ and $1/\alpha_*$ & vacuum catalogue with the declared two-loop matching inputs & input-dependent numerical estimate\\
+\TableRowRule
+V1 top-mass bound $m_t\le172.89$~GeV & Higgs stability: three-loop Standard-Model running with the displayed matching inputs & input-dependent numerical estimate\\
+\TableRowRule
+V1 axion $E/N=2/3$, $m_a\simeq358\,\mu$eV & vacuum catalogue (anomaly ratio) and axion dark matter (misalignment estimate) & exact finite computation plus input-dependent numerical estimate\\
+\TableRowRule
+Fine-structure/Newton sky dipole & sky dipole: signatures on the stated $(k,\Omega_k)$ grid & numerical diagnostic\\
+\TableRowRule
+Second-Higgs scale and $\tan\beta$ & two-Higgs-doublet checks: running with the declared inputs & input-dependent numerical estimate\\
+\TableRowRule
+Black-hole entropy ratio & black-hole entropy: entanglement entropy compared with the induced Newton constant for $M=24,32,40$ & finite consistency check\\
+\TableRowRule
+Exact gauge matching in all ten classes & exact gauge matching & numerical diagnostic\\
+\TableRowRule
+Matched Villain signed dynamic-programming cross-check & descriptive scope note in \path{supplement/reproducibility/diagnostics/matched_villain_crosscheck.md}; no executable script or standalone log is present & numerical diagnostic\\
+\TableRowRule
+Top-mass bounds on the matching surfaces & top-mass bound & input-dependent numerical estimate\\
+\TableRowRule
+Asymptotic scale $\mu_\infty\simeq5.906\times10^8$~GeV & asymptotic matching scale & numerical diagnostic\\
+\TableRowRule
+Axion mass interval and wall-forming branch & axion history & input-dependent numerical estimate\\
+\TableRowRule
+Charged-lepton ratios, $\kappa_2\simeq0.5724$ & lepton circulant fit & numerical diagnostic\\
+\TableRowRule
+Failure of the quark overlap rule & quark overlap test & numerical diagnostic\\
+\TableRowRule
+Selection of the matching class V11 by the gravity--gauge relation & gravity--gauge selection & numerical diagnostic\\
+\bottomrule
+\end{supertabular}}
+\par\vspace{0.7em}
+
+Of these computations, only the vacuum catalogue is an exhaustive finite
+integer enumeration. The other rows combine the catalogue with running,
+geometric or observational inputs, so their values depend on those inputs as
+well as on the source. The searches on the matching surfaces are numerical:
+the asymptotic scale is the solution of an explicit limiting equation, but no
+proof is supplied that it is the global infimum; the lepton fit uses truncated
+Gaussian sums at selected separations and is not a uniqueness certificate; the
+quark overlap test is a pre-registered test whose failure is the reported
+result; and the gravity--gauge selection is established on the sampled
+matching surfaces, not on the full continuous parameter domain. The formal
+verification of the finite statements is described in
+Appendix~\ref{app:lean}.
+
+For the matched Villain cross-check the archive retains only a descriptive
+scope note. The explicit absence of a script, standalone input, and execution
+log is recorded in
+\path{supplement/reproducibility/diagnostics/matched_villain_crosscheck.md};
+the values are not treated as an exact certificate or as a result for the
+integer Wilson action.
+
+\subsection{Files}
+Table~\ref{tab:locators} lists the files for each computation. Scripts are in
+\path{numerics/scripts_and_inputs/} and stored outputs in
+\path{numerics/outputs_and_logs/}; the lock file
+\path{calculations-lock.json} records the command, environment, SHA-256
+checksums and comparison tolerances.
+\par\vspace{0.7em}
+{\small
+\TableStart
+\tablecaption{Files of the reproducibility package.\label{tab:locators}}
+\tablehead{\toprule\TableHeader Computation & Script & Stored output\\\midrule}
+\begin{supertabular}{P{0.25\textwidth}@{\hspace{0.35em}} P{0.32\textwidth}@{\hspace{0.35em}} P{0.35\textwidth}}
+vacuum catalogue & \path{vacuum_catalogue.cjs} & \path{vacuum_catalogue.log}\\
+\TableRowRule
+Higgs stability & \path{higgs_stability.py} & \path{higgs_stability.log}\\
+\TableRowRule
+axion dark matter & \path{axion_dark_matter.py} & \path{axion_dark_matter.log}\\
+\TableRowRule
+sky dipole & \path{sky_dipole.py} & \path{sky_dipole.log}\\
+\TableRowRule
+two-Higgs-doublet checks & \path{two_higgs_doublet.py} & \path{two_higgs_doublet.log}\\
+\TableRowRule
+black-hole entropy & \path{black_hole_entropy.py} & \path{black_hole_entropy_M24.json}, \path{black_hole_entropy_M32.json}, \path{black_hole_entropy_M40.json}\\
+\TableRowRule
+exact gauge matching & \path{exact_gauge_matching.cjs} & \path{exact_gauge_matching.log}\\
+\TableRowRule
+top-mass bound & \path{top_mass_bound.py} & \path{top_mass_bound.log}\\
+\TableRowRule
+asymptotic matching scale & \path{asymptotic_matching_scale.cjs} & \path{asymptotic_matching_scale.log}\\
+\TableRowRule
+axion history & \path{axion_history.py} & \path{axion_history.log}\\
+\TableRowRule
+lepton circulant fit & \path{lepton_circulant_fit.py} & \path{lepton_circulant_fit.log}\\
+\TableRowRule
+quark overlap test & \path{quark_overlap_test.py} & \path{quark_overlap_test.log}\\
+\TableRowRule
+gravity--gauge selection & \path{gravity_gauge_selection.cjs} & \path{gravity_gauge_selection.log}\\
+\bottomrule
+\end{supertabular}}
+\par\vspace{0.7em}
+The catalogue scripts share the helper \path{cycle_valid.cjs}.

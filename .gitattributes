@@ -1,0 +1,32 @@
+* text=auto eol=lf
+
+*.lean text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.sty text eol=lf
+*.cff text eol=lf
+*.tsv text eol=lf
+*.txt text eol=lf
+*.cjs text eol=lf
+*.js text eol=lf
+*.log text eol=lf
+*.csv text eol=lf
+LICENSE text eol=lf
+
+# These are byte-for-byte calculation baselines.  Their SHA-256 values are
+# part of calculations-lock.json, so Git must not rewrite line endings.
+numerics/outputs_and_logs/** -text
+numerics/scripts_and_inputs/** -text
+supplement/reproducibility/interval_inputs/** -text -diff
+
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary

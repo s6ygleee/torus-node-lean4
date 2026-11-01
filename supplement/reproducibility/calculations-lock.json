@@ -1,0 +1,802 @@
+{
+    "schema_version":  1,
+    "python":  "3.12.10",
+    "node":  "v24.18.0",
+    "environment":  {
+                        "PYTHONHASHSEED":  "0",
+                        "OMP_NUM_THREADS":  "1",
+                        "OPENBLAS_NUM_THREADS":  "1",
+                        "MKL_NUM_THREADS":  "1",
+                        "NUMEXPR_NUM_THREADS":  "1"
+                    },
+    "shared_inputs":  {
+                          "cycle_valid.cjs":  "776749c0847cf4fd2c6fd5506c270ee2069031a91505317e8896d2a9c15954ca",
+                          "d4_lattice.cjs":  "53f91ee9c455716d13e3e83218edf4dad6a97085abcb3df58faf721c560d7170",
+                          "hodge_symbol_d4.cjs":  "26a297d62086e84dc17e10e571048077a3f62acbac6f49daaa5e73950cea0aa6",
+                          "photon_ir_gate.cjs":  "5367c787a9453b9e7c0bf7cf044d86d0118adb525ed8c8bb0a7c0c583be85702",
+                          "inputs/source_config.json":  "d862a82989112c34ab21073eed831753ca36638882b0b9a259a31dfc5f4f880c"
+                      },
+    "calculations":  [
+                         {
+                             "order":  1,
+                             "classification":  "exact_finite_enumeration",
+                             "runtime":  "node",
+                             "script":  "vacuum_catalogue.cjs",
+                             "script_sha256":  "aba7d5da3ac90fe9bed5dd6a3f8c3c3676a819b0a7041f5343339c731c6bc78b",
+                             "inputs":  [
+                                            "cycle_valid.cjs",
+                                            "constants embedded in program"
+                                        ],
+                             "input_files":  [
+                                                 "cycle_valid.cjs"
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "vacuum_catalogue.cjs"
+                                         ],
+                             "expected":  "vacuum_catalogue.log",
+                             "expected_sha256":  "bfa8de0b7e5b72de4153d6fdff036fe1967814754d471cf53a742e47b219b2f7",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "76 two-loop survivor vacua; 16 distinct catalogue rows"
+                         },
+                         {
+                             "order":  2,
+                             "classification":  "numerical_running_diagnostic",
+                             "runtime":  "python",
+                             "script":  "higgs_stability.py",
+                             "script_sha256":  "9c58680f4deaf262e941456dcebe99c5991cfeb8d256f5de9a07bfdd687e68e0",
+                             "inputs":  [
+                                            "SM matching inputs embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "higgs_stability.py"
+                                         ],
+                             "expected":  "higgs_stability.log",
+                             "expected_sha256":  "dab856cc89e47c244d2d4bdeee1cedd699f45f1b7d3af28c3d9e373385cfe557",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-10,
+                             "expected_summary":  "three-loop SM running table and H-STAB verdicts"
+                         },
+                         {
+                             "order":  3,
+                             "classification":  "input_dependent_numerical_estimate",
+                             "runtime":  "python",
+                             "script":  "axion_dark_matter.py",
+                             "script_sha256":  "7dcd7c5c125a42a22602486d3eb6e177b73f0b3270914dd7eec5839e9197a276",
+                             "inputs":  [
+                                            "vacuum table and cosmological constants embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "axion_dark_matter.py"
+                                         ],
+                             "expected":  "axion_dark_matter.log",
+                             "expected_sha256":  "5a497688eda1c6c1ffdfeb564448dff0d0f375e60852b1a79e0b63f77faaf73e",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "axion abundance table with exact categorical verdicts"
+                         },
+                         {
+                             "order":  4,
+                             "classification":  "input_dependent_numerical_estimate",
+                             "runtime":  "python",
+                             "script":  "sky_dipole.py",
+                             "script_sha256":  "8d6ef7046f26e0e5937569c0dbb40933833eff51db0f0199842e12b4fbb77d6f",
+                             "inputs":  [
+                                            "(k, Omega_k) grid embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "sky_dipole.py"
+                                         ],
+                             "expected":  "sky_dipole.log",
+                             "expected_sha256":  "7b83539f3e8abc50f00d9598940bac7864c18ad328ef441d1e1352e780a4614b",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-12,
+                             "absolute_tolerance":  1E-15,
+                             "expected_summary":  "curvature-signature grid"
+                         },
+                         {
+                             "order":  5,
+                             "classification":  "numerical_evolution_diagnostic",
+                             "runtime":  "python",
+                             "script":  "two_higgs_doublet.py",
+                             "script_sha256":  "24bd86980553b6040f4ebca0d23a332d05d75c561ec41a3c741c944d1eef6dd0",
+                             "inputs":  [
+                                            "higgs_stability.py"
+                                        ],
+                             "input_files":  [
+                                                 "higgs_stability.py"
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "two_higgs_doublet.py"
+                                         ],
+                             "expected":  "two_higgs_doublet.log",
+                             "expected_sha256":  "bcd892e2a5c9f6146c5f245d97a92d5d236630131b45c1097529980c796e73c0",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "2HDM evolution, primordial seed scale and verdicts"
+                         },
+                         {
+                             "order":  6,
+                             "classification":  "finite_regulator_numerical_diagnostic",
+                             "runtime":  "python",
+                             "script":  "black_hole_entropy.py",
+                             "script_sha256":  "d8e5c846f5a1eac0b6170d07d505463ed00a7cc75a0cc4f0b74ec893f749c2f9",
+                             "inputs":  [
+                                            "M=24",
+                                            "m2=0.5,1"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "black_hole_entropy.py",
+                                             "24",
+                                             "0.5,1"
+                                         ],
+                             "expected":  "black_hole_entropy_M24.json",
+                             "expected_sha256":  "9113aaf52ee6623b2fe89f6cccee4e3ab7f55d03164c1d793acd0b269eb2d7c9",
+                             "actual":  "logs/black_hole_entropy_kappa.json",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "JSON regulator certificate with exact keys"
+                         },
+                         {
+                             "order":  "6b",
+                             "classification":  "finite_regulator_numerical_diagnostic",
+                             "runtime":  "python",
+                             "script":  "black_hole_entropy.py",
+                             "script_sha256":  "d8e5c846f5a1eac0b6170d07d505463ed00a7cc75a0cc4f0b74ec893f749c2f9",
+                             "inputs":  [
+                                            "M=32",
+                                            "m2=0.5,1"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "black_hole_entropy.py",
+                                             "32",
+                                             "0.5,1"
+                                         ],
+                             "expected":  "black_hole_entropy_M32.json",
+                             "expected_sha256":  "689de2d4b1b8c7de39dc305e2b4550cce6d34cc8c7135b6bb46fe0942fe74ba5",
+                             "actual":  "logs/black_hole_entropy_kappa.json",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "JSON regulator certificate with exact keys"
+                         },
+                         {
+                             "order":  "6c",
+                             "classification":  "finite_regulator_numerical_diagnostic",
+                             "runtime":  "python",
+                             "script":  "black_hole_entropy.py",
+                             "script_sha256":  "d8e5c846f5a1eac0b6170d07d505463ed00a7cc75a0cc4f0b74ec893f749c2f9",
+                             "inputs":  [
+                                            "M=40",
+                                            "m2=0.5,1"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "black_hole_entropy.py",
+                                             "40",
+                                             "0.5,1"
+                                         ],
+                             "expected":  "black_hole_entropy_M40.json",
+                             "expected_sha256":  "831c0456f79b7b46dbd67d2580aedc1718f4fa63fe00b9bf993b5f1c90afa8a5",
+                             "actual":  "logs/black_hole_entropy_kappa.json",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "JSON regulator certificate with exact keys"
+                         },
+                         {
+                             "order":  7,
+                             "classification":  "finite_catalogue_with_numerical_inverse_search",
+                             "runtime":  "node",
+                             "script":  "exact_gauge_matching.cjs",
+                             "script_sha256":  "524f071c171fa9b0996cf17e7a54a7806a50c44e57540619b17112dc1b781809",
+                             "inputs":  [
+                                            "cycle_valid.cjs",
+                                            "catalogue and exact matching equations embedded in program"
+                                        ],
+                             "input_files":  [
+                                                 "cycle_valid.cjs"
+                                             ],
+                             "seed":  777,
+                             "command":  [
+                                             "node",
+                                             "exact_gauge_matching.cjs"
+                                         ],
+                             "expected":  "exact_gauge_matching.log",
+                             "expected_sha256":  "4cc8b15f70ce6c69e15edcb0be82154d46a830792f370e4428007bca1d7a6930",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "ten exact-surface class/count records"
+                         },
+                         {
+                             "order":  8,
+                             "classification":  "input_dependent_derived_bound",
+                             "runtime":  "python",
+                             "script":  "top_mass_bound.py",
+                             "script_sha256":  "82fb5db6af98e044f3f03a91a1a4def6caee16325209bc0741af15532dad3d7c",
+                             "inputs":  [
+                                            "exact matching bounds embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "top_mass_bound.py"
+                                         ],
+                             "expected":  "top_mass_bound.log",
+                             "expected_sha256":  "1ad024a40d9bd6a76939f8202343b27f384f762ada14099e280fe8a2e5fd4384",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  1E-06,
+                             "expected_summary":  "top-mass bounds in GeV"
+                         },
+                         {
+                             "order":  9,
+                             "classification":  "numerical_global_infimum_diagnostic",
+                             "runtime":  "node",
+                             "script":  "asymptotic_matching_scale.cjs",
+                             "script_sha256":  "e2f3de64882a7b17b5c52e45ee7b1c842dd646ca7e8975905bb10f45ccf6b4da",
+                             "inputs":  [
+                                            "cycle_valid.cjs",
+                                            "exact matching surface embedded in program"
+                                        ],
+                             "input_files":  [
+                                                 "cycle_valid.cjs"
+                                             ],
+                             "seed":  777,
+                             "command":  [
+                                             "node",
+                                             "asymptotic_matching_scale.cjs"
+                                         ],
+                             "expected":  "asymptotic_matching_scale.log",
+                             "expected_sha256":  "219f6a69d87f90867ed752f272a086195debfea356a6a03ad067f4948807d087",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "large-chi floor and top-mass bound; global optimum remains non-certified"
+                         },
+                         {
+                             "order":  10,
+                             "classification":  "input_dependent_numerical_estimate",
+                             "runtime":  "python",
+                             "script":  "axion_history.py",
+                             "script_sha256":  "38c5253f4579c3a9314ada5f22e6d0136336cea51abb299a52dc3f1a683e033f",
+                             "inputs":  [
+                                            "retained matching classes embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "python",
+                                             "axion_history.py"
+                                         ],
+                             "expected":  "axion_history.log",
+                             "expected_sha256":  "9d5f93363953f1388bc657e0aa50d8f6b5551b9f00f633b209b5870202793d86",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-08,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "axion cosmology window table with exact labels"
+                         },
+                         {
+                             "order":  11,
+                             "classification":  "numerical_fit_diagnostic",
+                             "runtime":  "python",
+                             "script":  "lepton_circulant_fit.py",
+                             "script_sha256":  "d761fe6c2c84c1929221e1e3863e8b999327b8e2a92846d8cdfff8cd9ab51ead",
+                             "inputs":  [
+                                            "charged-lepton ratios embedded in program"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  5,
+                             "command":  [
+                                             "python",
+                                             "lepton_circulant_fit.py"
+                                         ],
+                             "expected":  "lepton_circulant_fit.log",
+                             "expected_sha256":  "15bf58fe161b49eace62b94fb13b1fcff50f543aaee82fb84b72d7d352f7515e",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  1E-08,
+                             "expected_summary":  "charged-lepton ratios and exact successful-fit count"
+                         },
+                         {
+                             "order":  12,
+                             "classification":  "numerical_quadrature_truncation_optimizer_diagnostic",
+                             "runtime":  "python",
+                             "script":  "quark_overlap_test.py",
+                             "script_sha256":  "62cdd8da5a8528a4f17873744e9e06a33dd4c46945e4fc66a716b963b7bbb932",
+                             "inputs":  [
+                                            "eight declared ratios/invariants; 20 percent log allowance"
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  11,
+                             "command":  [
+                                             "python",
+                                             "quark_overlap_test.py"
+                                         ],
+                             "expected":  "quark_overlap_test.log",
+                             "expected_sha256":  "b5bd7080dc601a4380e38531b343ee0b839ffae7f52eecf37cc37f05817aa46b",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-06,
+                             "absolute_tolerance":  1E-10,
+                             "expected_summary":  "quark-fit objective, observables and exact classification"
+                         },
+                         {
+                             "order":  13,
+                             "classification":  "finite_catalogue_with_numerical_inverse_comparison",
+                             "runtime":  "node",
+                             "script":  "gravity_gauge_selection.cjs",
+                             "script_sha256":  "30c10715c93c1301bbb9ea27ed2b6568800fb108292e42fc279c1e10225a81cf",
+                             "inputs":  [
+                                            "cycle_valid.cjs",
+                                            "exact matching surface and retained class list"
+                                        ],
+                             "input_files":  [
+                                                 "cycle_valid.cjs"
+                                             ],
+                             "seed":  777,
+                             "command":  [
+                                             "node",
+                                             "gravity_gauge_selection.cjs"
+                                         ],
+                             "expected":  "gravity_gauge_selection.log",
+                             "expected_sha256":  "18745b33c25ae11f866e9a3765b5c47766a87ed870478e141c0fccfba4e0ab9f",
+                             "actual":  "stdout",
+                             "relative_tolerance":  1E-10,
+                             "absolute_tolerance":  1E-12,
+                             "expected_summary":  "four exact class identifiers and bridge ranges"
+                         },
+                         {
+                             "order":  16,
+                             "classification":  "exact_rational_certificate",
+                             "runtime":  "node",
+                             "script":  "history_rg_sturm.cjs",
+                             "script_sha256":  "544d0f6404b29adbe4dfcb2182768a3d0777c5926e06c257efc117b72bf99733",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "history_rg_sturm.cjs"
+                                         ],
+                             "expected":  "history_rg_sturm.log",
+                             "expected_sha256":  "8a47e0b98fc2fccdab3633593e209ff8326c71ffc222d066f8dc99afdd7aeca2",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "History-RG Sturm certificate"
+                         },
+                         {
+                             "order":  17,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "reflection_positivity_gram.cjs",
+                             "script_sha256":  "eccde57be28e226ebf62074471ef572c6c719407ea124dc177ec6463e2aff93e",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  5,
+                             "command":  [
+                                             "node",
+                                             "reflection_positivity_gram.cjs"
+                                         ],
+                             "expected":  "reflection_positivity_gram.log",
+                             "expected_sha256":  "ae6fb70b1bb1597d58ac2784f1d8bf5a3a73ae8a19582581ac38bc0b102822c9",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "D4 reflection-positivity Gram check"
+                         },
+                         {
+                             "order":  18,
+                             "classification":  "error_bounded_finite_certificate",
+                             "runtime":  "node",
+                             "script":  "reflection_positivity_certificate.cjs",
+                             "script_sha256":  "de51e490627a9948969e7884eba79b8dfa09f9ec696d647062d04bb19b86fff2",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  5,
+                             "command":  [
+                                             "node",
+                                             "reflection_positivity_certificate.cjs"
+                                         ],
+                             "expected":  "reflection_positivity_certificate.log",
+                             "expected_sha256":  "d30e05fafefe3a48666276250a1ed4b67292c7dfae05917eb4d01fc496530430",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "D4 reflection-positivity certificate"
+                         },
+                         {
+                             "order":  19,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "maxwell_invariants.cjs",
+                             "script_sha256":  "18172f9b485392b3b37fd47a7a5c9c8acc23e8a75da1fa2d6cc7969407154d9f",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "maxwell_invariants.cjs"
+                                         ],
+                             "expected":  "maxwell_invariants.log",
+                             "expected_sha256":  "21416e9ee67cb396e5efbca49f2c245cc7fb2fd911d14c4a238f8757e7c1720a",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "W(D4) Maxwell invariants"
+                         },
+                         {
+                             "order":  20,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "history_commutant.cjs",
+                             "script_sha256":  "3da80a7c5e2ce069056202ea5993546beb6ca84c3f045cbdb2910a51fa701e92",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "history_commutant.cjs"
+                                         ],
+                             "expected":  "history_commutant.log",
+                             "expected_sha256":  "4049345ba96e8ae8741969d055851151442073614f24626fed83af832bc7743f",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "History commutant"
+                         },
+                         {
+                             "order":  21,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "source_move_semigroup.cjs",
+                             "script_sha256":  "999b3ff811e64f8d2273d15616734c075973d06dc426b3a7c82565e483614b39",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "source_move_semigroup.cjs"
+                                         ],
+                             "expected":  "source_move_semigroup.log",
+                             "expected_sha256":  "1b84b4442dc5294872fde152a41f584a18add6d8f0ac606ca274f233aea3bb73",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Source move semigroup"
+                         },
+                         {
+                             "order":  22,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "schur_effective_symbol.cjs",
+                             "script_sha256":  "1279ac4ecae7f8d211a5c0b3338622fd8a5c4b56ec97066504a4daf26f1c7664",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "schur_effective_symbol.cjs"
+                                         ],
+                             "expected":  "schur_effective_symbol.log",
+                             "expected_sha256":  "2b968387f1567df2c46e67805af3c1bf5d43c0ad6adeb42db2a9115a79c02a33",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "D4 Schur effective symbol"
+                         },
+                         {
+                             "order":  23,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "gauss_law_projections.cjs",
+                             "script_sha256":  "89a572bf2d58b3751a22a1fc0c8419353d8a0eb4ae021614725ab70e6227633c",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "gauss_law_projections.cjs"
+                                         ],
+                             "expected":  "gauss_law_projections.log",
+                             "expected_sha256":  "5caf171973de5bc3fd3e2224476d1710bb49157c3d4486934c1c009e8452b00c",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Gauss-law projections"
+                         },
+                         {
+                             "order":  24,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "lift_defect.cjs",
+                             "script_sha256":  "c81e81b04aa8e1e8c008610661c69dd8aeccc3d480f110e750859618ccd1828b",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  4,
+                             "command":  [
+                                             "node",
+                                             "lift_defect.cjs"
+                                         ],
+                             "expected":  "lift_defect.log",
+                             "expected_sha256":  "53aa1408109eca606b2d7ea79bbd52177d2934c070b1556ce613c8073931e258",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Physical-time lift defect"
+                         },
+                         {
+                             "order":  25,
+                             "classification":  "exact_finite_enumeration",
+                             "runtime":  "node",
+                             "script":  "self_dual_scan.cjs",
+                             "script_sha256":  "8400134fc974935befb5ab13bedcc42c00d5d116a4672c6068efb05ed8d16e6e",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "self_dual_scan.cjs"
+                                         ],
+                             "expected":  "self_dual_scan.log",
+                             "expected_sha256":  "dd1a4a2f1bb7bd14a7fb728c69098b727e7221c1b0155c826c8b2a0cec595613",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Self-dual scan"
+                         },
+                         {
+                             "order":  26,
+                             "classification":  "exact_finite_enumeration",
+                             "runtime":  "node",
+                             "script":  "self_dual_scan_n5.cjs",
+                             "script_sha256":  "2c1d8568cb7989d80b599c7b38784f4043295d0ec4b97f672fe61a594438d326",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "self_dual_scan_n5.cjs"
+                                         ],
+                             "expected":  "self_dual_scan_n5.log",
+                             "expected_sha256":  "dd1a4a2f1bb7bd14a7fb728c69098b727e7221c1b0155c826c8b2a0cec595613",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Self-dual scan (windings up to 5)"
+                         },
+                         {
+                             "order":  27,
+                             "classification":  "exact_finite_enumeration",
+                             "runtime":  "node",
+                             "script":  "self_dual_scan_n6.cjs",
+                             "script_sha256":  "d6e5c673bab64b860bd0b7ad4e009e978cdd8fe5b68f394b5f0da4284401b980",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "self_dual_scan_n6.cjs"
+                                         ],
+                             "expected":  "self_dual_scan_n6.log",
+                             "expected_sha256":  "dd1a4a2f1bb7bd14a7fb728c69098b727e7221c1b0155c826c8b2a0cec595613",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Self-dual scan (windings up to 6)"
+                         },
+                         {
+                             "order":  28,
+                             "classification":  "finite_counterexample_search",
+                             "runtime":  "python",
+                             "script":  "crossing_kernel_check.py",
+                             "script_sha256":  "c8f649579a73d8a70ad2c759abdd91b4e047cc66740dd717040b84ac958541b4",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  143,
+                             "command":  [
+                                             "python",
+                                             "crossing_kernel_check.py"
+                                         ],
+                             "expected":  "crossing_kernel_check.log",
+                             "expected_sha256":  "f955e126733fa7273ca28d35a47329ef26862317097e4b66485a54539ae7c540",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Crossing-kernel check"
+                         },
+                         {
+                             "order":  29,
+                             "classification":  "finite_counterexample_search",
+                             "runtime":  "python",
+                             "script":  "embeddability_kernel_check.py",
+                             "script_sha256":  "2ef63686e408a0fa69ac9ecb753ec55e5833383d8b440b7957cc250ff6f2102c",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  155,
+                             "command":  [
+                                             "python",
+                                             "embeddability_kernel_check.py"
+                                         ],
+                             "expected":  "embeddability_kernel_check.log",
+                             "expected_sha256":  "9b12092c7f7c5f8a77019937b6967898ae04287ee06c5c756ddc6ee515a50aa2",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Embeddability-kernel check"
+                         },
+                         {
+                             "order":  30,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "random_complex_betti.cjs",
+                             "script_sha256":  "0943eff71d1aaa30134dadbd89a476ea19d117c319f4ae1c002151ec0d9d681b",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "random_complex_betti.cjs"
+                                         ],
+                             "expected":  "random_complex_betti.log",
+                             "expected_sha256":  "71d671fd5fed85e0340e5699b0bba9bd198209e22c23c64cfcc9ba83c720a498",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Random-complex mod-2 Betti numbers"
+                         },
+                         {
+                             "order":  31,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "periodic_d4_betti.cjs",
+                             "script_sha256":  "55bf820eb2862bfb85611befb91d72d680dc317e8a60bcbadd00317fbc6e3ed6",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "periodic_d4_betti.cjs"
+                                         ],
+                             "expected":  "periodic_d4_betti.log",
+                             "expected_sha256":  "c5d3d10f781ecc1e6d27977e21f0e4627e66606ab047193565003fee89f97278",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Periodic D4 Betti numbers"
+                         },
+                         {
+                             "order":  32,
+                             "classification":  "exact_finite_computation",
+                             "runtime":  "node",
+                             "script":  "matter_bimodule_anomaly.cjs",
+                             "script_sha256":  "9eec27142f40a968b5c9764eda4255977b355121e057b6f591022cddd4a35116",
+                             "inputs":  [
+
+                                        ],
+                             "input_files":  [
+
+                                             ],
+                             "seed":  null,
+                             "command":  [
+                                             "node",
+                                             "matter_bimodule_anomaly.cjs"
+                                         ],
+                             "expected":  "matter_bimodule_anomaly.log",
+                             "expected_sha256":  "63413b28be11adcce2faa19ecd192a2f2636dfdcf67fdc4dfe3e7a1e83506eb0",
+                             "actual":  "stdout",
+                             "relative_tolerance":  0.0,
+                             "absolute_tolerance":  0.0,
+                             "expected_summary":  "Matter bimodule anomalies"
+                         }
+                     ]
+}

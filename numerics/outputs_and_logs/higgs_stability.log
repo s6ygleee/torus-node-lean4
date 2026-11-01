@@ -1,0 +1,12 @@
+Higgs stability three-loop SM running (Buttazzo et al. 2013 App. B), NNLO matching
+  check (2013 inputs): Lambda_I = 6.20e+09 GeV, lambda(M_P) = -0.0144, min lambda = -0.0147   [paper: lambda(M_P) = -0.0143]
+  threshold band at M_*: d_lambda = +-4.8e-04
+  m_t = 172.28: Lambda_I = 1.36e+11; V1: lam=+0.0035 cos2(2b)=+0.059 OK; V2: lam=+0.0008 cos2(2b)=+0.013 OK; V3: lam=-0.0019 cos2(2b)=-0.031 FAIL
+  m_t = 172.57: Lambda_I = 4.50e+10; V1: lam=+0.0019 cos2(2b)=+0.031 OK; V2: lam=-0.0010 cos2(2b)=-0.016 FAIL; V3: lam=-0.0037 cos2(2b)=-0.061 FAIL
+  m_t = 172.86: Lambda_I = 1.74e+10; V1: lam=+0.0002 cos2(2b)=+0.003 OK; V2: lam=-0.0027 cos2(2b)=-0.045 FAIL; V3: lam=-0.0055 cos2(2b)=-0.091 FAIL
+  V1 alpha_s=0.1171: m_t <= 172.57 GeV (threshold band 172.49 .. 172.57); vs 172.57 +- 0.29: -0.0 sigma
+  V1 alpha_s=0.118: m_t <= 172.89 GeV (threshold band 172.81 .. 172.89); vs 172.57 +- 0.29: +1.1 sigma
+  V1 alpha_s=0.1189: m_t <= 173.21 GeV (threshold band 173.13 .. 173.21); vs 172.57 +- 0.29: +2.2 sigma
+  V2 alpha_s=0.1171: m_t <= 172.08 GeV (threshold band 172.00 .. 172.08); vs 172.57 +- 0.29: -1.7 sigma
+  V2 alpha_s=0.118: m_t <= 172.41 GeV (threshold band 172.33 .. 172.41); vs 172.57 +- 0.29: -0.6 sigma
+  V2 alpha_s=0.1189: m_t <= 172.74 GeV (threshold band 172.66 .. 172.74); vs 172.57 +- 0.29: +0.6 sigma

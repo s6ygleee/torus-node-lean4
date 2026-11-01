@@ -1,0 +1,3 @@
+|W(D4)| = 192 (expected 192), rotations 96
+invariant quadratic forms on Lambda^2: W(D4) -> 1 (Maxwell only),  W(D4)∩SO(4) -> 2 (F^2 and F∧F)
+clock-axis stabiliser (|G|=24) -> 2 forms;  stabiliser up to time reversal (|G|=48) -> 2 forms (anisotropic Maxwell: F_0i^2 and F_ij^2 [+ possible parity-odd])

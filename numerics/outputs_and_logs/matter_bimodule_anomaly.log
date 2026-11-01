@@ -1,0 +1,55 @@
+{
+  "integerCharges": {
+    "Q": 1,
+    "uC": -4,
+    "dC": 2,
+    "L": -3,
+    "eC": 6,
+    "H": 3
+  },
+  "threeGenerations": {
+    "SU3sqU1": 0,
+    "SU2sqU1": 0,
+    "grav": 0,
+    "U1cube": 0
+  },
+  "yukawaResiduals": {
+    "QHu": 0,
+    "QHdagD": 0,
+    "LHdagE": 0
+  },
+  "nuCCharge": 0,
+  "withNuCAnomalies": {
+    "SU3sqU1": 0,
+    "SU2sqU1": 0,
+    "grav": 0,
+    "U1cube": 0
+  },
+  "withNuCFreeDirectionTrial": {
+    "q": 2,
+    "h": 5,
+    "nuC": 1,
+    "anomalies": {
+      "SU3sqU1": 0,
+      "SU2sqU1": 0,
+      "grav": 0,
+      "U1cube": 0
+    }
+  },
+  "bimoduleDimensions": {
+    "Q_tensor_C3xC2": 6,
+    "U": 3,
+    "D": 3,
+    "L": 2,
+    "E": 1,
+    "H": 2,
+    "oneGeneration": 15,
+    "threeGenerations": 45
+  },
+  "intertwinerDimensions": {
+    "QHu": 1,
+    "QHdagD": 1,
+    "LHdagE": 1
+  },
+  "pass": true
+}

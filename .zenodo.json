@@ -1,0 +1,20 @@
+{
+  "title": "Torus-Node Model: Lean 4 formalisation and reproducibility data",
+  "upload_type": "software",
+  "description": "Lean 4 formalisation, the statement-to-declaration table, certificate records with their programs and stored outputs, retained calculation scripts, fixed outputs and interval fixtures for the torus-node model. The formalisation covers the finite algebraic statements represented in the source tree; continuum and source-to-continuum interfaces remain conditional on the premises stated in the verification supplement. Lean code and scripts are released under the MIT licence, while the accompanying verification and numerical material is released under CC BY 4.0.",
+  "creators": [
+    {
+      "name": "Lee, Youngik (Tom)"
+    }
+  ],
+  "version": "1.0.0",
+  "access_right": "open",
+  "license": "mit",
+  "keywords": [
+    "Lean 4",
+    "formal verification",
+    "mathematical physics",
+    "torus-node model",
+    "reproducibility"
+  ]
+}

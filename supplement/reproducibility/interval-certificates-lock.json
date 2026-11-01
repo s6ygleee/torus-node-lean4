@@ -1,0 +1,132 @@
+{
+    "schema_version":  1,
+    "python":  "3.12.10",
+    "node":  "v24.18.0",
+    "environment":  {
+                        "PYTHONHASHSEED":  "0",
+                        "OMP_NUM_THREADS":  "1",
+                        "OPENBLAS_NUM_THREADS":  "1",
+                        "MKL_NUM_THREADS":  "1"
+                    },
+    "jobs":  [
+                 {
+                     "order":  1,
+                     "id":  "arb-constants",
+                     "classification":  "interval_certificate_input",
+                     "workspace":  "massless_chain",
+                     "runtime":  "python",
+                     "script":  "numerics/scripts_and_inputs/arb_constants.py",
+                     "script_sha256":  "d08ee0e3afd4fc38e79b1a4e6642d5e053b64dd9b0b7066a9f9341dc84543558",
+                     "command":  [
+                                     "python",
+                                     "arb_constants.py"
+                                 ],
+                     "inputs":  [
+                                    {
+                                        "fixture":  "villain_polymer_data.json",
+                                        "target":  "logs/villain_polymer_data.json",
+                                        "sha256":  "1d563d3c9e32a4fd75a06df677ed3876b5349162a6b0b339c57fce90ca87999d"
+                                    }
+                                ],
+                     "actual":  "logs/arb_constants.json",
+                     "expected_fixture":  "arb_constants.json",
+                     "expected_sha256":  "ae21b9c052d2b27d83d78cd718e2139029f154c3aa9a9ef9503c49d118961b38",
+                     "validation":  "exact_sha256",
+                     "seed":  null
+                 },
+                 {
+                     "order":  2,
+                     "id":  "villain-threshold-certificate",
+                     "classification":  "interval_certificate",
+                     "workspace":  "massless_chain",
+                     "runtime":  "node",
+                     "script":  "numerics/scripts_and_inputs/villain_threshold_certificate.cjs",
+                     "script_sha256":  "a3245b80cbc28f2491f6009c06e0b46789a1e89bca126ff924abe2c37fded081",
+                     "command":  [
+                                     "node",
+                                     "villain_threshold_certificate.cjs"
+                                 ],
+                     "inputs":  [
+                                    {
+                                        "fixture":  "villain_polymer_data.json",
+                                        "target":  "logs/villain_polymer_data.json",
+                                        "sha256":  "1d563d3c9e32a4fd75a06df677ed3876b5349162a6b0b339c57fce90ca87999d"
+                                    },
+                                    {
+                                        "fixture":  "tesseract_link_adjacency.json",
+                                        "target":  "logs/tesseract_link_adjacency.json",
+                                        "sha256":  "9a9ccb7914c275025cc4c3e4f851640ba5e3ec10174f8fd2e07dfd24f96abf0c"
+                                    }
+                                ],
+                     "generated_input":  "logs/arb_constants.json",
+                     "generated_input_sha256":  "ae21b9c052d2b27d83d78cd718e2139029f154c3aa9a9ef9503c49d118961b38",
+                     "actual":  "stdout",
+                     "expected_fixture":  "villain_threshold_certificate.log",
+                     "expected_sha256":  "8b24ac823bc8df23bdb7f8d0d12077e22da9cdd0792fe2ce07195de10f6d1bbc",
+                     "validation":  "villain_certificate_semantic",
+                     "seed":  null
+                 },
+                 {
+                     "order":  3,
+                     "id":  "ew-boundary-tail",
+                     "classification":  "interval_certificate_finite_gaussian_scope",
+                     "workspace":  "ew_boundary_tail",
+                     "runtime":  "python",
+                     "script":  "numerics/scripts_and_inputs/ew_boundary_tail_certificate.py",
+                     "script_sha256":  "579c9b763d65fe41d452b2dd0125c11d6f13208cd56a69f841d7de4f33eccf3c",
+                     "command":  [
+                                     "python",
+                                     "ew_boundary_tail_certificate.py"
+                                 ],
+                     "inputs":  [
+
+                                ],
+                     "actual":  "result.json",
+                     "expected_fixture":  "ew_boundary_tail_result.json",
+                     "expected_sha256":  "e57ad5f3c6aa989eb76d791298a038f23715485384b2d144ecfc9b320af04aa3",
+                     "validation":  "exact_sha256",
+                     "seed":  null
+                 },
+                 {
+                     "order":  4,
+                     "id":  "ew-su2-mixed-invariant",
+                     "classification":  "interval_certificate_finite_gaussian_scope",
+                     "workspace":  "ew_su2_mixed_invariant",
+                     "runtime":  "python",
+                     "script":  "numerics/scripts_and_inputs/ew_su2_mixed_invariant_certificate.py",
+                     "script_sha256":  "ebc8f357d234674fabb8183ccdb8f6e09ee3a63e653f31526a2c6dd81479a796",
+                     "command":  [
+                                     "python",
+                                     "ew_su2_mixed_invariant_certificate.py"
+                                 ],
+                     "inputs":  [
+
+                                ],
+                     "actual":  "arb_result.json",
+                     "expected_fixture":  "ew_su2_mixed_invariant_result.json",
+                     "expected_sha256":  "5a4480cee8431aa300fc024b661760038da9e4e14f424655c8c0953b1045f423",
+                     "validation":  "exact_sha256",
+                     "seed":  null
+                 },
+                 {
+                     "order":  5,
+                     "id":  "ew-u2-wedge",
+                     "classification":  "finite_interval_certificate_with_diagnostic_coarse_scan",
+                     "workspace":  "ew_u2_wedge",
+                     "runtime":  "python",
+                     "script":  "numerics/scripts_and_inputs/ew_u2_wedge_certificate.py",
+                     "script_sha256":  "d31d97031ec2ee5e3111d5305aef136acdb1d422228f102021168f13f012b03e",
+                     "command":  [
+                                     "python",
+                                     "ew_u2_wedge_certificate.py"
+                                 ],
+                     "inputs":  [
+
+                                ],
+                     "actual":  "stdout",
+                     "validation":  "u2_wedge_dimensionless_interval",
+                     "threshold":  1.408437706037625,
+                     "seed":  null
+                 }
+             ]
+}

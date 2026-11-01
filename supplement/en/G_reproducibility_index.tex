@@ -1,0 +1,81 @@
+% =====================================================================
+% References into the main paper resolve when the supplement is part of the paper;
+% in the standalone supplement they read "in the main text".
+\providecommand\gref[1]{\ifcsname r@#1\endcsname\ref{#1}\else in the main text\fi}
+\section{Computational data and reproducibility index}\label{app:codes}
+This appendix lists every result of the paper that depends on a computation,
+together with the computation that supports it and its evidence class. The
+names in the middle column are the names of the distributed files: scripts
+and stored outputs are in \path{numerics/scripts_and_inputs/} and
+\path{numerics/outputs_and_logs/}, and certificate records
+are in the \path{certificates/} directory of the reproducibility package.
+The locked runners re-run every script and compare the result with the stored
+output (Appendix~\gref{app:provenance}).
+
+The evidence classes are: \emph{exact}, a computation in exact integer or
+rational arithmetic, a finite exact enumeration, or a closed-form identity
+proved in the text, in which case a distributed floating-point program
+replays the identity and is not itself the proof; \emph{interval-certified},
+an outward-rounded interval computation (Arb); \emph{error-bounded}, a
+floating-point computation with an explicit rigorous error bound;
+\emph{finite counterexample}, an explicit finite witness that a stated kernel
+is not positive; and \emph{numerical}, a floating-point computation without a
+rigorous error bound. A numerical entry is evidence, not a proof.
+\TableStart
+\tablecaption{Computations supporting the stated results.}\label{tab:calculation-index}
+\tablehead{\toprule\TableHeader Result & Computation & Evidence class\\\midrule}
+\begin{supertabular}{P{0.36\textwidth}@{\hspace{0.35em}} P{0.38\textwidth}@{\hspace{0.35em}} P{0.18\textwidth}}
+Reflection positivity of the $D_4$ lattice model (Theorem~\gref{thm:RP}) & \path{reflection_positivity_gram}, \path{reflection_positivity_certificate} & exact; error-bounded\\
+\TableRowRule
+Uniqueness of the Maxwell form (Theorem~\gref{thm:maxwell}) & \path{maxwell_invariants}, \path{schur_effective_symbol} & exact\\
+\TableRowRule
+Gauss-law lemma on $D_4$ (Lemma~\gref{lem:GL}) & \path{gauss_law_projections} & exact\\
+\TableRowRule
+Gauge group from the history commutant (Theorem~\gref{thm:gauge}) & \path{history_commutant}, \path{source_move_semigroup} & exact\\
+\TableRowRule
+Contraction of the finite spatial-move renormalisation (Proposition~\gref{thm:historyRG}) & \path{history_rg_sturm} & exact\\
+\TableRowRule
+Physical-time lift (Theorem~\gref{thm:S2lift}) & \path{lift_defect} & exact\\
+\TableRowRule
+Vacuum catalogue, chirality and anomalies (Proposition~\gref{prop:vacua}, Theorem~\gref{thm:generations}) & \path{vacuum_catalogue}, \path{matter_bimodule_anomaly} & exact\\
+\TableRowRule
+No extra massless $U(1)$ (Proposition~\gref{prop:noExtraU1})\phantomsection\label{calc:extra-u1} & \path{vacuum_catalogue} & exact\\
+\TableRowRule
+Failure of the reverse derivation at self-dual points (Proposition~\gref{prop:reverse}) & \path{self_dual_scan}, \path{self_dual_scan_n5}, \path{self_dual_scan_n6} & exact\\
+\TableRowRule
+Periodic $D_4$ Hodge gate (\S\gref{sec:periodic-hodge}) & \path{periodic_d4_betti}, \path{random_complex_betti}; \path{certificates/periodic_d4_coercivity}, \path{certificates/periodic_rellich_compactness} & exact\\
+\TableRowRule
+Villain photon (Theorem~\gref{thm:villain}) & \path{arb_constants}, \path{villain_threshold_certificate}; \path{certificates/villain_threshold}, \path{certificates/villain_dehn_bound}, \path{certificates/villain_constants}, \path{certificates/villain_arb_certificate} & interval-certified\\
+\TableRowRule
+Direct dual-weight comparison (\S\gref{sec:wilsoncompare}) & \path{certificates/matched_villain_comparison}, \path{certificates/villain_signed_crosscheck}, \path{certificates/wilson_photon_hessian} & interval-certified\\
+\TableRowRule
+Matched Villain signed dynamic-programming cross-check\phantomsection\label{calc:matched-villain-crosscheck} & \path{supplement/reproducibility/diagnostics/matched_villain_crosscheck.md}; no executable script or standalone log is included & numerical diagnostic\\
+\TableRowRule
+Villain $U(1)$ non-confinement (Theorem~\gref{thm:nonconf}) & \path{villain_threshold_certificate}; \path{certificates/villain_threshold} (Koteck\'y--Preiss sum shared with the Villain photon) & interval-certified\\
+\TableRowRule
+Electroweak covariance input and finite step map (\S\gref{sec:stepmap})\phantomsection\label{calc:ew-activity} & \path{ew_boundary_tail_certificate}, \path{ew_su2_mixed_invariant_certificate}, \path{ew_u2_wedge_certificate}; \path{certificates/ew_volume_uniform_covariance}, \path{certificates/ew_volume_uniform_covariance_gate}, \path{certificates/ew_mixed_bound}, \path{certificates/ew_bubble_majorant} & interval-certified\\
+\TableRowRule
+Local determinant fields of support at most five (\S\gref{sec:ewtensor}) & \path{certificates/ew_support_four_worst_case}, \path{certificates/ew_support_four_streaming}, \path{certificates/ew_support_five_determinant}; obstruction at support six: \path{certificates/ew_support_six_obstruction} & interval-certified\\
+\TableRowRule
+Reflection positivity of the finite sources (\S\gref{sec:unitarity}) & \path{certificates/volume_uniform_reflection_positivity}, \path{certificates/bath_reflection_positivity} & exact\\
+\TableRowRule
+Gravitational crossing kernels (Proposition~\gref{prop:GRP}) & \path{crossing_kernel_check}, \path{embeddability_kernel_check} & finite counterexample\\
+\TableRowRule
+Finite source, push-forward and non-identifiability (Appendix~\gref{app:canonical-finite-model})\phantomsection\label{calc:source-nonid} & \path{certificates/finite_source_pushforward}, \path{certificates/raw_source_nonidentifiability}, \path{certificates/minimal_source_package}, \path{certificates/explicit_finite_action} & exact\\
+\TableRowRule
+Finite Ward remainder (Proposition~\gref{prop:finite-ward-tail})\phantomsection\label{calc:ward-tail} & \path{certificates/finite_ward_remainder}, \path{certificates/continuum_ward_identity} & interval-certified\\
+\TableRowRule
+Clock moments and tightness (\S\gref{sec:canonical-finite-model}) & \path{certificates/finite_partition_moments}, \path{certificates/clock_increment_moment}, \path{certificates/clock_uv_obstruction}, \path{certificates/clock_distributional_tightness} & exact\\
+\bottomrule
+\end{supertabular}
+The matched Villain cross-check is deliberately classified as a numerical
+diagnostic.  Its descriptive scope and the absence of an executable script,
+standalone input, and execution log are recorded in
+\path{supplement/reproducibility/diagnostics/matched_villain_crosscheck.md}.
+It is not a certificate for the integer Wilson action.
+\paragraph{Numerical illustrations.}
+Some statements of the paper are illustrated by numerical calculations that the
+argument does not use: the averaged reflection-positivity tests, the bounce and
+Page-curve models, the heat-flow negative-mode sampling, the Hartman--Watson
+tail values and the weak-triangle loss estimates. They are described where they
+appear and are not part of the reproducibility package.

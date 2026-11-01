@@ -1,0 +1,5 @@
+Arb constants written; RM_check = True ; A_up = 4.234226343166948e-05 ; B_up = 3.9708296672216834 ; RM_up = 0.05510020704271407
+(1) non-root DP: continuation(empty) <= 0.007464265974 at alpha_test=0.1525  -> ADMISSIBLE (26s)
+(2) root constant C_root <= 0.017640
+(5a) KP sum <= 4.1886e-10  vs a = 0.005  -> OK
+(5b) eps_F <= 3.1392e-6;  c' <= 0.003765  -> CERTIFIED MASSLESS (c' < 1)  [beta=3.03778242198, s=0.1075, alpha_test=0.1525, a=0.005, b=0.1, N0=12] (56s)

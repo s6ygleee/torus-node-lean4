@@ -1,0 +1,46 @@
+% Minimal standalone preamble for the verification supplement.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,supertabular,array}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[htt]{hyphenat}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\TableStart}{\needspace{8\baselineskip}}
+\newcommand{\TableHeader}{}
+\newcommand{\TableRowRule}{\specialrule{0.25pt}{0.18ex}{0.18ex}}
+\setlength{\tabcolsep}{4pt}
+\setlength{\extrarowheight}{0.6pt}
+\renewcommand{\arraystretch}{1.08}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\sloppy
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{numerical}[theorem]{Numerical result}
+\newtheorem{nogo}[theorem]{No-go result}
+% Zenodo DOI of the archived release; replaced once the DOI is minted.
+\providecommand{\ZenodoDOI}{10.5281/zenodo.XXXXXXX}
+% Long and split tables: centred, and separated from the surrounding text.
+\usepackage{etoolbox}
+\setlength{\LTpre}{\bigskipamount}
+\setlength{\LTpost}{\bigskipamount}
+\setlength{\LTleft}{0pt plus 0.5\textwidth}
+\setlength{\LTright}{0pt plus 0.5\textwidth}
+\BeforeBeginEnvironment{supertabular}{\par\addvspace{\bigskipamount}}
+\AfterEndEnvironment{supertabular}{\par\addvspace{\bigskipamount}}

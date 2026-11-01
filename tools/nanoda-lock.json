@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "lean4export": {
+    "repository": "https://github.com/leanprover/lean4export.git",
+    "commit": "df81913eee5519d5a88ae5b0fd701b5298cc29ab",
+    "binary_sha256": "df3244daf441ea35384bc5e571b7f0898fd30fe5f09649046baeb61033779f84"
+  },
+  "nanoda": {
+    "repository": "https://github.com/coproduct-opensource/nanoda.git",
+    "commit": "6ba649836ff52755d77bbe5bc732a129b7173486",
+    "binary_sha256": "ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a"
+  }
+}
