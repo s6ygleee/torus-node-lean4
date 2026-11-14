@@ -9,7 +9,7 @@ input. It returned
 \qquad RM=0.055,
 \qquad c'=1.094\times10^{-8}<1,
 \]
-with the finite consumer classified `MASSLESS`.
+with the finite sector classified `MASSLESS`.
 
 This independently strengthens the matched Villain finite P1 margin. It does
 not close the physical Wilson problem: the test still uses the Villain/dual

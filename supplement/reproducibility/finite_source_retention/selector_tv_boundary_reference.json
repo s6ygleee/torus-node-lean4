@@ -1,0 +1,8 @@
+{
+  "record": "selector_tv_boundary",
+  "operator_bound": "||B(nu)-B(mu)|| <= 2 TV(nu,mu)",
+  "common_strict_TV_budget": 0.16666666666666666,
+  "individual_budgets": {"history": 0.16666666666666666, "gravity": 0.2214532871972315, "electroweak": 2.49935, "photon": 200.81003798309794},
+  "compatible_completions": {"canonical_selector": {"TV": 0.0, "transfer_floor": 0.3333333333333333}, "point_mass": {"TV": 0.5, "transfer_floor": 1.0}, "uniform_history": {"TV": 0.7083333333333333, "transfer_floor": 0.0}},
+  "scope": "finite sector stability and raw-source measure non-identifiability"
+}

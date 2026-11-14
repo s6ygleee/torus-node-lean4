@@ -1,0 +1,7 @@
+{
+  "record": "finite_compactness_reference",
+  "status": "PASS_FINITE_SOURCE_SUBSEQUENTIAL_INFINITE_VOLUME_COMPACTNESS",
+  "compactness_statement": "finite per-site state space implies compact product configuration space and subsequential weak limits",
+  "scope": "lattice thermodynamic limit; continuum a-to-0 scaling remains open"
+}
+

@@ -1,0 +1,11 @@
+Command: python verify_wilson_villain_cluster_boundary.py
+
+{
+  "classification": "finite local cluster comparison",
+  "nonlocal_signed_source_estimate": "not established",
+  "required_effective_suppression": 3.668,
+  "villain_connected_ratio": 0.009272071313313562,
+  "villain_simple_ratio": 0.09935196075883469,
+  "wilson_local_entropy_base": 12.72476635416509,
+  "wilson_local_suppression": 0.1645
+}

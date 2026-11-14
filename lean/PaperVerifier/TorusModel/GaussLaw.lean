@@ -1,8 +1,7 @@
 /-
-  TorusModel.GL — Lemma 8.4 of the paper (`lem:GL`, Gauss law: a lower bound suffices for masslessness)
+  TorusModel.GaussLaw — the Gauss-law lemma of the paper: a lower bound suffices for masslessness.
   The analytic steps (summable ⇒ S continuous ⇒ exchange of limits; proof steps 1-3) are
   kept as hypotheses; the algebraic core (contradiction from inclusions of projection ranges, step 4) is formalized.
-  Status: builds with Lean/mathlib v4.32.1, no placeholders.
 -/
 import Mathlib.Algebra.Module.Submodule.Basic
 import Mathlib.Algebra.Module.LinearMap.Defs
@@ -14,7 +13,7 @@ import Mathlib.Analysis.Matrix.Order
 import Mathlib.Data.Matrix.Mul
 import Mathlib.Tactic.Linarith
 
-namespace TorusModel.GL
+namespace TorusModel.GaussLaw
 
 open scoped Matrix MatrixOrder
 
@@ -23,7 +22,7 @@ variable {K V ι : Type*} [Field K] [AddCommGroup V] [Module K V]
 /-- Algebraic core. `R` = range S(0), `P e` = range P(e).
     If (upper side: exact Gauss law + continuity) R ≤ P e' for every e', and
     (lower side) P e ≤ R for every e, then P does not depend on the direction. -/
-theorem GL_core (R : Submodule K V) (P : ι → Submodule K V)
+theorem range_inclusion_contradiction (R : Submodule K V) (P : ι → Submodule K V)
     (hupper : ∀ e', R ≤ P e') (hlower : ∀ e, P e ≤ R) :
     ∀ e e', P e = P e' := by
   intro e e'
@@ -31,29 +30,29 @@ theorem GL_core (R : Submodule K V) (P : ι → Submodule K V)
 
 /-- Consequence: if P depends on the direction (P e ≠ P e' for some e, e'),
     the "summable (⇒ both inclusions above)" assumption is contradictory, i.e. the flux two-point function is not summable. -/
-theorem GL_massless (R : Submodule K V) (P : ι → Submodule K V)
+theorem massless_of_lower_bound (R : Submodule K V) (P : ι → Submodule K V)
     (hdep : ∃ e e', P e ≠ P e')
     (hlower : ∀ e, P e ≤ R) :
     ¬ (∀ e', R ≤ P e') := by
   intro hupper
   obtain ⟨e, e', hne⟩ := hdep
-  exact hne (GL_core R P hupper hlower e e')
+  exact hne (range_inclusion_contradiction R P hupper hlower e e')
 
 /- The Villain application has the same logical kernel once its Gaussian
    lower bound and direction-dependent limiting projections are supplied.
-   Naming this wrapper makes the conditional boundary explicit: no Villain
+   This statement makes the hypotheses explicit: no Villain
    measure or polymer estimate is inferred here. -/
 theorem villain_massless (R : Submodule K V) (P : ι → Submodule K V)
     (hdep : ∃ e e', P e ≠ P e')
     (hlower : ∀ e, P e ≤ R) :
     ¬ (∀ e', R ≤ P e') := by
-  exact GL_massless R P hdep hlower
+  exact massless_of_lower_bound R P hdep hlower
 
 /-!
-  The four logical steps of the manuscript's Gauss-law lemma can be packaged
+  The four logical steps of the manuscript's Gauss-law lemma can be stated
   without hiding an analytic premise.  `upper_of_summable` is exactly the
   Gauss-law plus Fourier-continuity passage; `lower` is the limiting lower
-  bound.  The structure is explicit because this package does not yet define
+  bound.  The structure is explicit because this formalisation does not define
   the lattice flux field and its Fourier transform.
 -/
 variable {K₀ V₀ ι₀ : Type*} [Field K₀] [AddCommGroup V₀] [Module K₀ V₀]
@@ -68,7 +67,7 @@ theorem not_summable (R : Submodule K₀ V₀) (P : ι₀ → Submodule K₀ V�
     (h : AnalyticInputs R P) : ¬ h.summable := by
   intro hs
   rcases h.direction_dependent with ⟨e, e', hne⟩
-  exact hne (GL_core R P (h.upper_of_summable hs) h.lower e e')
+  exact hne (range_inclusion_contradiction R P (h.upper_of_summable hs) h.lower e e')
 
 theorem gauss_range_subset_kernel
     {V W : Type*} [AddCommGroup V] [Module ℝ V]
@@ -87,7 +86,7 @@ theorem gauss_range_subset_kernel
 theorem psd_lower_bound_kernel
     {n : Type*} [Fintype n] [DecidableEq n]
     (S P : Matrix n n ℝ) (c : ℝ)
-    (hS : S.PosSemidef) (hP : P.PosSemidef)
+    (_hS : S.PosSemidef) (hP : P.PosSemidef)
     (hc : 0 < c) (hbound : c • P ≤ S) :
     ∀ x : n → ℝ, S *ᵥ x = 0 → P *ᵥ x = 0 := by
   intro x hx
@@ -102,4 +101,4 @@ theorem psd_lower_bound_kernel
     nlinarith
   exact (hP.dotProduct_mulVec_zero_iff x).mp (by simpa using hzero)
 
-end TorusModel.GL
+end TorusModel.GaussLaw

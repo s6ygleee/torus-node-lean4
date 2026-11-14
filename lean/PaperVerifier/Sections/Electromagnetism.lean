@@ -14,7 +14,9 @@ import PaperVerifier.TorusModel.IsotropyConcrete
 import PaperVerifier.TorusModel.IsotropyPoisson
 import PaperVerifier.TorusModel.PerSampleLowerBound
 import PaperVerifier.TorusModel.PeriodicCoexactCompactness
+import PaperVerifier.TorusModel.TransverseProjector
+import PaperVerifier.TorusModel.WardTransversePole
 
-/-! Section 8 and Appendix B: electromagnetism and homogenisation.
+/-! Electromagnetism and the homogenisation appendix.
 
 Aggregator module: imports every Lean file formalising this part of the paper. -/

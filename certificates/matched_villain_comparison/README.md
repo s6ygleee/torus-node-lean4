@@ -27,7 +27,7 @@ The outward-rounded outputs are
 c'\le0.003765<1.
 \]
 
-Thus the matched Villain consumer is decisively in the certified massless
+Thus the matched Villain sector is decisively in the certified massless
 phase. This removes the lower-coupling test-point ambiguity from P1.
 
 ## Remaining Wilson boundary
@@ -37,5 +37,5 @@ Wilson dual activity has (15e^{-\kappa_{\rm loc}}>1), and the tested
 complex-shift comparison does not reach the required nonlocal coefficient.
 The sole remaining P1/WP task is a rigorous nonlocal Wilson
 characteristic-function or Feshbach comparison to the matched Villain
-consumer.
+sector.
 

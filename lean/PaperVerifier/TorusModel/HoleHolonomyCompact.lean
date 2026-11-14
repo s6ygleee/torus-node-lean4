@@ -1,12 +1,12 @@
 /-
-  The measure-theoretic part of HC is separated from the curvature algebra.
+  The measure-theoretic part of HoleHolonomy is separated from the curvature algebra.
   Mathlib's Haar uniqueness theorem gives the exact conditional step once a
   fibre is known to be a locally compact additive group and the conditional
   probability is invariant.
 -/
 import Mathlib.MeasureTheory.Measure.Haar.Unique
 
-namespace TorusModel.HC
+namespace TorusModel.HoleHolonomy
 
 open MeasureTheory Measure
 
@@ -32,4 +32,4 @@ theorem conditional_probability_eq_addHaar
     [IsAddHaarMeasure μ] [IsAddHaarMeasure ν] : μ = ν := by
   exact isAddHaarMeasure_eq_of_isProbabilityMeasure μ ν
 
-end TorusModel.HC
+end TorusModel.HoleHolonomy

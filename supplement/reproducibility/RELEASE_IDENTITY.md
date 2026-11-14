@@ -1,4 +1,4 @@
-# Release identity contract
+# Release identity
 
 The public archive is identified by the Git commit and tag created when this
 tree is sealed, the SHA-256 manifest stored in `SHA256SUMS.txt`, and the DOI

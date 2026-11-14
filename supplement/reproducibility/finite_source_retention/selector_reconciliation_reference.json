@@ -1,0 +1,14 @@
+{
+  "record": "finite_selector_reconciliation",
+  "class_unions_enumerated": 15,
+  "minimal_support_size": 7,
+  "surviving_supports": ["identity plus six transpositions", "identity plus six four-cycles"],
+  "reflection_positive_interval": [0.5, 1.0],
+  "entropy_measure": {"identity": 0.5, "each_nonidentity_mark": 0.08333333333333333},
+  "clock": {"support_size": 7, "alpha": 0.4804762950414192, "target_second_moment": 0.8419783707167505, "moment_residual": 2.3e-16},
+  "root_reynolds": {"root_count": 24, "weyl_group_size": 192, "uniform_root_mass": 0.041666666666666664, "idempotence_defect": 1.25e-16, "inverse_defect": 3.5e-17},
+  "conditional_A3_rule": {"difference_root_reflections": 6, "transposition_word_length": 1, "four_cycle_word_length": 3, "weight_ratio_at_unit_penalty": 0.1353352832366127},
+  "conditional_pushforward": {"assumption": "uniform Weyl-invariant root-sector measure", "identity_mass": 0.5, "each_transposition_mass": 0.08333333333333333, "B_QP_defect": 0.0, "right_S4_equivariant": true},
+  "finite_sector_margins": {"history_transfer_floor": 0.3333333333333333, "gravity_metric_floor": 0.442906574394463, "electroweak_margin": 4.9987, "photon_residue_min": 401.6200759661959},
+  "scope": "finite selector classification and conditional D4-to-A3-to-S4 push-forward; literal torus equality remains open"
+}

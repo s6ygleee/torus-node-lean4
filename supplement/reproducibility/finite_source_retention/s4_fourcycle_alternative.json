@@ -1,0 +1,43 @@
+{
+  "record": "s4_fourcycle_alternative",
+  "support": "identity + six S4 four-cycles",
+  "support_size": 7,
+  "history_fibre_dimension": 24,
+  "history_measure": {
+    "identity": 0.5,
+    "each_fourcycle": 0.08333333333333333
+  },
+  "central_projector_retention_defects": {
+    "trivial": 1.389751530090134e-16,
+    "sign": 4.340276750224305e-17,
+    "standard": 2.013045505012423e-16,
+    "standard_prime": 2.0749533577903278e-16,
+    "two_two": 9.115949060850941e-17
+  },
+  "central_transfer_eigenvalues": {
+    "trivial": 1.0,
+    "sign": 3.469446951953614e-17,
+    "standard": 0.3333333333333334,
+    "standard_prime": 0.6666666666666666,
+    "two_two": 0.5
+  },
+  "sector_commutator_defects": {
+    "photon": 0.0,
+    "ew_M2": 1.8147930873896342e-17,
+    "gravity": 0.0,
+    "gauge_M3": 7.076311083754595e-17
+  },
+  "finite_sector_margins": {
+    "photon_ward_defect": 1.5527014579844593e-14,
+    "photon_residue_min": 401.6200759661959,
+    "ew_q_star": 0.9020965351496255,
+    "ew_B_sup": 8.464,
+    "ew_B_critical": 13.4627,
+    "gravity_q_defect": 1.7763568394002505e-13,
+    "gravity_vertex_defect": 9.094947017729282e-12,
+    "gravity_metric_floor": 0.442906574394463,
+    "ew_q_total": 0.9825487365041257
+  },
+  "status": "PASS_FINITE_FOURCYCLE_SECTOR_BRANCH; SELECTOR_TIE_REMAINS",
+  "scope": "finite alternative branch; no literal torus criterion selecting it or transpositions"
+}

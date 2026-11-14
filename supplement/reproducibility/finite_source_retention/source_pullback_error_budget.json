@@ -1,0 +1,25 @@
+{
+  "record": "source_pullback_error_budget",
+  "sufficient_source_pullback_budgets": {
+    "WP_signed_operator_norm": {
+      "certified_floor": 0.19976081359496434,
+      "strict_sufficient_condition": "||Delta_W|| < 0.1997608135949643",
+      "robust_half_floor_budget": 0.09988040679748217
+    },
+    "EW_projected_activity": {
+      "q_total": 0.9825487365041257,
+      "contraction_margin": 0.0174512634958743,
+      "strict_sufficient_condition": "sum(source transfer errors) <= 0.0174512634958743"
+    },
+    "gravity_effective_metric": {
+      "hessian_floor": 0.442906574394463,
+      "strict_sufficient_condition": "||Delta_H_metric|| < 0.442906574394463",
+      "robust_half_floor_budget": 0.2214532871972315,
+      "existing_q_defect": 1.7763568394002505e-13,
+      "existing_vertex_defect": 9.094947017729282e-12
+    }
+  },
+  "combined_minimum_margin": 0.0174512634958743,
+  "status": "PASS_FINITE_SOURCE_PULLBACK_ERROR_BUDGET; SOURCE_IDENTIFICATION_OPEN",
+  "scope": "sufficient perturbative budgets only; does not prove the physical pullback exists"
+}

@@ -1,0 +1,43 @@
+{
+  "record": "standard_model_bimodule_retention",
+  "source_transfer": {
+    "rho_M3": "2/3",
+    "rho_M2": "1/2"
+  },
+  "field_dimensions": {
+    "Q_L": 6,
+    "u_R^c": 3,
+    "d_R^c": 3,
+    "L_L": 2,
+    "e_R^c": 1
+  },
+  "chirality": {
+    "square_defect": 0.0,
+    "transfer_commutator_defect": 0.0
+  },
+  "gauge_retention": {
+    "max_transfer_gauge_commutator_defect": 0.0
+  },
+  "anomalies": {
+    "gravity_squared_U1": "0",
+    "U1_cubic": "0",
+    "SU3_squared_U1": "0",
+    "SU2_squared_U1": "0",
+    "SU3_cubic": "0",
+    "SU2_Witten_doublet_count": 4
+  },
+  "yukawa": {
+    "hypercharge_sums": {
+      "down": "0",
+      "up": "0",
+      "lepton": "0"
+    },
+    "transfer_scales": {
+      "down": "2/9",
+      "up": "2/9",
+      "lepton": "1/4"
+    }
+  },
+  "status": "PASS_FINITE_SOURCE_FINITE_SM_BIMODULE_RETENTION",
+  "scope": "finite source-transfer retention; physical chiral identification, family replication and continuum Yukawa dynamics remain open"
+}

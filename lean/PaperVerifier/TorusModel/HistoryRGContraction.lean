@@ -36,7 +36,7 @@ theorem history_RG_power_identity
       c.blocking ^ (m + 1) = c.fixed + c.defect ^ (m + 1) := by
     intro m
     induction m with
-    | zero => simpa [c.decomposition]
+    | zero => simp [c.decomposition]
     | succ m ih =>
         rw [pow_succ, ih, c.decomposition, add_mul, mul_add]
         rw [c.fixed_idempotent, c.fixed_defect_zero, mul_add, hdefect m]
@@ -63,7 +63,7 @@ noncomputable def liftOperator
     V →ₗ[ℝ] W :=
   ∑ g, (a g) • ((L g).comp D)
 
-theorem lift_S2
+theorem physical_time_lift
     {G V W : Type*} [Fintype G] [AddCommGroup V] [AddCommGroup W]
     [Module ℝ V] [Module ℝ W]
     (a : G → ℝ) (L : G → (V →ₗ[ℝ] W))
@@ -73,7 +73,7 @@ theorem lift_S2
       liftOperator a L Dperp := by
   rw [hD]
   ext x
-  simp [liftOperator, LinearMap.comp_apply, Finset.sum_sub_distrib]
+  simp [liftOperator]
   rw [Finset.sum_add_distrib]
   abel
 

@@ -1,0 +1,32 @@
+{
+  "record": "finite_completion_check",
+  "finite_gates": {
+    "selector_measure": true,
+    "reflection_positivity": true,
+    "same_measure_RG": true,
+    "history_coframe_gauge_retention": true,
+    "finite_photon": true,
+    "finite_electroweak": true,
+    "finite_gravity_Ward": true,
+    "finite_chiral_anomaly_Higgs": true,
+    "three_family_candidate": true,
+    "lattice_subsequential_compactness": true,
+    "free_neutral_continuum_RP_test": true
+  },
+  "margins": {
+    "photon_residue_min": 401.6200759661959,
+    "ew_q_star": 0.9020965351496255,
+    "ew_margin": 4.9987,
+    "gravity_metric_floor": 0.442906574394463,
+    "history_M3_rank": 9,
+    "history_M2_rank": 4
+  },
+  "excluded": [
+    "literal source derivation of the finite measure and RG",
+    "interacting continuum uniform bounds",
+    "physical Wilson/P1 all-volume theorem",
+    "independent four-dimensional SU(3) mass-gap theorem"
+  ],
+  "status": "PASS_COMPLETE_FINITE_COMPLETION; SOURCE_AND_CONTINUUM_BOUNDARIES_OPEN",
+  "scope": "complete finite source-compatible completion; no raw-source or full-continuum claim"
+}

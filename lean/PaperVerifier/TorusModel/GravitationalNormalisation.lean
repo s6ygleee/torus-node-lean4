@@ -23,16 +23,16 @@ theorem induced_newton_log_sensitivity
   have hχ0 : χ ≠ 0 := ne_of_gt hχ
   have hderiv : deriv (fun x : Real => c / x) χ = -c / χ ^ 2 := by
     have h := (hasDerivAt_const (x := χ) c).div (hasDerivAt_id χ) hχ0
-    simpa [div_eq_mul_inv, inv_pow] using h.deriv
+    simp [div_eq_mul_inv]
   rw [logSensitivity, hderiv]
   field_simp [hχ0, hc]
 
 theorem constant_newton_log_sensitivity
-    (c χ : Real) (hc : c ≠ 0) :
+    (c χ : Real) (_hc : c ≠ 0) :
     logSensitivity (fun _ : Real => c) χ = 0 := by
   have hderiv : deriv (fun _ : Real => c) χ = 0 := by
-    simpa using (hasDerivAt_const (x := χ) c).deriv
+    simp
   rw [logSensitivity, hderiv]
-  simp [hc]
+  simp
 
 end TorusModel

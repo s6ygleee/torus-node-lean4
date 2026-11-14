@@ -1,0 +1,14 @@
+{
+  "record": "cmp_map_boundary",
+  "source_facts": {
+    "averaging_operation_is_not_unique": true,
+    "kernel_is_a_gauge_invariant_choice": true,
+    "physical_map_identified_with_CMP": false
+  },
+  "logical_split": {
+    "same_map": "an explicitly chosen physical map equal to the CMP map gives equality by definition",
+    "independent_map": "a different physical map requires a quantitative comparison bound"
+  },
+  "status": "PASS_SOURCE_MAP_BOUNDARY; INDEPENDENT_BLOCKED_COMPARISON_OPEN",
+  "scope": "source-text boundary; no later physical RG scheme is ruled out"
+}

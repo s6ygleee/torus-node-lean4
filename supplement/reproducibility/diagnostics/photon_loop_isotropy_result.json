@@ -1,0 +1,19 @@
+{
+  "moments": {
+    "E_T": 4512,
+    "E_M": 14768,
+    "B_M": 7816,
+    "B_S": 1088
+  },
+  "equal_weight_C_E": 19280,
+  "equal_weight_C_B": 8904,
+  "equal_weight_photon_speed": 0.6795776086225023,
+  "graviton_lattice_speed": 1.0,
+  "time_space_asymmetry": {
+    "E_T_over_B_S": 4.147058823529412,
+    "E_M_over_B_M": 1.8894575230296826
+  },
+  "selector_w_S": "1433/136",
+  "selector_restores_C_E_eq_C_B": true,
+  "evidence_class": "exact arithmetic on the declared ensemble moments"
+}

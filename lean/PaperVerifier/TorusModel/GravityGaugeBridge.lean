@@ -13,7 +13,7 @@ import Mathlib.Tactic.Ring
 
 namespace TorusModel
 
-theorem gravity_gauge_catalogue_cube_core
+theorem gravity_gauge_catalogue_cube
     (kA L V αinv K : ℝ)
     (hV : V ≠ 0) (hkA : kA ≠ 0)
     (hGauge : αinv = kA * L ^ 3 * V)
@@ -35,7 +35,7 @@ theorem gravity_gauge_catalogue_cube_core
   field_simp [hkA]
   nlinarith [hKmul]
 
-theorem gravity_induced_scale_square_core
+theorem gravity_induced_scale_square
     (MP eps kg L Pχ : ℝ)
     (hGravity : MP ^ 2 * eps ^ 2 = kg * L ^ 6 * Pχ) :
     (MP * eps) ^ 2 = (kg * Pχ) * (L ^ 3) ^ 2 := by

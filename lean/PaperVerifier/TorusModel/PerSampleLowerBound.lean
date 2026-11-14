@@ -36,9 +36,9 @@ theorem projection_energy_identity
     realInner x (c.P x) = realInner x (c.P (c.P x)) := by rw [hP]
     _ = realInner (c.P x) (c.P x) := (c.selfAdjoint x (c.P x)).symm
     _ = ‖c.P x‖ ^ 2 := by
-      simpa [realInner] using (real_inner_self_eq_norm_sq (c.P x))
+      simp [realInner]
 
-theorem Q3_lower
+theorem per_sample_lower_bound
     {V : Type*} [NormedAddCommGroup V] [InnerProductSpace Real V]
     (sample continuum : OrthogonalProjectionCertificate V)
     (n0 eps E : Real) (f : V)

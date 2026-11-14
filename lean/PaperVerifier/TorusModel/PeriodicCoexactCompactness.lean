@@ -21,7 +21,7 @@ noncomputable def highModeSet {ι : Type*} [Fintype ι] [DecidableEq ι]
 theorem periodic_fourier_tail_bound
     {ι : Type*} [Fintype ι] [DecidableEq ι]
     (u radius : ι -> Real) (K C : Real)
-    (hK : 0 <= K) (hC : 0 <= C)
+    (_hK : 0 <= K) (_hC : 0 <= C)
     (henergy : Finset.univ.sum (fun i =>
         (1 + radius i ^ 2) * norm (u i) ^ 2) <= C)
     (hweight : forall i, K < radius i ->

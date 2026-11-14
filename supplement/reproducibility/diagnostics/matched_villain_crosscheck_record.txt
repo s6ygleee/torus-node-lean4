@@ -1,0 +1,14 @@
+record_type=transcribed_record
+model=matched_villain_signed_dynamic_programming
+beta_V=3.03778242198
+s=0.1075
+N0=10
+alpha0=0.0201
+C_root=0.134
+RM=0.055
+c_prime=1.094e-8
+c_prime_less_than_one=true
+finite_sector=MASSLESS
+executable_rerun=false
+scope=matched_villain_dual_finite_sector_only
+not_established=integer_wilson_transfer;physical_source_pullback;continuum_limit

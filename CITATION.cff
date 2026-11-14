@@ -1,13 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this formalisation or data, please cite the archived release."
-title: "Torus-Node Model: Lean 4 formalisation and reproducibility data"
+title: "A Torus-Node Model for Emergent Spacetime, Gravity, and Gauge Structure: D4 Moves, Level-3 Commensurability, the S4 Ordered-History Algebra, and a Poisson-Source Interface"
 type: software
 authors:
   - family-names: "Lee"
     given-names: "Youngik (Tom)"
-version: "1.0.0"
-doi: "10.5281/zenodo.23863514"
-date-released: "2026-11-01"
+version: "1.1.0"
+date-released: "2026-11-15"
 license: MIT
 repository-code: "https://github.com/s6ygleee/torus-node-lean4"
 url: "https://github.com/s6ygleee/torus-node-lean4"
@@ -15,7 +14,7 @@ abstract: >-
   Lean 4 formalisation, verification tables, retained calculation scripts,
   fixed outputs, and interval fixtures for the torus-node model. The
   continuum interfaces remain conditional on the premises stated in the
-  verification supplement.
+  paper.
 keywords:
   - Lean 4
   - formal verification

@@ -18,7 +18,7 @@ import PaperVerifier.TorusModel.D4ChartCompatibility
 import PaperVerifier.TorusModel.D4ChartAreaUpdate
 import PaperVerifier.TorusModel.HeckeD4Comparison
 import PaperVerifier.TorusModel.ModelDefinitions
-import PaperVerifier.TorusModel.D4SourceWrappers
+import PaperVerifier.TorusModel.D4SourceStatements
 import PaperVerifier.TorusModel.FiniteGaussianPartition
 import PaperVerifier.TorusModel.ClockIncrementBound
 import PaperVerifier.TorusModel.ClockRegularity
@@ -26,9 +26,9 @@ import PaperVerifier.TorusModel.FiniteGibbsModel
 import PaperVerifier.TorusModel.GeneralGibbsMeasure
 import PaperVerifier.TorusModel.FiniteCompletion
 import PaperVerifier.TorusModel.MinimalCompletion
-import PaperVerifier.TorusModel.OpenHypothesisInterfaces
-import PaperVerifier.TorusModel.ConditionalProofBoundaries
+import PaperVerifier.TorusModel.HistoryBlockingRatio
+import PaperVerifier.TorusModel.SimultaneousRetention
 
-/-! Section 3: Poisson source, D4 moves and the canonical finite model.
+/-! Poisson source, D4 moves and the canonical finite model.
 
 Aggregator module: imports every Lean file formalising this part of the paper. -/

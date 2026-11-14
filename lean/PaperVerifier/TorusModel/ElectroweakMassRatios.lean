@@ -11,7 +11,7 @@ import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
 import PaperVerifier.TorusModel.ElectroweakBreaking
 
-namespace TorusModel.EW1
+namespace TorusModel.ElectroweakBreaking
 
 noncomputable def wMass (g v : ℝ) : ℝ := g * v / 2
 
@@ -32,17 +32,17 @@ theorem mass_ratio_cosTheta
   dsimp [wMass, zMass, cosTheta]
   field_simp [hv0, hsqrt]
 
-end TorusModel.EW1
+end TorusModel.ElectroweakBreaking
 
 namespace TorusModel
 
 /- Finite-jet obstruction used in the electroweak analysis.  A monomial of order
-   strictly above the recorded jet is invisible to all derivatives through
+   strictly above the given jet is invisible to all derivatives through
    that order at the vacuum, while its value at any fixed nonzero point can
    be made arbitrarily large.  This is the exact analytic core of the
    paper's finite-jet no-go; the gauge/Higgs embedding is a separate model
    identification. -/
-theorem finite_jet_no_uniform_bound_core
+theorem finite_jet_no_uniform_bound
     (q N : ℕ) (hqN : q < N) (R : ℝ) (hR : 0 < R) :
     ∀ B : ℝ, ∃ M : ℝ,
       (∀ n ≤ q,
@@ -63,31 +63,20 @@ theorem finite_jet_no_uniform_bound_core
     rw [hMmul, abs_of_nonneg (by positivity)]
     exact lt_of_le_of_lt (le_abs_self B) (lt_add_of_pos_right _ zero_lt_one)
 
-/- The abstract counterexample already proves the proposition's logical
-   content: no finite jet at the vacuum can imply a uniform analytic bound.
-   The gauge-invariant Wilson/Higgs realisation is an application of this
-   statement, not an additional premise of the no-go itself. -/
-theorem finite_jet_no_uniform_bound
-    (q N : ℕ) (hqN : q < N) (R : ℝ) (hR : 0 < R) :
-    ∀ B : ℝ, ∃ M : ℝ,
-      (∀ n ≤ q,
-        iteratedDeriv n (fun x : ℝ => M * x ^ N) 0 = 0) ∧
-        B < |M * R ^ N| := by
-  exact finite_jet_no_uniform_bound_core q N hqN R hR
 
 /- Algebraic Wick-moment core for the scalar Gaussian quartic fluctuation. -/
-theorem gaussian_quartic_variance_core
+theorem gaussian_quartic_variance
     (σ m4 m8 : ℝ)
     (h4 : m4 = 3 * σ ^ 4) (h8 : m8 = 105 * σ ^ 8) :
     m8 - m4 ^ 2 = 96 * σ ^ 8 := by
   rw [h8, h4]
   ring
 
-theorem gaussian_quartic_l2_core
+theorem gaussian_quartic_l2
     (σ m4 m8 : ℝ)
     (h4 : m4 = 3 * σ ^ 4) (h8 : m8 = 105 * σ ^ 8) :
     Real.sqrt (m8 - m4 ^ 2) = Real.sqrt 96 * σ ^ 4 := by
-  rw [gaussian_quartic_variance_core σ m4 m8 h4 h8]
+  rw [gaussian_quartic_variance σ m4 m8 h4 h8]
   rw [Real.sqrt_mul (by positivity : (0 : ℝ) ≤ 96)]
   have hσ4 : 0 ≤ σ ^ 4 := by positivity
   have hsqrt : Real.sqrt (σ ^ 8) = σ ^ 4 := by
@@ -95,12 +84,12 @@ theorem gaussian_quartic_l2_core
     rw [Real.sqrt_sq_eq_abs, abs_of_nonneg hσ4]
   rw [hsqrt]
 
-theorem gaussian_quartic_moments_core
+theorem gaussian_quartic_moments
     (σ m4 m8 : ℝ)
     (h4 : m4 = 3 * σ ^ 4) (h8 : m8 = 105 * σ ^ 8) :
     m8 - m4 ^ 2 = 96 * σ ^ 8 ∧
       Real.sqrt (m8 - m4 ^ 2) = Real.sqrt 96 * σ ^ 4 := by
-  exact ⟨gaussian_quartic_variance_core σ m4 m8 h4 h8,
-    gaussian_quartic_l2_core σ m4 m8 h4 h8⟩
+  exact ⟨gaussian_quartic_variance σ m4 m8 h4 h8,
+    gaussian_quartic_l2 σ m4 m8 h4 h8⟩
 
 end TorusModel

@@ -1,0 +1,30 @@
+{
+  "record": "selector_reconciliation",
+  "finite_filter": [
+    "identity plus six transpositions",
+    "identity plus six four-cycles"
+  ],
+  "support_size": 7,
+  "root_reynolds": {
+    "root_count": 24,
+    "weyl_group_size": 192,
+    "uniform_root_mass": 0.041666666666666664,
+    "idempotence_defect": 1.25e-16,
+    "inverse_defect": 3.5e-17
+  },
+  "conditional_pushforward": {
+    "assumption": "uniform Weyl-invariant root-sector measure",
+    "identity_mass": 0.5,
+    "each_transposition_mass": 0.08333333333333333,
+    "B_QP_defect": 0.0,
+    "right_S4_equivariant": true
+  },
+  "sector_margins": {
+    "history_transfer_floor": 0.3333333333333333,
+    "gravity_metric_floor": 0.442906574394463,
+    "electroweak_margin": 4.9987,
+    "photon_residue_min": 401.6200759661959
+  },
+  "status": "PASS_FINITE_SELECTOR_RECONCILIATION; LITERAL_SOURCE_EQUALITY_OPEN",
+  "scope": "finite selector classification and conditional D4-to-A3-to-S4 push-forward; literal torus equality remains open"
+}

@@ -11,7 +11,7 @@ import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Tactic.FieldSimp
 import Mathlib.Tactic.Ring
 
-namespace TorusModel.HWD
+namespace TorusModel.RankOneDefect
 
 open Matrix
 
@@ -40,8 +40,8 @@ theorem rank_one_energy_update
     simpa [a] using hcross
   have hb : b ≠ 0 := by simpa [b] using hden
   simp [quadraticEnergy, mulVec_sub, mulVec_smul, dotProduct_sub,
-    dotProduct_smul, hcross', a, b]
+    dotProduct_smul, hcross']
   field_simp [hb]
   ring
 
-end TorusModel.HWD
+end TorusModel.RankOneDefect

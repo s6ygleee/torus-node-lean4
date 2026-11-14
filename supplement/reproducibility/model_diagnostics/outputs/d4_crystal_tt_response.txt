@@ -1,0 +1,4 @@
+eps=0.02: Pi(1)=0.135091161 Pi(2)=0.135226112 Pi(3)=0.135377855
+eps=0.04: Pi(1)=0.135193528 Pi(2)=0.135346717 Pi(3)=0.135470466
+eps->0: Pi(1)=0.135057039 Pi(2)=0.135185910 Pi(3)=0.135346985   c2 from (2,1): 4.924e-5, from (3,2): 3.693e-5
+PASS  crystal TT kinetic coefficient c2 > 0 (stable graviton) after eps -> 0

@@ -47,7 +47,7 @@ stored coupling gives
   moment;
 - **PASS:** the 53-step invariant rectangle retains margin (>0.50);
 - **OPEN:** a term-by-term cumulant identity showing that every joint
-  gauge--Higgs activity is bounded by this consumer in the declared BKAR norm;
+  gauge--Higgs activity is bounded by this sector in the declared BKAR norm;
 - **OPEN:** continuous noncommuting holonomy cover, background-recentred
   large polymers, and final IR source identification.
 

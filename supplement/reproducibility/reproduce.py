@@ -54,6 +54,29 @@ def verify_archive_manifest(archive: Path) -> dict:
     return {"path": str(manifest), "checked_files": checked, "pass": True}
 
 
+def verify_diagnostic_checks(repro: Path, lock: dict) -> dict:
+    """Verify hashes of finite boundary diagnostics recorded outside the main suite."""
+    rows = []
+    for item in lock.get("diagnostic_checks", []):
+        script = repro / item["script"]
+        script_ok = script.is_file() and sha256(script).lower() == item["script_sha256"].lower()
+        output_rows = []
+        for output in item.get("outputs", []):
+            path = repro / output["path"]
+            output_rows.append({
+                "path": str(path),
+                "exists": path.is_file(),
+                "hash_match": path.is_file() and sha256(path).lower() == output["sha256"].lower(),
+            })
+        rows.append({
+            "script": item["script"],
+            "script_hash_match": script_ok,
+            "outputs": output_rows,
+            "pass": script_ok and all(row["exists"] and row["hash_match"] for row in output_rows),
+        })
+    return {"checked": len(rows), "items": rows, "pass": all(row["pass"] for row in rows)}
+
+
 def normalized_text(path: Path) -> str:
     return path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
 
@@ -383,6 +406,8 @@ def main() -> int:
     passed = True
     try:
         report["archive_manifest"] = verify_archive_manifest(archive)
+        report["diagnostic_checks"] = verify_diagnostic_checks(repro, lock)
+        passed = passed and report["diagnostic_checks"]["pass"]
         report["execution_order"] = [job["order"] for job in lock["calculations"]]
         if not args.skip_calculations:
             report["calculations"], report["calculation_preflight"] = reproduce_calculations(archive, run_root, lock)

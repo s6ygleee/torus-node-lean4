@@ -1,5 +1,5 @@
 /-
-  The measure-theoretic factorisation used after HC disintegration.
+  The measure-theoretic factorisation used after HoleHolonomy disintegration.
 
   This proves the exact product-measure expectation identity.  Identifying the
   model's quotient/fibre measure with such a product (the actual disintegration
@@ -7,7 +7,7 @@
 -/
 import Mathlib.MeasureTheory.Integral.Prod
 
-namespace TorusModel.HC
+namespace TorusModel.HoleHolonomy
 
 open MeasureTheory
 
@@ -21,7 +21,7 @@ theorem product_measure_expectation_factor
 
 /- A normalized product fibre leaves an observable depending only on the base
    unchanged.  This is the scalar conditional-expectation fragment of the
-   paper's HC disintegration statement; the model-specific identification of
+   paper's HoleHolonomy disintegration statement; the model-specific identification of
    the fibre measure is still separate. -/
 theorem product_measure_expectation_of_first
     {X Y : Type*} [MeasurableSpace X] [MeasurableSpace Y]
@@ -43,4 +43,4 @@ theorem product_measure_expectation_of_second
     norm_num
   rw [integral_fun_snd, hμreal, one_smul]
 
-end TorusModel.HC
+end TorusModel.HoleHolonomy

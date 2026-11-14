@@ -41,7 +41,7 @@ noncomputable def measure (ν : Measure Ω) (S : Ω → ℝ) : Measure Ω :=
   (partition ν S)⁻¹ • ν.withDensity (boltzmannDensity S)
 
 theorem measure_univ {ν : Measure Ω} {S : Ω → ℝ}
-    (hS : Measurable S) (hZ0 : partition ν S ≠ 0)
+    (_hS : Measurable S) (hZ0 : partition ν S ≠ 0)
     (hZtop : partition ν S ≠ ∞) :
     measure ν S Set.univ = 1 := by
   rw [measure, Measure.smul_apply, smul_eq_mul,

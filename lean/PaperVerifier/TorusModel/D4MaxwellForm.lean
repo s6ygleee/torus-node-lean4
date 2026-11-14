@@ -28,7 +28,7 @@ def diagonalQuadratic4 (a x : Fin 4 → ℝ) : ℝ :=
 theorem diagonalQuadratic4_unit (a : Fin 4 → ℝ) (i : Fin 4) :
     diagonalQuadratic4 a (coordinateUnit4 i) = a i := by
   classical
-  simp [diagonalQuadratic4, coordinateUnit4, Fin.sum_univ_succ]
+  simp [diagonalQuadratic4, coordinateUnit4]
 
 theorem diagonalQuadratic4_perm_isotropic
     (a : Fin 4 → ℝ)

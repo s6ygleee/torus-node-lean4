@@ -1,5 +1,5 @@
 /-
-  The finite-jump generator determined by the source moves of Section 3.
+  The finite-jump generator determined by the source moves of the paper.
 
   The generator uses the paper's unnormalised source weights as jump rates.
   Its action on coordinate observables is the source drift, and its carré du

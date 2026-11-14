@@ -14,6 +14,6 @@ and
 \]
 
 This removes ordinary floating-point rounding from an earlier calculation/an earlier calculation.  The
-certificate is for the finite Gaussian/ward-projected consumer.  It does not
+certificate is for the finite Gaussian/ward-projected sector.  It does not
 prove the transfer of this local bound to the interacting quartic
 Wilson--Higgs block measure.

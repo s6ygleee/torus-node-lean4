@@ -8,7 +8,7 @@
 
 namespace TorusModel
 
-theorem finite_kernel_convolution_list_core
+theorem finite_kernel_convolution_list
     {ι : Type} (xs : List ι) (K : ι → ι → Nat) (q : Nat)
     (x y : ι)
     (hpoint : ∀ z, z ∈ xs → K x z * K z y ≤ q) :

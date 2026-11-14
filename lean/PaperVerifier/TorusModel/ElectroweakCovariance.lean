@@ -1,12 +1,12 @@
 /-
-  Quantitative core of the recorded [EW-C*] multiscale certificate.
+  Quantitative part of the electroweak multiscale covariance certificate.
 
   The Balaban/BKAR and Osterwalder--Seiler analytic theorems are external
   inputs.  This file formalizes the exact numerical bridge that those inputs
-  consume: the certified activity budget is below the contraction threshold,
-  so the resulting scale budget is geometric and summable.
+  consume: the certified activity bound is below the contraction threshold,
+  so the resulting sum over scales is geometric and summable.
 
-  No source-native derivation of the step map or of the recorded constants is
+  No derivation of the step map or of the certified constants from the source is
   asserted here; those are represented by explicit hypotheses where needed.
 -/
 import Mathlib.Analysis.Complex.ExponentialBounds
@@ -20,17 +20,17 @@ import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
 
-namespace TorusModel.EWC
+namespace TorusModel.ElectroweakCovariance
 
 noncomputable section
 open scoped BigOperators
 open MeasureTheory Set Filter
 
-/-! The decimal data in the latest EW-C* record, written as exact rationals. -/
+/-! The certified decimal constants, written as exact rationals. -/
 
 def activity : ℝ := 41 / 2000
 def bathBound : ℝ := 1058 / 125
-def certifiedBudget : ℝ := 59 / 125
+def certifiedBound : ℝ := 59 / 125
 def contractionThreshold : ℝ := 3 / 4
 def largeFieldMargin : ℝ := 23 / 250
 def irKPSum : ℝ := 863 / 1000
@@ -38,13 +38,13 @@ def fluctuationGap : ℝ := 2
 def covarianceMoment : ℝ := 3211 / 25000
 def covarianceSecondMoment : ℝ := 15 / 32
 
-/-! The recorded ultraviolet depth is finite: 53 block-2 steps. -/
+/-! The ultraviolet depth is finite: 53 block-2 steps. -/
 
 def block2Steps : ℕ := 53
 
 theorem block2Steps_eq : block2Steps = 53 := rfl
 
-/-! Scalar gap underlying the Gaussian-level EW-C* statement.  The operator
+/-! Scalar gap underlying the Gaussian-level covariance statement.  The operator
     positivity and Combes--Thomas estimate remain separate analytic inputs. -/
 
 structure GaussianGapData where
@@ -143,54 +143,54 @@ theorem activity_nonneg : 0 ≤ activity := by
 theorem bathBound_nonneg : 0 ≤ bathBound := by
   norm_num [bathBound]
 
-theorem certifiedBudget_lt_threshold : certifiedBudget < contractionThreshold := by
-  norm_num [certifiedBudget, contractionThreshold]
+theorem certifiedBound_lt_threshold : certifiedBound < contractionThreshold := by
+  norm_num [certifiedBound, contractionThreshold]
 
-theorem recorded_margins :
+theorem certified_margins :
     0 < largeFieldMargin ∧ irKPSum < 1 ∧ 0 < fluctuationGap ∧
       0 < covarianceMoment ∧ 0 < covarianceSecondMoment := by
   norm_num [largeFieldMargin, irKPSum, fluctuationGap, covarianceMoment,
     covarianceSecondMoment]
 
-/-! The Arb/analytic bound on `exp 1` closes the recorded product estimate. -/
+/-! The Arb/analytic bound on `exp 1` closes the certified product estimate. -/
 
-theorem recorded_activity_bound :
-    activity * Real.exp 1 * bathBound < certifiedBudget := by
+theorem certified_activity_bound :
+    activity * Real.exp 1 * bathBound < certifiedBound := by
   have hexp : Real.exp 1 < (2.7182818286 : ℝ) := Real.exp_one_lt_d9
   have hact : 0 ≤ activity := activity_nonneg
   have hbath : 0 ≤ bathBound := bathBound_nonneg
-  dsimp [activity, bathBound, certifiedBudget]
+  dsimp [activity, bathBound, certifiedBound]
   nlinarith
 
-theorem recorded_contraction_bound :
+theorem certified_contraction_bound :
     activity * Real.exp 1 * bathBound < contractionThreshold := by
-  exact recorded_activity_bound.trans certifiedBudget_lt_threshold
+  exact certified_activity_bound.trans certifiedBound_lt_threshold
 
-/-! A source/step-map certificate supplies the same scalar budget abstractly. -/
+/-! A source/step-map certificate supplies the same scalar bound abstractly. -/
 
 structure Certificate where
   κ : ℝ
   nonneg : 0 ≤ κ
-  certified : κ ≤ certifiedBudget
+  certified : κ ≤ certifiedBound
 
 theorem Certificate.contraction_lt_one (c : Certificate) : c.κ < 1 := by
   have hcrit : contractionThreshold < (1 : ℝ) := by
     norm_num [contractionThreshold]
-  exact lt_of_le_of_lt c.certified (lt_trans certifiedBudget_lt_threshold hcrit)
+  exact lt_of_le_of_lt c.certified (lt_trans certifiedBound_lt_threshold hcrit)
 
 theorem Certificate.contraction_lt_threshold (c : Certificate) :
     c.κ < contractionThreshold := by
-  exact lt_of_le_of_lt c.certified certifiedBudget_lt_threshold
+  exact lt_of_le_of_lt c.certified certifiedBound_lt_threshold
 
-theorem Certificate.scale_budget_summable (c : Certificate) :
+theorem Certificate.scale_sum_summable (c : Certificate) :
     Summable (fun n : ℕ => c.κ ^ n) := by
   exact summable_geometric_of_lt_one c.nonneg c.contraction_lt_one
 
-theorem Certificate.scale_budget_hasSum (c : Certificate) :
+theorem Certificate.scale_sum_hasSum (c : Certificate) :
     HasSum (fun n : ℕ => c.κ ^ n) (1 / (1 - c.κ)) := by
   simpa [one_div] using hasSum_geometric_of_lt_one c.nonneg c.contraction_lt_one
 
-theorem Certificate.scale_budget_lt_four (c : Certificate) :
+theorem Certificate.scale_sum_lt_four (c : Certificate) :
     1 / (1 - c.κ) < 4 := by
   have hκ : c.κ < contractionThreshold := c.contraction_lt_threshold
   have hcrit : contractionThreshold < (1 : ℝ) := by
@@ -212,31 +212,31 @@ theorem Certificate.remainder_bound_lt_three (c : Certificate) :
   norm_num [contractionThreshold] at hκ
   nlinarith [hκ]
 
-/-! The literal recorded constants instantiate the abstract certificate. -/
+/-! The certified constants instantiate the abstract certificate. -/
 
-theorem recorded_scale_budget_summable :
+theorem certified_scale_sum_summable :
     Summable (fun n : ℕ => (activity * Real.exp 1 * bathBound) ^ n) := by
   have hnonneg : 0 ≤ activity * Real.exp 1 * bathBound :=
     mul_nonneg (mul_nonneg activity_nonneg (Real.exp_pos 1).le)
       bathBound_nonneg
   have hone : activity * Real.exp 1 * bathBound < 1 := by
-    exact lt_trans recorded_contraction_bound (by norm_num [contractionThreshold])
+    exact lt_trans certified_contraction_bound (by norm_num [contractionThreshold])
   exact summable_geometric_of_lt_one hnonneg hone
 
-theorem recorded_scale_budget_hasSum :
+theorem certified_scale_sum_hasSum :
     HasSum (fun n : ℕ => (activity * Real.exp 1 * bathBound) ^ n)
       (1 / (1 - activity * Real.exp 1 * bathBound)) := by
   have hnonneg : 0 ≤ activity * Real.exp 1 * bathBound :=
     mul_nonneg (mul_nonneg activity_nonneg (Real.exp_pos 1).le)
       bathBound_nonneg
   have hone : activity * Real.exp 1 * bathBound < 1 := by
-    exact lt_trans recorded_contraction_bound (by norm_num [contractionThreshold])
+    exact lt_trans certified_contraction_bound (by norm_num [contractionThreshold])
   simpa [one_div] using hasSum_geometric_of_lt_one hnonneg hone
 
-theorem recorded_scale_budget_lt_four :
+theorem certified_scale_sum_lt_four :
     1 / (1 - activity * Real.exp 1 * bathBound) < 4 := by
   have hκ : activity * Real.exp 1 * bathBound < contractionThreshold :=
-    recorded_contraction_bound
+    certified_contraction_bound
   have hcrit : contractionThreshold < (1 : ℝ) := by
     norm_num [contractionThreshold]
   have hden : 0 < 1 - activity * Real.exp 1 * bathBound :=
@@ -245,30 +245,30 @@ theorem recorded_scale_budget_lt_four :
   norm_num [contractionThreshold] at hκ
   nlinarith
 
-/-! The finite 53-step budget is bounded by the same convergent geometric budget. -/
+/-! The finite 53-step sum is bounded by the same convergent geometric sum. -/
 
-theorem recorded_finite_scale_budget_lt_four :
+theorem certified_finite_scale_sum_lt_four :
     Finset.sum (Finset.range block2Steps)
       (fun n => (activity * Real.exp 1 * bathBound) ^ n) < 4 := by
   have hnonneg : 0 ≤ activity * Real.exp 1 * bathBound :=
     mul_nonneg (mul_nonneg activity_nonneg (Real.exp_pos 1).le)
       bathBound_nonneg
   have hone : activity * Real.exp 1 * bathBound < 1 := by
-    exact lt_trans recorded_contraction_bound (by norm_num [contractionThreshold])
+    exact lt_trans certified_contraction_bound (by norm_num [contractionThreshold])
   have hsum : Summable (fun n : ℕ =>
       (activity * Real.exp 1 * bathBound) ^ n) :=
     summable_geometric_of_lt_one hnonneg hone
   have hfinite := hsum.sum_le_tsum (Finset.range block2Steps) (by
     intro n hn
     exact pow_nonneg hnonneg n)
-  rw [recorded_scale_budget_hasSum.tsum_eq] at hfinite
-  exact lt_of_le_of_lt hfinite recorded_scale_budget_lt_four
+  rw [certified_scale_sum_hasSum.tsum_eq] at hfinite
+  exact lt_of_le_of_lt hfinite certified_scale_sum_lt_four
 
-theorem recorded_l3_remainder_bound_lt_one :
+theorem certified_l3_remainder_bound_lt_one :
     (activity * Real.exp 1 * bathBound) /
         (1 - activity * Real.exp 1 * bathBound) < 1 := by
   have hκ : activity * Real.exp 1 * bathBound < (1 / 2 : ℝ) := by
-    exact lt_trans recorded_activity_bound (by norm_num [certifiedBudget])
+    exact lt_trans certified_activity_bound (by norm_num [certifiedBound])
   have hden : 0 < 1 - activity * Real.exp 1 * bathBound :=
     sub_pos.mpr (lt_trans hκ (by norm_num))
   apply (div_lt_iff₀ hden).2
@@ -359,8 +359,8 @@ theorem CombesThomasCertificate.kernel_abs_tsum_bound
 
 /-! The BKAR/tree estimate is kept as an explicit input inequality.  Once it
     is supplied, the cluster-activity series is a genuine geometric comparison
-    and hence converges without introducing an unproved declaration or a
-    placeholder. -/
+    and hence converges without introducing an unproved declaration or an
+    unverified theorem. -/
 
 structure ClusterExpansionCertificate where
   contraction : ℝ
@@ -392,7 +392,7 @@ theorem ClusterExpansionCertificate.activity_abs_tsum_bound
     deliberately parameters here; this theorem checks the denominator and
     sign bookkeeping once those source identities are supplied. -/
 
-def wilsonCosSecond (g2 s a b : ℝ) : ℝ :=
+def wilsonCosSecond (g2 _s a b : ℝ) : ℝ :=
   (3 / 2 - 2 * a + b / 2) / g2 ^ 2
 
 def wilsonQuadraticSecond (s : ℝ) : ℝ :=
@@ -449,8 +449,8 @@ theorem wilson_centered_variance_expanded
 
 theorem invariant_sector_bound
     {q r x x' : ℝ}
-    (hq_nonneg : 0 ≤ q) (hq_lt_one : q < 1) (hr_nonneg : 0 ≤ r)
-    (hx_nonneg : 0 ≤ x) (hx_bound : x ≤ r / (1 - q))
+    (hq_nonneg : 0 ≤ q) (hq_lt_one : q < 1) (_hr_nonneg : 0 ≤ r)
+    (_hx_nonneg : 0 ≤ x) (hx_bound : x ≤ r / (1 - q))
     (hstep : x' ≤ q * x + r) :
     x' ≤ r / (1 - q) := by
   have hden : 0 < 1 - q := sub_pos.mpr hq_lt_one
@@ -483,7 +483,7 @@ theorem two_sector_rectangle_invariant
 
 theorem local_moment_root_bound
     {lambdaVal c Y : ℝ}
-    (hlambda : 0 < lambdaVal) (hc : 0 ≤ c) (hY : 0 ≤ Y)
+    (hlambda : 0 < lambdaVal) (_hc : 0 ≤ c) (_hY : 0 ≤ Y)
     (hineq : 4 * lambdaVal * Y ^ 2 ≤ 4 + c * Y) :
     Y ≤ (c + Real.sqrt (c ^ 2 + 64 * lambdaVal)) / (8 * lambdaVal) := by
   have hdisc : 0 ≤ c ^ 2 + 64 * lambdaVal := by
@@ -507,7 +507,7 @@ theorem local_moment_root_bound
 
 theorem radial_quartic_domination
     {lambdaVal rho r : ℝ}
-    (hlambda : 0 ≤ lambdaVal) (hrho : 0 ≤ rho)
+    (hlambda : 0 ≤ lambdaVal) (_hrho : 0 ≤ rho)
     (hthreshold : 2 * rho ^ 2 ≤ r ^ 2) :
     lambdaVal * (r ^ 2 - rho ^ 2) ^ 2 ≥
       (lambdaVal / 4) * r ^ 4 := by
@@ -524,7 +524,7 @@ theorem radial_quartic_domination
   nlinarith
 
 theorem radial_hopping_amgm
-    {rx ry : ℝ} (hrx : 0 ≤ rx) (hry : 0 ≤ ry) :
+    {rx ry : ℝ} (_hrx : 0 ≤ rx) (_hry : 0 ≤ ry) :
     rx * ry ≤ (rx ^ 2 + ry ^ 2) / 2 := by
   nlinarith [sq_nonneg (rx - ry)]
 
@@ -605,4 +605,4 @@ theorem full_radial_quartic_tail_integral
   field_simp [ne_of_gt hlambda]
 
 end
-end TorusModel.EWC
+end TorusModel.ElectroweakCovariance

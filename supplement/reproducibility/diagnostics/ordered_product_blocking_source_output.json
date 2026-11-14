@@ -1,0 +1,22 @@
+{
+  "weak": {
+    "carrier": "rho2",
+    "pair_linear_span_dimension": 2,
+    "hermitian_lie_closure_dimension": 3,
+    "expected_lie_dimension": 3,
+    "max_pair_span_projection_residual": 0.03750616418124423,
+    "max_lie_closure_projection_residual": 2.6511017620572402e-14,
+    "max_unitarity_defect": 4.726604465039849e-16,
+    "max_tau_J_rescaling_defect": 1.1210138299964713e-16
+  },
+  "colour": {
+    "carrier": "rho3",
+    "pair_linear_span_dimension": 6,
+    "hermitian_lie_closure_dimension": 9,
+    "expected_lie_dimension": 9,
+    "max_pair_span_projection_residual": 0.008175062440746249,
+    "max_lie_closure_projection_residual": 6.972423350187217e-16,
+    "max_unitarity_defect": 5.441749548505705e-16,
+    "max_tau_J_rescaling_defect": 3.180392081167921e-17
+  }
+}

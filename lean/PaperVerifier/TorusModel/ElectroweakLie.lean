@@ -7,7 +7,7 @@ import Mathlib.Algebra.BigOperators.Fin
 import Mathlib.Tactic.FinCases
 import PaperVerifier.TorusModel.ElectroweakBreaking
 
-namespace TorusModel.EW1
+namespace TorusModel.ElectroweakBreaking
 
 open Complex
 open scoped Matrix
@@ -44,4 +44,4 @@ theorem lieMatrix_action_eq (α₁ α₂ α₃ β : ℝ) (u : ℂ) :
   rcases lieMatrix_action_formula α₁ α₂ α₃ β u with ⟨h₀, h₁⟩
   exact Prod.ext h₀ h₁
 
-end TorusModel.EW1
+end TorusModel.ElectroweakBreaking

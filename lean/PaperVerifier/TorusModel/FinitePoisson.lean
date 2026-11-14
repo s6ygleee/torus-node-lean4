@@ -83,10 +83,10 @@ theorem finitePoisson_expectation_coordinatePermutation
     {n : ℕ} {E : Type*} [MeasurableSpace E] [NormedAddCommGroup E] [NormedSpace ℝ E]
     (rate : NNReal) (σ : Equiv.Perm (Fin n))
     (F : (Fin n → ℕ) → E) :
-    Q2.expectation (uniformFinitePoissonMeasure rate)
+    Isotropy.expectation (uniformFinitePoissonMeasure rate)
         (fun ω => F (coordinatePermutation σ ω)) =
-      Q2.expectation (uniformFinitePoissonMeasure rate) F := by
-  exact Q2.expectation_comp_measurableEquiv
+      Isotropy.expectation (uniformFinitePoissonMeasure rate) F := by
+  exact Isotropy.expectation_comp_measurableEquiv
     (uniformFinitePoissonMeasure rate) (coordinatePermutation σ) F
     (coordinatePermutation_measurePreserving rate σ)
 

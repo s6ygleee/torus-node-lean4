@@ -1,0 +1,48 @@
+{
+  "record": "selector_sector_preservation",
+  "selector_rule": {
+    "history_support": "identity + six S4 transpositions",
+    "clock_support": "0, +/-e2, +/-e3, +/-e5",
+    "history_RP_feasible_interval": [
+      0.5,
+      1.0
+    ],
+    "history_entropy_maximizer": 0.5,
+    "clock_alpha": 0.4804762950414192,
+    "clock_target_second_moment": 0.8419783707167505,
+    "clock_second_moment": 0.8419783707167507,
+    "clock_moment_residual": 2.220446049250313e-16,
+    "clock_Vprime_certificate": -0.6598444361577143,
+    "inverse_closed": true,
+    "history_mark_count": 7,
+    "history_fiber_dimension": 24,
+    "product_domain_size": 49
+  },
+  "history_retention": {
+    "projector_idempotence_defect": 2.482534153247273e-16,
+    "projector_sum_defect": 5.926969055564841e-16,
+    "right_regular_commutator_defect": 0.0,
+    "B_QP_max_defect": 2.246567365754107e-16,
+    "M3_rank": 9,
+    "M2_rank": 4
+  },
+  "sector_preservation": {
+    "photon_w_S": 10.536764705882353,
+    "sector_commutator_defects": {
+      "photon": 0.0,
+      "ew_M2": 1.626287196394529e-17,
+      "gravity": 0.0,
+      "gauge_M3": 1.6711069443220838e-16
+    },
+    "photon_residue_min": 401.6200759661959,
+    "ew_q_star": 0.9020965351496255,
+    "ew_B_sup": 8.464,
+    "ew_B_critical": 13.4627,
+    "gravity_q_defect": 1.7763568394002505e-13,
+    "gravity_vertex_defect": 9.094947017729282e-12,
+    "gravity_metric_floor": 0.442906574394463,
+    "source_ward_status": "PASS_FINITE_SOURCE_WARD_CLOSURE"
+  },
+  "status": "PASS_FINITE_SELECTOR_DERIVATION_AND_FINITE_SECTOR_PRESERVATION",
+  "scope": "finite source-compatible rule under declared support; literal torus push-forward and continuum sectors remain open"
+}

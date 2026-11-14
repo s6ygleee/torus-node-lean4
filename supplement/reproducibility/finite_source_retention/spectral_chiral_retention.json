@@ -1,0 +1,36 @@
+{
+  "record": "spectral_chiral_retention",
+  "source": "explicit finite-source central S4 history transfer",
+  "isotypic_ranks": {
+    "trivial": 1,
+    "sign": 1,
+    "standard": 9,
+    "standard_prime": 9,
+    "two_two": 4
+  },
+  "central_transfer_eigenvalues": {
+    "trivial": 1.0,
+    "sign": 2.004569350017644e-17,
+    "standard": 0.6666666666666666,
+    "standard_prime": 0.3333333333333334,
+    "two_two": 0.5
+  },
+  "projector_defects": {
+    "idempotence": 2.482534153247273e-16,
+    "orthogonality": 9.257639144254436e-17,
+    "sum": 5.926969055564841e-16
+  },
+  "spectral_chiral_candidate": {
+    "definition": "+ on trivial, standard, two_two; - on sign, standard_prime",
+    "grading_square_defect": 1.7933033118703785e-15,
+    "self_adjoint_defect": 0.0,
+    "transfer_commutator_defect": 1.8235582618758947e-16,
+    "isotypic_commutator_defect": 5.450897560680633e-16
+  },
+  "matter_block_retention": {
+    "M3_BQP_defect": 2.246567365754107e-16,
+    "M2_BQP_defect": 8.895996913677829e-17
+  },
+  "status": "PASS_FINITE_SOURCE_FINITE_SPECTRAL_CHIRAL_RETENTION",
+  "scope": "finite spectral grading and retention; physical chirality/family/Yukawa dynamics remain open"
+}

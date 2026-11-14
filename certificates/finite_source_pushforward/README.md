@@ -1,7 +1,7 @@
 # finite source push-forward and same-measure RG
 
 The declared the finite completion source is now written as an explicit finite measured
-relational model, rather than only as a consumer:
+relational model, rather than only as a sector:
 
 \[
 D_*=H_*\times E_*,\qquad

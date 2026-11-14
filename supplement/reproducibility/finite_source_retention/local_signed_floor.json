@@ -1,0 +1,21 @@
+{
+  "record": "local_signed_floor",
+  "tested_volumes": [
+    3,
+    4
+  ],
+  "integer_sector": {
+    "coefficient_radius": 8,
+    "cycle_residual_max": 0.0,
+    "signed_floor_before_tail": 0.19976081682814406,
+    "volume_spread": 0.0,
+    "tail_error_bound": 3.2331797155304584e-09,
+    "certified_floor_after_tail": 0.19976081359496434
+  },
+  "pruning_row": {
+    "R1_signed_min_max": -0.00843530357685083,
+    "R1_is_not_uniformly_positive": true
+  },
+  "status": "PASS_FINITE_LOCAL_D4_INTEGER_WILSON_SIGNED_FLOOR; PHYSICAL_CMP_P1_OPEN",
+  "scope": "finite local D4 Ward-cycle block at L=3,4; not a physical Wilson/CMP volume-uniform theorem"
+}

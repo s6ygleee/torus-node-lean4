@@ -1,0 +1,8 @@
+{
+  "classification": "componentwise finite estimates",
+  "clock_bound": 3.2217741720177973,
+  "clock_stiffness": 1.1876789651362785,
+  "coframe_inverse_bound": "norm(H_e^{-1}) <= 1/m_e^2",
+  "higgs_identity": "(r^2 - 2 v^2)^2 / 2 >= 0",
+  "joint_polymer_estimate": "not established by these separate checks"
+}

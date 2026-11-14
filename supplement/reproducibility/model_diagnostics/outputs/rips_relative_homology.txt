@@ -1,0 +1,6 @@
+## 1.5 1 8
+rc=1.5 R=8 N=4003: b1(GF2)=46; balls 256 (radius 3, grid 2); undetected dim = 4 (expect 4 = torus); detected local = 42
+## 1.5 2 8
+rc=1.5 R=8 N=4085: b1(GF2)=45; balls 256 (radius 3, grid 2); undetected dim = 4 (expect 4 = torus); detected local = 41
+## 1.5 3 8
+rc=1.5 R=8 N=4121: b1(GF2)=50; balls 256 (radius 3, grid 2); undetected dim = 4 (expect 4 = torus); detected local = 46

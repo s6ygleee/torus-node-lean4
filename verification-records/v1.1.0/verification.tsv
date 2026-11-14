@@ -1,0 +1,4 @@
+PASS	Lean build
+PASS	No project-local placeholders
+PASS	Independent nanoda check
+PASS	Public verification checks

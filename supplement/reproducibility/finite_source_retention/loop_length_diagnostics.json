@@ -1,0 +1,34 @@
+{
+  "record": "loop_length_diagnostics",
+  "all_momentum_scan": {
+    "sample_count": 1587,
+    "full_support_residue_floor": 20.494185371173966,
+    "length3_residue_floor": 0.002373775175110467,
+    "length3_4_residue_floor": 0.002357861864761191,
+    "max_Ward_defect": 1.8132480030572777e-13
+  },
+  "nested_support_scan": {
+    "sample_count": 1564,
+    "through3_floor": 0.0010371854440600163,
+    "through4_floor": 0.02037720632793098,
+    "through5_floor": 0.13324076514179778,
+    "through6_floor": 22.158501924504073,
+    "through6_max_nullity": 15
+  },
+  "low_momentum_representatives": {
+    "volumes": [
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32,
+      64
+    ],
+    "minimum_for_volume_at_least_16": 372.38141620915326,
+    "maximum_Ward_defect": 2.956970195101118e-14
+  },
+  "status": "PASS_FINITE_LOOP_LENGTH_DIAGNOSTIC; UNIFORM_PROOF_OPEN",
+  "scope": "finite momentum samples and axis/diagonal representatives; no all-volume lower bound"
+}

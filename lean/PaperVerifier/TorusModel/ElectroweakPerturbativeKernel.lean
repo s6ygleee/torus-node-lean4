@@ -8,13 +8,13 @@ import Mathlib.Tactic.Ring
 namespace TorusModel
 
 theorem exponential_convolution_pointwise
-    (μ m' a b c : ℝ) (hm : 0 ≤ m') (hmm : m' ≤ μ) :
+    (μ m' a b c : ℝ) (hm : 0 ≤ m') (_hmm : m' ≤ μ) :
     Real.exp (-μ * |a - b|) * Real.exp (-μ * |b - c|) ≤
       Real.exp (-m' * |a - c|) *
         Real.exp (-(μ - m') * (|a - b| + |b - c|)) := by
   have htri : |a - c| ≤ |a - b| + |b - c| := by
     calc
-      |a - c| = |(a - b) + (b - c)| := by congr 1 <;> ring
+      |a - c| = |(a - b) + (b - c)| := by (congr 1; ring)
       _ ≤ |a - b| + |b - c| := abs_add_le _ _
   have hgap :
       0 ≤ m' * ((|a - b| + |b - c|) - |a - c|) :=

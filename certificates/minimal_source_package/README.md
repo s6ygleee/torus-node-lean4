@@ -19,7 +19,7 @@ Minimality is information-theoretic: omitting respectively
 \(\Theta\), \(M_t\), \(K[X]\), or \(F_{\rm chiral}\) reopens the RP, RG,
 metric, or matter completion pairs in the `raw_source_nonidentifiability` record. Omitting \(D_*,\mu_*\) itself
 reopens the selector/measure ambiguity. Hence no proper subpackage can
-determine all the finite completion consumers.
+determine all the finite completion sectors.
 
 With (H1_{\rm real}) declared, the source-to-finite the finite completion push-forward is
 exact by definition and the `finite_source_pushforward` record verifies the resulting RP/history/RG

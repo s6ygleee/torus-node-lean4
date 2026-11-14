@@ -1,0 +1,14 @@
+{
+  "record": "anchor_preserving_scale_dependent_clock",
+  "alpha0": 0.48047629504141964,
+  "anchor_scale": 1.0,
+  "anchor_M": 3,
+  "anchor_state_count": 7,
+  "anchor_probability_defect_bound": 1e-14,
+  "small_scale": 0.00390625,
+  "small_scale_variance_interval": [0.9, 1.1],
+  "small_scale_fourth_moment_interval": [2.5, 3.5],
+  "history_sector_unchanged": true,
+  "finite_retention_tests_unchanged": true,
+  "scope": "optional anchor-compatible one-site scaling; interacting continuum bounds remain open"
+}

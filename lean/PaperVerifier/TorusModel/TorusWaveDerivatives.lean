@@ -12,7 +12,7 @@ noncomputable def waveLog (b A x y : ℝ) (r s : ℤ) : ℝ :=
 
 theorem waveLog_x_deriv
     {b A x y : ℝ} {r s : ℤ}
-    (hb : 0 < b) (hA : 0 < A) (hy : 0 < y)
+    (_hb : 0 < b) (_hA : 0 < A) (_hy : 0 < y)
     (hmode : (r : ℝ) * x - (s : ℝ) ≠ 0 ∨ (r : ℝ) * y ≠ 0) :
     deriv (fun z : ℝ => waveLog b A z y r s) x =
       (r : ℝ) * ((r : ℝ) * x - (s : ℝ)) /
@@ -72,7 +72,7 @@ theorem waveLog_x_deriv
 
 theorem waveLog_y_deriv
     {b A x y : ℝ} {r s : ℤ}
-    (hb : 0 < b) (hA : 0 < A) (hy : 0 < y)
+    (_hb : 0 < b) (_hA : 0 < A) (hy : 0 < y)
     (hmode : (r : ℝ) * x - (s : ℝ) ≠ 0 ∨ (r : ℝ) * y ≠ 0) :
     deriv (fun z : ℝ => waveLog b A x z r s) y =
       ((r : ℝ) ^ 2 * y) /
@@ -150,7 +150,7 @@ theorem waveLog_log_y_deriv
 
 theorem waveLog_log_area_deriv
     {b A x y : ℝ} {r s : ℤ}
-    (hb : 0 < b) (hA : 0 < A) (hy : 0 < y) :
+    (_hb : 0 < b) (hA : 0 < A) (_hy : 0 < y) :
     A * deriv (fun z : ℝ => waveLog b z x y r s) A = -(1 / 2 : ℝ) := by
   have hlogA : HasDerivAt (fun z : ℝ => Real.log z) (1 / A) A := by
     simpa using Real.hasDerivAt_log (ne_of_gt hA)

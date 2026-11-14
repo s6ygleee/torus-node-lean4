@@ -1,0 +1,38 @@
+{
+  "adjacent_control_lie_dimensions": {
+    "su2": 3,
+    "u3": 9
+  },
+  "adjacent_exchange_gap": 0.5857864376269049,
+  "classification": "finite algebraic and numerical cross-relation check",
+  "continuum_selection_and_mass_gap": "not established",
+  "endpoint_repolarization_mismatches": {
+    "U2": 1.6450726653927232,
+    "U3": 1.6991727674216008
+  },
+  "finite_source_reflection_positivity_floor": 0.037039723150515916,
+  "fixed_cutoff_plaquette_bounds": {
+    "U2": 4,
+    "U3": 6
+  },
+  "matter_determinant_wilson_coefficients": {
+    "U2": 8.192e-05,
+    "U3": 8.192e-05
+  },
+  "ordered_product_covariance_defects": {
+    "U2": 7.53599086205978e-16,
+    "U3": 1.2966561709933048e-15
+  },
+  "positive_fourth_order_contributions": {
+    "U2": 3.72246500091198e-05,
+    "U3": 4.017020202295003e-05
+  },
+  "source_link_holonomy_nonflat_norms": {
+    "U2": 0.9533126097263552,
+    "U3": 0.9893821188314449
+  },
+  "source_link_wilson_actions": {
+    "U2": 0.45440246593163813,
+    "U3": 0.49035891141296417
+  }
+}

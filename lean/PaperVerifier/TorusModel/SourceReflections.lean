@@ -1,5 +1,5 @@
 /-
-  The finite A3-reflection part of Proposition 3.9(a) (`prop:sectors`).
+  The finite A3-reflection part of part (a) of the proposition "Sector split of the moves".
 
   Mixed-sign D4 roots are the twelve directed difference roots.  Their
   Euclidean reflections are the six coordinate transpositions, and those

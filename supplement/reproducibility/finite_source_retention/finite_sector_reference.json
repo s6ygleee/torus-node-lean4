@@ -1,0 +1,24 @@
+{
+  "record": "finite_sector_reference",
+  "finite_gates": {
+    "photon_masslessness": true,
+    "ew_finite_sector": true,
+    "gravity_ward_transport": true,
+    "finite_source_dynamic_metric": true,
+    "finite_source_same_measure": true,
+    "finite_source_neutral_rp": true
+  },
+  "numerical_margins": {
+    "photon_ward_defect": 1.5527014579844593e-14,
+    "photon_residue_min": 401.6200759661959,
+    "ew_q_star": 0.9020965351496255,
+    "ew_B_sup": 8.464,
+    "ew_B_critical": 13.4627,
+    "gravity_q_defect": 1.7763568394002505e-13
+    ,"gravity_vertex_defect": 9.094947017729282e-12,
+    "gravity_metric_floor": 0.442906574394463,
+    "ew_q_total": 0.9825487365041257
+  },
+  "scope": "finite sector record; unrestricted source bridges remain open"
+}
+

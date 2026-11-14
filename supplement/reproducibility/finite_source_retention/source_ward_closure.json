@@ -1,0 +1,24 @@
+{
+  "record": "source_ward_closure",
+  "model": "explicit finite finite-source S4 history source",
+  "measure": "mu(e)=1/2; mu(transposition)=1/12; zero otherwise",
+  "source_measure": {
+    "normalization": 1.0,
+    "reversibility_defect": 0.0,
+    "kernel_symmetry_defect": 0.0,
+    "stochastic_defect": 2.220446049250313e-16
+  },
+  "ward_transport": {
+    "central_left_commutator": 0.0,
+    "central_right_commutator": 0.0,
+    "two_link_left_commutator": 3.597533769998862e-16,
+    "two_link_right_commutator": 3.597533769998862e-16
+  },
+  "composite_metric": {
+    "max_metric_covariance_defect": 1.3330963383348915e-13,
+    "max_quadratic_ward_defect": 9.947598300641403e-14,
+    "min_effective_hessian_eigenvalue": 0.047698404038041535
+  },
+  "status": "PASS_FINITE_SOURCE_WARD_CLOSURE",
+  "scope": "explicit finite model; literal torus pullback and continuum Einstein bounds remain open"
+}

@@ -1,0 +1,12 @@
+## 1.5 1 8,10
+rc=1.5 R=8: defects 65; birth radius median 1.66, 90% 1.93, max 2.34; #>1.5rc 1, #>2rc 0, #>3rc 0; path hops max 3
+rc=1.5 R=10: defects 75; birth radius median 1.67, 90% 1.92, max 2.64; #>1.5rc 3, #>2rc 0, #>3rc 0; path hops max 5
+## 1.5 2 8,10
+rc=1.5 R=8: defects 54; birth radius median 1.65, 90% 1.87, max 2.27; #>1.5rc 1, #>2rc 0, #>3rc 0; path hops max 3
+rc=1.5 R=10: defects 80; birth radius median 1.76, 90% 2.12, max 2.41; #>1.5rc 5, #>2rc 0, #>3rc 0; path hops max 5
+## 1.5 3 8,10
+rc=1.5 R=8: defects 67; birth radius median 1.66, 90% 2.03, max 2.16; #>1.5rc 0, #>2rc 0, #>3rc 0; path hops max 3
+rc=1.5 R=10: defects 107; birth radius median 1.73, 90% 2.10, max 2.66; #>1.5rc 5, #>2rc 0, #>3rc 0; path hops max 5
+## 1.5 4 8,10
+rc=1.5 R=8: defects 44; birth radius median 1.64, 90% 1.88, max 2.13; #>1.5rc 0, #>2rc 0, #>3rc 0; path hops max 3
+rc=1.5 R=10: defects 104; birth radius median 1.69, 90% 1.92, max 2.64; #>1.5rc 3, #>2rc 0, #>3rc 0; path hops max 5

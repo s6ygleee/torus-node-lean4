@@ -34,3 +34,4 @@ archive/
 !numerics/outputs_and_logs/*.log
 !supplement/reproducibility/interval_inputs/*.log
 !certificates/**/*.log
+!supplement/reproducibility/diagnostics/matched_villain_crosscheck_record_1023.log

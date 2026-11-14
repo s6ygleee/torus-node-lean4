@@ -1,0 +1,160 @@
+{
+  "record": "s4_selector_support_enumeration",
+  "candidate_rows": [
+    {
+      "class": [
+        2,
+        1,
+        1
+      ],
+      "class_size": 6,
+      "support_size_with_identity": 7,
+      "generated_group_size": 24,
+      "rp_interval": [
+        0.5,
+        1.0
+      ],
+      "entropy_maximizer": 0.5,
+      "entropy": 1.5890269151739729,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 0.0,
+        "standard": 0.6666666666666666,
+        "standard_prime": 0.33333333333333337,
+        "two_two": 0.5
+      },
+      "full_S4_generation": true,
+      "M3_retained_nonzero": true,
+      "M2_retained_nonzero": true
+    },
+    {
+      "class": [
+        2,
+        2
+      ],
+      "class_size": 3,
+      "support_size_with_identity": 4,
+      "generated_group_size": 4,
+      "rp_interval": [
+        0.25,
+        1.0
+      ],
+      "entropy_maximizer": 0.25,
+      "entropy": 1.3862943611198906,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 1.0,
+        "standard": 0.0,
+        "standard_prime": 0.0,
+        "two_two": 1.0
+      },
+      "full_S4_generation": false,
+      "M3_retained_nonzero": false,
+      "M2_retained_nonzero": true
+    },
+    {
+      "class": [
+        3,
+        1
+      ],
+      "class_size": 8,
+      "support_size_with_identity": 9,
+      "generated_group_size": 12,
+      "rp_interval": [
+        0.3333333333333333,
+        1.0
+      ],
+      "entropy_maximizer": 0.3333333333333333,
+      "entropy": 2.0228085294147036,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 1.0,
+        "standard": 0.3333333333333333,
+        "standard_prime": 0.3333333333333333,
+        "two_two": -5.551115123125783e-17
+      },
+      "full_S4_generation": false,
+      "M3_retained_nonzero": true,
+      "M2_retained_nonzero": false
+    },
+    {
+      "class": [
+        4
+      ],
+      "class_size": 6,
+      "support_size_with_identity": 7,
+      "generated_group_size": 24,
+      "rp_interval": [
+        0.5,
+        1.0
+      ],
+      "entropy_maximizer": 0.5,
+      "entropy": 1.5890269151739729,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 0.0,
+        "standard": 0.33333333333333337,
+        "standard_prime": 0.6666666666666666,
+        "two_two": 0.5
+      },
+      "full_S4_generation": true,
+      "M3_retained_nonzero": true,
+      "M2_retained_nonzero": true
+    }
+  ],
+  "surviving_full_S4_M3_M2_supports": [
+    {
+      "class": [
+        2,
+        1,
+        1
+      ],
+      "class_size": 6,
+      "support_size_with_identity": 7,
+      "generated_group_size": 24,
+      "rp_interval": [
+        0.5,
+        1.0
+      ],
+      "entropy_maximizer": 0.5,
+      "entropy": 1.5890269151739729,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 0.0,
+        "standard": 0.6666666666666666,
+        "standard_prime": 0.33333333333333337,
+        "two_two": 0.5
+      },
+      "full_S4_generation": true,
+      "M3_retained_nonzero": true,
+      "M2_retained_nonzero": true
+    },
+    {
+      "class": [
+        4
+      ],
+      "class_size": 6,
+      "support_size_with_identity": 7,
+      "generated_group_size": 24,
+      "rp_interval": [
+        0.5,
+        1.0
+      ],
+      "entropy_maximizer": 0.5,
+      "entropy": 1.5890269151739729,
+      "eigenvalues": {
+        "trivial": 1.0,
+        "sign": 0.0,
+        "standard": 0.33333333333333337,
+        "standard_prime": 0.6666666666666666,
+        "two_two": 0.5
+      },
+      "full_S4_generation": true,
+      "M3_retained_nonzero": true,
+      "M2_retained_nonzero": true
+    }
+  ],
+  "clock_marks": 7,
+  "status": "PASS_S4_SUPPORT_ENUMERATION; MULTIPLE_ADMISSIBLE_SUPPORTS_REMAIN",
+  "scope": "finite conjugacy-class support comparison; literal torus selection remains open"
+}

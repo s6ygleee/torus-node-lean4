@@ -2,7 +2,7 @@
   Irreducibility of the three-dimensional standard S4 representation.
 
   This closes the last representation-theoretic step of
-  Corollary 3.10 (`cor:axis`): every nonzero coordinate-permutation-invariant subspace of the
+  the corollary "A distinguished axis": every nonzero coordinate-permutation-invariant subspace of the
   coordinate-sum-zero space is the whole space.
 -/
 import PaperVerifier.TorusModel.SourceAxis

@@ -11,7 +11,11 @@ import PaperVerifier.TorusModel.WardRemainder
 import PaperVerifier.TorusModel.StrongSector
 import PaperVerifier.TorusModel.CommonPhysicalBlock
 import PaperVerifier.TorusModel.Integration
+import PaperVerifier.TorusModel.CombinedWardRemainder
+import PaperVerifier.TorusModel.ConfinementVortex
+import PaperVerifier.TorusModel.VortexTerminalBound
+import PaperVerifier.TorusModel.MixedCarrierRank
 
-/-! Sections 9-12: electroweak and strong sectors, models and audit.
+/-! Electroweak and strong sectors and the comparison models.
 
 Aggregator module: imports every Lean file formalising this part of the paper. -/

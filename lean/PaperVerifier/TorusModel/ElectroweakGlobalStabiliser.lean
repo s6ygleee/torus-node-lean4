@@ -14,7 +14,7 @@ import Mathlib.LinearAlgebra.UnitaryGroup
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.Ring
 
-namespace TorusModel.EW1
+namespace TorusModel.ElectroweakBreaking
 
 open Complex
 open scoped ComplexConjugate
@@ -143,4 +143,4 @@ theorem su2_vacuum_transitive
   refine ⟨g, ?_⟩
   ext <;> simp [globalVacuumAction, g]
 
-end TorusModel.EW1
+end TorusModel.ElectroweakBreaking

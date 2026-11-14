@@ -11,5 +11,5 @@ Arb precision using (10\times10) low-rank moments.  With truncation order
 \]
 
 Together with the `ew_support_four_streaming` record this closes every discrete signed field of support at
-most five.  the `ew_support_six_obstruction` record proves that the same fixed-background gate cannot be
+most five.  the `ew_support_six_obstruction` record proves that the same fixed-background test cannot be
 extended uniformly to support six.

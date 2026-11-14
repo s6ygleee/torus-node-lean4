@@ -11,9 +11,9 @@ namespace TorusModel
 theorem finite_cell_energy_scale
     {n : Type*} [Fintype n]
     (G : Matrix n n ℝ) (x : n → ℝ) (t : ℝ) :
-    HWD.quadraticEnergy G (t • x) =
-      t ^ 2 * HWD.quadraticEnergy G x := by
-  simp [HWD.quadraticEnergy, Matrix.mulVec_smul, dotProduct_smul]
+    RankOneDefect.quadraticEnergy G (t • x) =
+      t ^ 2 * RankOneDefect.quadraticEnergy G x := by
+  simp [RankOneDefect.quadraticEnergy, Matrix.mulVec_smul, dotProduct_smul]
   ring
 
 end TorusModel

@@ -1,0 +1,38 @@
+{
+  "record": "torus_symmetry_filter",
+  "source_compatible_dictionary": {
+    "history_marks": 7,
+    "clock_marks": 7,
+    "domain_size": 49,
+    "inverse_closed": true,
+    "determinant_clock": "nu(T_p)=+e_p, nu(T_p*)=-e_p"
+  },
+  "conditional_selector_measure": {
+    "history_identity_weight": 0.5,
+    "history_transposition_weight": 0.08333333333333333,
+    "history_min_convolution_eigenvalue": 0.0,
+    "clock_alpha": 0.4804762950414192,
+    "clock_target_second_moment": 0.8419783707167505,
+    "clock_second_moment": 0.8419783707167507,
+    "clock_moment_residual": 2.220446049250313e-16,
+    "clock_variance": 0.659844436157714,
+    "determinant_detailed_balance_defect": 4.440892098500626e-16,
+    "finite_selector_uniqueness": "PASS_CONDITIONAL_ON_DECLARED_SUPPORT_RULES"
+  },
+  "photon_selector": {
+    "E_T": 4512,
+    "E_M": 14768,
+    "B_M": 7816,
+    "B_S": 1088,
+    "w_S": 10.536764705882353,
+    "singleton_residual": 0.0
+  },
+  "finite_sector_recomputation": {
+    "photon": true,
+    "ew": true,
+    "gravity_ward": true,
+    "source_ward_recomputation": "PASS_FINITE_SOURCE_WARD_CLOSURE"
+  },
+  "source_boundary": "raw_torus_pushforward_to_this_support_and_measure remains OPEN",
+  "status": "PASS_CONDITIONAL_TORUS_SYMMETRY_FILTER_AND_FINITE_SECTOR_RECOMPUTATION"
+}

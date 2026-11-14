@@ -1,5 +1,5 @@
 /-
-  Exact finite moment calculations for Proposition 3.9 (`prop:sectors`).
+  Exact finite moment calculations for the proposition "Sector split of the moves".
 
   Every sum below is over the already explicit 24-element `D4Root` type.
   Thus the source covariance and drift are kernel-checked finite identities,

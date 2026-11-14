@@ -1,0 +1,9 @@
+{
+  "record": "length6_yang_mills_budget",
+  "length6_floor": 22.158501924504073,
+  "strict_pullback_budget": 22.158501924504073,
+  "half_floor_budget": 11.079250962252036,
+  "previous_local_floor_budget": 0.19976081359496434,
+  "scale_coupled_margin": {"formula": "cos(R*a0^2)-3R/c_star", "c_star": 372.38141620915326, "rows": [{"a0": 0.20, "R_max": 32.62162093644917}, {"a0": 0.10, "R_max": 83.40173950647205}, {"a0": 0.05, "R_max": 118.70162751745036}, {"a0": 0.02, "R_max": 123.97454637779373}, {"a0": 0.01, "R_max": 124.11757785881048}]},
+  "scope": "finite length-six and sampled scale-coupled bounds; physical Wilson rate and mass gap remain open"
+}

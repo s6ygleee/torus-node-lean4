@@ -15,7 +15,7 @@ git -C "$TOOLS/_lean4export" checkout --detach FETCH_HEAD
 cp "$ROOT/lean-toolchain" "$TOOLS/_lean4export/lean-toolchain"
 (
   cd "$TOOLS/_lean4export"
-  lake build
+  lake build -K jobs=1
 )
 
 git init "$TOOLS/_nanoda"
@@ -24,7 +24,7 @@ git -C "$TOOLS/_nanoda" fetch --depth 1 origin 6ba649836ff52755d77bbe5bc732a129b
 git -C "$TOOLS/_nanoda" checkout --detach FETCH_HEAD
 (
   cd "$TOOLS/_nanoda"
-  cargo build --release
+  CARGO_BUILD_JOBS=1 cargo build --release
 )
 
 echo "nanoda and lean4export prepared under tools/."

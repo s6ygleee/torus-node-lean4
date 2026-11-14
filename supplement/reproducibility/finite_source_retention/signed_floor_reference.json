@@ -1,0 +1,13 @@
+{
+  "rows": [
+    {"L": 3, "coefficient_radius": 1, "cycle_residual": 0.0, "signed_min": -0.00843530357685083},
+    {"L": 4, "coefficient_radius": 1, "cycle_residual": 0.0, "signed_min": -0.00843530357685083},
+    {"L": 3, "coefficient_radius": 8, "cycle_residual": 0.0, "signed_min": 0.19976081682814406},
+    {"L": 4, "coefficient_radius": 8, "cycle_residual": 0.0, "signed_min": 0.19976081682814406}
+  ],
+  "tail": {
+    "status": "PASS_LOCAL_D4_INTEGER_TAIL_IF_MARGIN_POSITIVE",
+    "conservative_signed_tail_error": 3.2331797155304584e-09,
+    "certified_margin_after_tail": 0.19976081359496434
+  }
+}

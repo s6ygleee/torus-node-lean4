@@ -38,6 +38,7 @@ def BCReflectionPositive (μ : ProbabilityMeasure E) (θ : E → E)
     (PositiveTime : (E →ᵇ ℝ) → Prop) : Prop :=
   ∀ F, PositiveTime F → 0 ≤ reflectedForm (μ : Measure E) θ F
 
+omit [T2Space E] [SecondCountableTopology E] in
 /-- Weak convergence passes each bounded-continuous reflected quadratic form
 to the limit when the reflection is continuous. -/
 theorem reflectedForm_tendsto_of_weak_convergence
@@ -52,6 +53,7 @@ theorem reflectedForm_tendsto_of_weak_convergence
   simpa [reflectedForm, G, θc,
     BoundedContinuousFunction.compContinuous_apply] using hG
 
+omit [T2Space E] [SecondCountableTopology E] in
 /-- The E2 closedness step for bounded continuous observables. -/
 theorem bcReflectionPositive_of_weakLimit
     {μn : ℕ → ProbabilityMeasure E} {μ : ProbabilityMeasure E}

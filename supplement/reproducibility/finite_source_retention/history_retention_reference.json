@@ -1,0 +1,10 @@
+{
+  "record": "history_retention_reference",
+  "retention_B_QP_defects": {
+    "trivial": 5.2871134967687446e-17,
+    "sign": 3.1048508113289684e-17,
+    "standard": 2.246567365754107e-16,
+    "standard_prime": 1.9353443062258742e-16,
+    "two_two": 8.895996913677829e-17
+  }
+}

@@ -1,12 +1,11 @@
 /-
-  TorusModel.HC — Lemma 8.12 of the paper (`lem:HC`, winding-holonomy separation)
+  TorusModel.HoleHolonomy — the lemma "Holonomies of holes decouple" of the paper.
   (i) Every weight depending only on the curvature is invariant under ker d₁ translations.
-  (ii)-(iv) (closed subtorus by rationality, Haar conditional law, independence) are left for the next stage.
-  Status: builds with Lean/mathlib v4.32.1, no placeholders.
+  (ii)-(iv) (closed subtorus by rationality, Haar conditional law, independence) are not formalised here.
 -/
 import Mathlib.Algebra.Module.Submodule.Ker
 
-namespace TorusModel.HC
+namespace TorusModel.HoleHolonomy
 
 variable {R E F : Type*} [CommRing R] [AddCommGroup E] [Module R E]
   [AddCommGroup F] [Module R F]
@@ -27,4 +26,4 @@ theorem curvature_observable_indep (d₁ : E →ₗ[R] F) {β : Type*} (O : F �
 
 -- The parts of the paper's statement that are not formalised are listed in the statement-to-declaration table.
 
-end TorusModel.HC
+end TorusModel.HoleHolonomy

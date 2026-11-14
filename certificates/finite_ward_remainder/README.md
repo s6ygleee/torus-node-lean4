@@ -24,7 +24,7 @@ Therefore
 \le0.682518507618341\,C_V^2.
 \]
 
-This closes the finite bounded-vertex H6 consumer without assuming an
+This closes the finite bounded-vertex H6 sector without assuming an
 unproved vertex constant. It uses only finite-dimensional operator norms,
 unitarity/contraction, and the exact class-sum tail. It does not prove that
 the unrestricted literal torus interaction generates the same vertices, nor

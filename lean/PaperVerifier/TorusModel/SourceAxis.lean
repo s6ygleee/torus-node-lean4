@@ -1,7 +1,7 @@
 /-
   Spectral consequences of the exact source moment matrix.
 
-  This is the algebraic core of Corollary 3.10 (`cor:axis`): the all-ones axis
+  This is the algebraic core of the corollary "A distinguished axis": the all-ones axis
   has eigenvalue 15, the coordinate-sum-zero space has eigenvalue 13, and the
   source drift has no spatial component.
 -/
@@ -91,7 +91,7 @@ theorem sourceDrift_ne_zero : sourceDrift ≠ 0 := by
   have h0 := congrFun h (0 : Fin 4)
   norm_num [oneVector] at h0
 
-theorem distinguished_axis_algebraic_core :
+theorem distinguished_axis_algebraic :
     (1 : ℝ) < (15 : ℝ) / 13 ∧
       sourceDrift ≠ 0 ∧
       axisProjection *ᵥ sourceDrift = sourceDrift ∧
@@ -100,7 +100,7 @@ theorem distinguished_axis_algebraic_core :
     axisProjection_sourceDrift, spatialProjection_sourceDrift⟩
 
 /- The finite algebraic content displayed in the paper's sector-split proposition.
-   This packages the explicit A3 transposition/Weyl calculation and the three
+   This combines the explicit A3 transposition/Weyl calculation and the three
    exact second-moment identities.  It does not assert existence of a
    continuous-time diffusion; that is a separate analytic obligation. -/
 theorem sector_split_algebraic_exact :

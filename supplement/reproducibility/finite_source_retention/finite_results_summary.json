@@ -1,0 +1,28 @@
+{
+  "record": "finite_results_summary",
+  "closed_finite": [
+    "finite selector/measure under declared support rules",
+    "same-measure finite history retention and M3/M2 projectors",
+    "finite photon incidence/Ward masslessness",
+    "finite electroweak 53-step sector",
+    "finite gravity Ward/dynamic-metric sector",
+    "finite lattice thermodynamic subsequential compactness",
+    "free neutral continuum/RP test",
+    "local D4 integer-sector signed Wilson floor"
+  ],
+  "open_source_or_continuum": [
+    "literal torus push-forward to the finite selector/measure (raw tuple non-identifiability)",
+    "physical CMP/Wilson pullback and volume-uniform signed P1 bound",
+    "interacting EW continuum/polymer identification",
+    "continuum dynamic-metric derivative and pole/vertex bounds",
+    "source-derived nonlinear Einstein/YM Ward summability",
+    "source-derived chiral matter continuum dictionary",
+    "independent four-dimensional SU(3) Yang-Mills mass gap"
+  ],
+  "finite_selector_marks": 49,
+  "history_fibre_dimension": 24,
+  "finite_wp_floor_after_tail": 0.19976081359496434,
+  "ew_q_total": 0.9825487365041257,
+  "infinite_volume_statement": "finite per-site state space implies compact product configuration space and subsequential weak limits",
+  "status": "PASS_FINITE_RESULTS_SUMMARY;_SOURCE_CONTINUUM_BOUNDARIES_EXPLICIT"
+}

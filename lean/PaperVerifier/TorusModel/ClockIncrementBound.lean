@@ -15,7 +15,7 @@ import Mathlib.Tactic.FieldSimp
 
 namespace TorusModel
 
-theorem clock_increment_bound_core
+theorem clock_increment_bound
     {I E : Type*} [Fintype I] [NormedAddCommGroup E]
     (i0 : I) (delta mark : I -> E) (kappa : Real)
     (hkappa : 0 < kappa)

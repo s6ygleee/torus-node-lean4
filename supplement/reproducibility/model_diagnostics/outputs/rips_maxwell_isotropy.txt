@@ -1,0 +1,26 @@
+## 1.8 1 5,6
+R=5 N=588 F0=e01: eps_eff=8.4469 naive=14.0457 ratio=0.6014 res=7.9e-10
+R=5 N=588 F0=e02: eps_eff=8.5253 naive=14.0967 ratio=0.6048 res=9.5e-10
+R=5 N=588 F0=e23: eps_eff=8.0900 naive=13.9938 ratio=0.5781 res=8.9e-10
+R=5 N=588 F0=sd: eps_eff=8.4261 naive=14.0834 ratio=0.5983 res=7.8e-10
+R=5 N=588 F0=asd: eps_eff=8.1108 naive=13.9561 ratio=0.5812 res=8.4e-10
+R=5 N=588 F0=mix: eps_eff=8.4869 naive=13.9874 ratio=0.6068 res=8.5e-10
+R=6 N=1294 F0=e01: eps_eff=9.4632 naive=16.2227 ratio=0.5833 res=9.8e-10
+R=6 N=1294 F0=e02: eps_eff=9.8382 naive=16.1120 ratio=0.6106 res=9.5e-10
+R=6 N=1294 F0=e23: eps_eff=10.2741 naive=16.4607 ratio=0.6242 res=8.4e-10
+R=6 N=1294 F0=sd: eps_eff=9.8271 naive=16.3261 ratio=0.6019 res=8.4e-10
+R=6 N=1294 F0=asd: eps_eff=9.9102 naive=16.3573 ratio=0.6059 res=9.7e-10
+R=6 N=1294 F0=mix: eps_eff=9.6404 naive=16.2844 ratio=0.5920 res=9.2e-10
+## 1.8 2 5,6
+R=5 N=621 F0=e01: eps_eff=10.2690 naive=16.7673 ratio=0.6124 res=8.6e-10
+R=5 N=621 F0=e02: eps_eff=10.2447 naive=16.7096 ratio=0.6131 res=8.3e-10
+R=5 N=621 F0=e23: eps_eff=10.4491 naive=16.2276 ratio=0.6439 res=9.4e-10
+R=5 N=621 F0=sd: eps_eff=10.2688 naive=16.4824 ratio=0.6230 res=9.3e-10
+R=5 N=621 F0=asd: eps_eff=10.4492 naive=16.5124 ratio=0.6328 res=8.4e-10
+R=5 N=621 F0=mix: eps_eff=10.5093 naive=16.5540 ratio=0.6349 res=7.9e-10
+R=6 N=1274 F0=e01: eps_eff=9.3163 naive=15.6871 ratio=0.5939 res=8.3e-10
+R=6 N=1274 F0=e02: eps_eff=9.5757 naive=15.6308 ratio=0.6126 res=1.0e-9
+R=6 N=1274 F0=e23: eps_eff=9.8305 naive=15.7501 ratio=0.6242 res=9.9e-10
+R=6 N=1274 F0=sd: eps_eff=9.6450 naive=15.7557 ratio=0.6122 res=9.5e-10
+R=6 N=1274 F0=asd: eps_eff=9.5018 naive=15.6814 ratio=0.6059 res=9.8e-10
+R=6 N=1274 F0=mix: eps_eff=9.4511 naive=15.6462 ratio=0.6040 res=9.5e-10

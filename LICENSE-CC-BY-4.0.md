@@ -1,8 +1,8 @@
-# Licence for the verification supplement and numerical data
+# Licence for the documentation and numerical data
 
 Copyright (c) 2026 Youngik (Tom) Lee
 
-The verification supplement, numerical inputs, fixed outputs, and interval
+The documentation, numerical inputs, fixed outputs, and interval
 fixtures in this repository are licensed under the Creative Commons
 Attribution 4.0 International licence (CC BY 4.0).
 

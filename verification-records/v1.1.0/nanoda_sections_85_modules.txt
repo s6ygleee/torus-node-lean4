@@ -1,0 +1,161 @@
+lean4export_binary_sha256=df3244daf441ea35384bc5e571b7f0898fd30fe5f09649046baeb61033779f84
+nanoda_binary_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+⚠ [2888/2945] Replayed PaperVerifier.TorusModel.SourceIrreducible
+warning: lean/PaperVerifier/TorusModel/SourceIrreducible.lean:112:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3710 jobs).
+batch=batch_001
+modules=PaperVerifier.TorusModel.AllPairHistoryMarginal PaperVerifier.TorusModel.AppendWordLeakage PaperVerifier.TorusModel.CellFormula PaperVerifier.TorusModel.ChargeConjugationBlocking
+export_sha256=0c3e2bb09d227fb2948f2559d269537fdd7012896f5947ac103c03e34df853a0
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 384800 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_002
+modules=PaperVerifier.TorusModel.ClockIncrementBound PaperVerifier.TorusModel.ClockRegularity PaperVerifier.TorusModel.CombinedWardRemainder PaperVerifier.TorusModel.CommonPhysicalBlock
+export_sha256=fd79b3e59d451a4d0764a6dab3cdb7ee2b8ace024c51860cb983f04f622bf5d8
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 298193 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_003
+modules=PaperVerifier.TorusModel.ConfinementVortex PaperVerifier.TorusModel.ContinuousWilsonPhoton PaperVerifier.TorusModel.D4 PaperVerifier.TorusModel.D4ChartAreaUpdate
+export_sha256=99dbf73a0b5b8e1f56a945311f016ff9292e86ed50209295cfee7cfd913a9836
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 384871 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_004
+modules=PaperVerifier.TorusModel.D4ChartCompatibility PaperVerifier.TorusModel.D4Cosine PaperVerifier.TorusModel.D4DispersionTaylor PaperVerifier.TorusModel.D4Lightcone
+export_sha256=c80a6352d052f552dff4d91d490e97a2772a142d451262efcdea71e4688d3ef7
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 312686 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_005
+modules=PaperVerifier.TorusModel.D4MaxwellForm PaperVerifier.TorusModel.D4Roots PaperVerifier.TorusModel.D4SourceStatements PaperVerifier.TorusModel.ElectroweakBreaking
+export_sha256=8969c45dfff083e4094b3e2de03b878d2da1564d3f82113b30c514b13b6aeb8a
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 321833 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_006
+modules=PaperVerifier.TorusModel.ElectroweakCovariance PaperVerifier.TorusModel.ElectroweakGlobalStabiliser PaperVerifier.TorusModel.ElectroweakLie PaperVerifier.TorusModel.ElectroweakMassRatios
+export_sha256=a9c8cd4d16fc091c891660b115fe61dacd3c9b03ac1099cc96883f59065741ce
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 362034 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_007
+modules=PaperVerifier.TorusModel.ElectroweakPerturbativeKernel PaperVerifier.TorusModel.ElectroweakReduction PaperVerifier.TorusModel.FiniteCompletion PaperVerifier.TorusModel.FiniteConfiguration
+export_sha256=49d306c4379c5dcf4effd37e736c71ddac3850327f3de8fe4b4358df6419fcb8
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 377527 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_008
+modules=PaperVerifier.TorusModel.FiniteConvolution PaperVerifier.TorusModel.FiniteGaussianPartition PaperVerifier.TorusModel.FiniteGibbsModel PaperVerifier.TorusModel.FinitePoisson
+export_sha256=59f751cf65a99b57995b6cbd1cdb29a1d0611626a01bb58d75b51b08f5ed9c9c
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 378401 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_009
+modules=PaperVerifier.TorusModel.FiniteRenyi PaperVerifier.TorusModel.FiniteSource PaperVerifier.TorusModel.GaussLaw PaperVerifier.TorusModel.GaussLawFourier
+export_sha256=0c0897f968d2408f7a26ed3b9a955598ecf054c836127c958fccb2ca9f53e857
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 356344 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_010
+modules=PaperVerifier.TorusModel.GeneralGibbsMeasure PaperVerifier.TorusModel.GravitationalNormalisation PaperVerifier.TorusModel.GravityGaugeBridge PaperVerifier.TorusModel.GravityReflectionPositivity
+export_sha256=73ead5b17c30811d7258ca369d56d45fa38f7b5096d4d00667dc3db23332c2ac
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 339357 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_011
+modules=PaperVerifier.TorusModel.HartmanWatsonMixture PaperVerifier.TorusModel.HeckeD4Comparison PaperVerifier.TorusModel.HelicalPair PaperVerifier.TorusModel.HistoryBlockingRatio
+export_sha256=655da768d7733210f36cad630117b1bddcfb6c937f8c027cefec2b22b375b050
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 384797 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_012
+modules=PaperVerifier.TorusModel.HistoryRGContraction PaperVerifier.TorusModel.HoleHolonomy PaperVerifier.TorusModel.HoleHolonomyCompact PaperVerifier.TorusModel.HoleHolonomyDisintegration
+export_sha256=5e54b8528c1160871f4626bad9998ce1e8eb8eedf044b544fc93a093df13b650
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 350925 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_013
+modules=PaperVerifier.TorusModel.HoleHolonomySubtorus PaperVerifier.TorusModel.IntegerVolumeLaplacian PaperVerifier.TorusModel.Integration PaperVerifier.TorusModel.Isotropy
+export_sha256=2ec3bd02257dd737e0190f28c23aeab1626c351caf2f5be16b94df9b971b20d3
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 370500 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_014
+modules=PaperVerifier.TorusModel.IsotropyConcrete PaperVerifier.TorusModel.IsotropyPoisson PaperVerifier.TorusModel.LorentzSignature PaperVerifier.TorusModel.Matter
+export_sha256=6db3907a67ea65b71752140665c93b766e5582be690fef38d08a734b3f30e93c
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 343502 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_015
+modules=PaperVerifier.TorusModel.MatterPropagatorWalk PaperVerifier.TorusModel.MatterStructural PaperVerifier.TorusModel.MinimalCompletion PaperVerifier.TorusModel.ModelDefinitions
+export_sha256=c0d8473d53667bb4a42d32cb61f8ba548ca47c121f181b1fc08719d7e9e7d633
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 283615 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_016
+modules=PaperVerifier.TorusModel.Node PaperVerifier.TorusModel.NoExtraU1 PaperVerifier.TorusModel.NoGravitonMass PaperVerifier.TorusModel.PeriodicCoexactCompactness
+export_sha256=9dc1f479c5bb680765e38c161c2c389339388d42ae923c6eaa733332af47a4e6
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 326737 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_017
+modules=PaperVerifier.TorusModel.PerSampleLowerBound PaperVerifier.TorusModel.PoissonPointProcess PaperVerifier.TorusModel.ProkhorovOSLimit PaperVerifier.TorusModel.RankOneDefect
+export_sha256=a3ed253a7702478b253f78a8c874ce2aa261d630586e08e75377e8e712cd684e
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 379249 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_018
+modules=PaperVerifier.TorusModel.ReflectionPositiveLimit PaperVerifier.TorusModel.Resonance PaperVerifier.TorusModel.SourceAxis PaperVerifier.TorusModel.SourceGenerator
+export_sha256=32b2e3635c064c2b7749c4b8e3d66b704f1f8ae56f510c1eec3db27ef83d4d0e
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 342820 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_019
+modules=PaperVerifier.TorusModel.SourceIrreducible PaperVerifier.TorusModel.SourceLayers PaperVerifier.TorusModel.SourceMoments PaperVerifier.TorusModel.SourceNoGo
+export_sha256=433b8a20d47bfbc869af884a6eceb2f91569f416d2d7d35fb306c2a1abde458b
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 311767 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_020
+modules=PaperVerifier.TorusModel.SourceReflections PaperVerifier.TorusModel.SourceWeight PaperVerifier.TorusModel.StrongSector PaperVerifier.TorusModel.TorusWaveDerivatives
+export_sha256=85bb351b84a4c2eec8ef033149b861dee1b8e3276ebc2b1dabe7415a942ea2f7
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 361913 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_021
+modules=PaperVerifier.TorusModel.TorusWaveLaw PaperVerifier.TorusModel.VertexAdditionHomology PaperVerifier.TorusModel.WardRemainder PaperVerifier.TorusModel.WaveGeometryStability
+export_sha256=3d625eb358beed3aa2cf64c17a651ebb03263bca19d8b01747fd84e20a0b2152
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 361798 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_022
+modules=PaperVerifier.TorusModel.WaveRotor
+export_sha256=db51f039c69531facc4686f9e9b6039e3ff743720a090f2c70e573bb9658431a
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 199006 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]

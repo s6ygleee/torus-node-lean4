@@ -1,0 +1,46 @@
+{
+  "record": "three_family_candidate",
+  "left_factor": "V3 standard S4 representation (family candidate)",
+  "right_factors": "M3 colour and M2 weak commutants",
+  "family_count": 3,
+  "field_dimensions": {
+    "Q_L": 18,
+    "u_R^c": 9,
+    "d_R^c": 9,
+    "L_L": 6,
+    "e_R^c": 3
+  },
+  "transfer_eigenvalues": {
+    "rho_M3": "2/3",
+    "rho_M2": "1/2",
+    "Q_L_and_L_L": "1/3"
+  },
+  "retention": {
+    "family_commutator_defect": 0.0,
+    "gauge_commutator_defect": 0.0,
+    "chirality_square_defect": 0.0
+  },
+  "anomalies": {
+    "gravity_squared_U1": "0",
+    "U1_cubic": "0",
+    "SU3_squared_U1": "0",
+    "SU2_squared_U1": "0",
+    "SU3_cubic": "0",
+    "SU2_Witten_doublet_count": 12
+  },
+  "yukawa": {
+    "hypercharge_sums": {
+      "down": "0",
+      "up": "0",
+      "lepton": "0"
+    },
+    "family_intertwiner_dimensions": {
+      "down": 1,
+      "up": 1,
+      "lepton": 1
+    },
+    "source_transfer_scale": "1/9"
+  },
+  "status": "PASS_FINITE_SOURCE_FINITE_THREE_FAMILY_BIMODULE_CANDIDATE",
+  "scope": "finite commuting left/right family candidate; physical family interpretation and continuum matter dynamics remain open"
+}

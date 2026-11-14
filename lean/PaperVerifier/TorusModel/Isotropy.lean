@@ -1,10 +1,10 @@
 /-
-  TorusModel.Q2 — Theorem 8.14 of the paper (`thm:Q2`, isotropy ⇒ q_hom = ε|F|²)
+  TorusModel.Isotropy — the isotropy theorem of the paper: isotropy implies q_hom = ε|F|².
   Isotropy follows already from a finite group:
   a symmetric quadratic form on Λ²ℝ⁴ invariant under coordinate sign flips and coordinate permutations
   (hyperoctahedral group W(B₄) ⊂ W(F₄) ⊂ O(4)) is scalar.
   Λ² basis: e₀₁, e₀₂, e₀₃, e₁₂, e₁₃, e₂₃ (Fin 6).
-  Status: builds, no placeholders. Off-diagonal vanishing and the abstract
+  Off-diagonal vanishing and the abstract
   transitive-permutation step are proved; the concrete hyperoctahedral action
   remains an explicit input.
 -/
@@ -14,7 +14,7 @@ import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.NormNum
 
-namespace TorusModel.Q2
+namespace TorusModel.Isotropy
 
 /-- Whether the Λ² basis element a contains coordinate k. -/
 def contains : Fin 6 → Fin 4 → Bool
@@ -70,4 +70,4 @@ theorem scalar_of_invariant (M : Matrix (Fin 6) (Fin 6) ℝ)
 
 -- The parts of the paper's statement that are not formalised are listed in the statement-to-declaration table.
 
-end TorusModel.Q2
+end TorusModel.Isotropy

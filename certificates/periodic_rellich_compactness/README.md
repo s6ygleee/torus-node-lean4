@@ -24,5 +24,5 @@ therefore yields an (L^2)-convergent subsequence of the interpolants.
 
 Thus bounded periodic the finite completion coexact fields satisfy a self-contained
 discrete Rellich compactness lemma. This closes the deterministic geometric
-compactness consumer. It does not imply tightness of the interacting torus
+compactness sector. It does not imply tightness of the interacting torus
 measure, nor does it repair the unrestricted Poisson obstruction.

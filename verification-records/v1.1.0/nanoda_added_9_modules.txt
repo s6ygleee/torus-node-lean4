@@ -1,0 +1,28 @@
+lean4export_binary_sha256=df3244daf441ea35384bc5e571b7f0898fd30fe5f09649046baeb61033779f84
+nanoda_binary_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+⚠ [2877/2923] Replayed PaperVerifier.TorusModel.SourceIrreducible
+warning: lean/PaperVerifier/TorusModel/SourceIrreducible.lean:112:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3710 jobs).
+batch=batch_001
+modules=PaperVerifier.TorusModel.SimultaneousRetention PaperVerifier.TorusModel.LinkBlocking PaperVerifier.TorusModel.PolarLinkReflectionPositivity PaperVerifier.TorusModel.HyperchargeRay
+export_sha256=f2cd89d97e30ac03c51fb7a964c86af9f8e758fe7daafa358a7ec8539a898f0a
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 354075 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_002
+modules=PaperVerifier.TorusModel.AdjacentRightControls PaperVerifier.TorusModel.TransverseProjector PaperVerifier.TorusModel.WardTransversePole PaperVerifier.TorusModel.VortexTerminalBound
+export_sha256=8eb18422570a8a2a873f68a3b3a590ac6032907b45de1a3ac631dbaa443fec18
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 334955 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+batch=batch_003
+modules=PaperVerifier.TorusModel.MixedCarrierRank
+export_sha256=88aebdd4e9e7baf11bad0e3a83d296a5e25edcc0200fe308ff044eb6578e7575
+nanoda_sha256=ccafeaf5f200223b66024438dbaba5bc0cc3b98f33f25a62b4b435e82d231a1a
+Checked 312633 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]

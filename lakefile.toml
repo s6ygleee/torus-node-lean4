@@ -1,11 +1,11 @@
 name = "paper-verifier-torus"
-version = "1.0.0"
+version = "1.1.0"
 defaultTargets = ["PaperVerifierTorus"]
 
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
-rev = "v4.32.1"
+rev = "520045ab14e26149ee970e2e617ca04b09bde5d6"
 
 [[lean_lib]]
 name = "PaperVerifierTorus"
@@ -50,17 +50,14 @@ roots = [
   "PaperVerifier.TorusModel.ProkhorovOSLimit",
   "PaperVerifier.TorusModel.FiniteRenyi",
   "PaperVerifier.TorusModel.GeneralGibbsMeasure",
-  "PaperVerifier.TorusModel.D4SourceWrappers",
+  "PaperVerifier.TorusModel.D4SourceStatements",
   "PaperVerifier.TorusModel.TorusWaveLaw",
   "PaperVerifier.TorusModel.HistoryRGContraction",
   "PaperVerifier.TorusModel.ElectroweakMassRatios",
-  "PaperVerifier.TorusModel.OpenHypothesisInterfaces",
-  "PaperVerifier.TorusModel.CouplingBoundary",
   "PaperVerifier.TorusModel.VertexAdditionHomology",
   "PaperVerifier.TorusModel.NoExtraU1",
   "PaperVerifier.TorusModel.ContinuousWilsonPhoton",
   "PaperVerifier.TorusModel.PerSampleLowerBound",
-  "PaperVerifier.TorusModel.VacuumCatalogue",
   "PaperVerifier.TorusModel.HelicalPair",
   "PaperVerifier.TorusModel.Resonance",
   "PaperVerifier.TorusModel.WardRemainder",
@@ -94,12 +91,25 @@ roots = [
   "PaperVerifier.TorusModel.CellFormula",
   "PaperVerifier.TorusModel.HartmanWatsonMixture",
   "PaperVerifier.TorusModel.FiniteConvolution",
-  "PaperVerifier.TorusModel.ConditionalProofBoundaries",
   "PaperVerifier.TorusModel.FiniteCompletion",
   "PaperVerifier.TorusModel.SourceNoGo",
   "PaperVerifier.TorusModel.FiniteSource",
   "PaperVerifier.TorusModel.IntegerVolumeLaplacian",
   "PaperVerifier.TorusModel.ElectroweakCovariance",
+  "PaperVerifier.TorusModel.HistoryBlockingRatio",
+  "PaperVerifier.TorusModel.AppendWordLeakage",
+  "PaperVerifier.TorusModel.AllPairHistoryMarginal",
+  "PaperVerifier.TorusModel.CombinedWardRemainder",
+  "PaperVerifier.TorusModel.ConfinementVortex",
+  "PaperVerifier.TorusModel.SimultaneousRetention",
+  "PaperVerifier.TorusModel.LinkBlocking",
+  "PaperVerifier.TorusModel.TransverseProjector",
+  "PaperVerifier.TorusModel.PolarLinkReflectionPositivity",
+  "PaperVerifier.TorusModel.HyperchargeRay",
+  "PaperVerifier.TorusModel.AdjacentRightControls",
+  "PaperVerifier.TorusModel.WardTransversePole",
+  "PaperVerifier.TorusModel.VortexTerminalBound",
+  "PaperVerifier.TorusModel.MixedCarrierRank",
   "PaperVerifier.TorusModel.Integration"
 ]
 srcDir = "lean"

@@ -1,0 +1,12 @@
+## 1.5 1 6,7,8
+rc=1.5 R=6 N=1243: vertices with disconnected link = 12 (0.965%), extra components = 13, per volume 0.0100, isolated 0, hist {"1":1231,"2":11,"3":1}
+rc=1.5 R=7 N=2345: vertices with disconnected link = 22 (0.938%), extra components = 27, per volume 0.0112, isolated 0, hist {"1":2323,"2":17,"3":5}
+rc=1.5 R=8 N=4059: vertices with disconnected link = 53 (1.306%), extra components = 56, per volume 0.0137, isolated 0, hist {"1":4006,"2":50,"3":3}
+## 1.5 2 6,7,8
+rc=1.5 R=6 N=1290: vertices with disconnected link = 13 (1.008%), extra components = 13, per volume 0.0100, isolated 0, hist {"1":1277,"2":13}
+rc=1.5 R=7 N=2329: vertices with disconnected link = 33 (1.417%), extra components = 33, per volume 0.0137, isolated 0, hist {"1":2296,"2":33}
+rc=1.5 R=8 N=4025: vertices with disconnected link = 60 (1.491%), extra components = 61, per volume 0.0149, isolated 0, hist {"1":3965,"2":59,"3":1}
+## 1.5 3 6,7,8
+rc=1.5 R=6 N=1310: vertices with disconnected link = 13 (0.992%), extra components = 15, per volume 0.0116, isolated 0, hist {"1":1297,"2":11,"3":2}
+rc=1.5 R=7 N=2336: vertices with disconnected link = 32 (1.370%), extra components = 33, per volume 0.0137, isolated 0, hist {"1":2304,"2":31,"3":1}
+rc=1.5 R=8 N=4195: vertices with disconnected link = 54 (1.287%), extra components = 56, per volume 0.0137, isolated 0, hist {"1":4141,"2":52,"3":2}

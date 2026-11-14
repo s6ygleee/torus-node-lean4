@@ -1,0 +1,104 @@
+{
+  "checks": {
+    "anomaly_map_rank_two": true,
+    "competing_cycle_threshold": true,
+    "hypercharge_kernel_exact": true,
+    "integer_charge_ray_exact": true,
+    "witness_stable": true,
+    "weak_su2_from_rank2_polar_links": false,
+    "coloured_carrier_condensation_allowed": false,
+    "declared_bath_passes_rank_one_higgs_threshold": false,
+    "history_only_gs_complete": false
+  },
+  "classical_scaling_exponents": {
+    "rank2": {
+      "plaquette_norm": 1.94365,
+      "wilson_density": 3.88729
+    },
+    "rank3": {
+      "plaquette_norm": 1.96134,
+      "wilson_density": 3.92997
+    }
+  },
+  "hypercharge": {
+    "archived_four_stack_transfer": false,
+    "charges": ["1/6", "-2/3", "1/3", "-1/2", "1"],
+    "kernel": ["-1/3", "-1/2", "-1"],
+    "nonzero_minor": "3/2",
+    "rank": 2
+  },
+  "polar_holonomy": {
+    "rank2_lie_dimension": 1,
+    "rank3_lie_dimension": 9
+  },
+  "weak_history": {
+    "higgs_charges": [0, 1, -1],
+    "hypercharge": "1/2",
+    "qem_safe_max_rank": 1,
+    "pair_mark_rank": 2,
+    "three_cycle_threshold": 0.007546587,
+    "declared_three_cycle_ratio": -0.007271
+  },
+  "history_gs": {
+    "qem_safe_lift_rank": 1,
+    "required_lift_rank": 2
+  },
+  "singlet_completion": {
+    "external_charge_row": [0, 2, -1],
+    "completed_lift_rank": 2,
+    "old_hessian_minimum": 0.8,
+    "extended_hessian_minimum": 0.8,
+    "colour_plaquette_defect": 0.0,
+    "source_derived": false
+  },
+  "word_pullback": {
+    "free_semigroup_defect": 1.73e-18,
+    "pair_memory_right_ordering_defect": 0.0013316403,
+    "defect_interpretation": "channel-weight nonuniformity",
+    "left_convolution_retains_right_multiplicity": true,
+    "finite_pair_memory_commutator": 0.0,
+    "right_history_dependent_defect": 2.68
+  },
+  "u2_quotient": {
+    "even_q2_observables_covariant": true,
+    "doublet_requires_z2_link": true,
+    "source_selected_z2_link": false
+  },
+  "colour": {
+    "polar_link_locked": true,
+    "iid_history_wilson": "(2/3)^P"
+  },
+  "finite_closure": {
+    "weak_lie_dimensions": [9, 3],
+    "ordered_blocking_retains_holonomy_dimensions": true,
+    "pair_mark_q2_centre_phase": false,
+    "missing_q2_charged_su2_singlet": true,
+    "exchange_gap": 0.5857864376269049,
+    "gravity_quotient_coercivity": 0.4052847345693511,
+    "all_five_gravity_mode_coefficients_positive": true,
+    "conditional_z_infty_at_lambda_1": [1.0299545, 1.0349625],
+    "tree_tt_residue": 1.0,
+    "d4_heat_gap": 8.0,
+    "face_convolution_defect_upper": 6e-17,
+    "partner_lifted_vacua": 3016,
+    "matched_vacua": 3016,
+    "maximum_partner_lift": 0.9578075,
+    "faithful_low_energy_group": "(SU3xSU2xU1Y)/Z6"
+  },
+  "mixed_cycle": {
+    "cycle_derivative": 1.45616086976,
+    "gram_residual": 1.45e-18,
+    "kappa": 0.009701655221418456,
+    "singular_values_at_a_0_005": [1.9405363, 0.8528353],
+    "smallest_positive_stiffness_eigenvalue": 0.0055879146944,
+    "threshold": 0.002425413805354614,
+    "witness_alpha": 0.002910496566425537,
+    "witness_curvature": 0.003557273581186765,
+    "witness_depth": 0.00016169425369030746,
+    "witness_h": 0.5856855434571508,
+    "representation": "(3bar,2)",
+    "hypercharge": "-1/6",
+    "is_higgs": false,
+    "positive_rotor_nonzero_vacuum": false
+  }
+}

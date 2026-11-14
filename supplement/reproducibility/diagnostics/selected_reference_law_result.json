@@ -1,0 +1,53 @@
+{
+  "parameters": {
+    "a": 0.08922119374358976,
+    "tau": 11.208099309608784,
+    "alpha": 0.48047629504141964,
+    "w_S": "1433/136"
+  },
+  "checks": {
+    "reflection_positivity": {
+      "min_eigenvalues": {
+        "trivial": 0.17844238748717953,
+        "sign": 0.0,
+        "rho2": 0.08806897481969862,
+        "rho3": 0.11674866700519065,
+        "rho3_sign": 0.057882626358688856
+      },
+      "pass": true
+    },
+    "coercivity": {
+      "min_relative_hessian": 0.029956657296635533,
+      "pass": true
+    },
+    "right_S4_retention": {
+      "max_commutator": 0.0,
+      "pass": true
+    },
+    "ward_frame_invariance": {
+      "max_relative_defect": 1.8880118198509323e-14,
+      "pass": 1.0
+    },
+    "charge_stationary_weak_block": {
+      "norm": 4.518630392372903e-16,
+      "pass": true
+    },
+    "colour_cycle_alignment": {
+      "phase_at_minimum": 0.0,
+      "pass": true
+    },
+    "link_holonomy_dimensions": {
+      "weak": 3,
+      "colour": 9,
+      "pass": true
+    },
+    "photon_isotropy": {
+      "C_E": 19280,
+      "C_B": 19280.0,
+      "pass": true
+    }
+  },
+  "all_pass": true,
+  "scope": "finite checks of one admissible representative; not a derivation from the unrestricted source",
+  "evidence_class": "exact finite algebra and floating-point linear algebra"
+}

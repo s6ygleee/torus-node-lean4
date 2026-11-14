@@ -1,5 +1,5 @@
 /-
-  The coordinate-level part of Lemma 4.4 (`lem:layers`).
+  The coordinate-level part of the lemma "Locality of the D4 moves".
 
   The explicit D4 root enumeration gives entries in {0, -1, 1}.  The
   clique-complex edge/triangle half-space argument is intentionally kept as a

@@ -1,0 +1,58 @@
+{
+  "record": "free_neutral_continuum_rp",
+  "physical_mass": 0.7,
+  "neutral_fourier_modes": 624,
+  "continuum_rows": [
+    {
+      "N": 8,
+      "a": 0.125,
+      "max_symbol_error": 119.6546816697188,
+      "max_inverse_covariance_bound": 0.0016276839808073444
+    },
+    {
+      "N": 16,
+      "a": 0.0625,
+      "max_symbol_error": 31.809369539768227,
+      "max_inverse_covariance_bound": 0.0003409838165230725
+    },
+    {
+      "N": 32,
+      "a": 0.03125,
+      "max_symbol_error": 8.0758120021801,
+      "max_inverse_covariance_bound": 8.19271022861988e-05
+    },
+    {
+      "N": 64,
+      "a": 0.015625,
+      "max_symbol_error": 2.026749922774229,
+      "max_inverse_covariance_bound": 2.028434469203322e-05
+    },
+    {
+      "N": 128,
+      "a": 0.0078125,
+      "max_symbol_error": 0.5071760479091836,
+      "max_inverse_covariance_bound": 5.058895065617526e-06
+    }
+  ],
+  "rp_rows": [
+    {
+      "L": 8,
+      "minimum_crossing_cholesky_pivot": -5.57837628625833e-17
+    },
+    {
+      "L": 16,
+      "minimum_crossing_cholesky_pivot": -9.844253807705155e-16
+    },
+    {
+      "L": 32,
+      "minimum_crossing_cholesky_pivot": -2.101905486061779e-15
+    },
+    {
+      "L": 64,
+      "minimum_crossing_cholesky_pivot": -7.0188431361744156e-15
+    }
+  ],
+  "theorem_scope": "finite-support neutral Fourier observables of the finite-source free derivative sector",
+  "status": "PASS_FINITE_SOURCE_FREE_NEUTRAL_CONTINUUM_RP_TEST",
+  "remaining": "interacting polymer bounds, raw-torus pullback, full matter/gravity/YM continuum"
+}

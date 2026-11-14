@@ -1,6 +1,6 @@
 /-
-  TorusModel.EW1 — Theorem 9.1 of the paper (`thm:EW1`, structure of partial breaking)
-  Pure algebra. Status: builds with Lean/mathlib v4.32.1, no placeholders.
+  TorusModel.ElectroweakBreaking — the theorem "Structure of partial breaking" of the paper.
+  Pure algebra.
 -/
 import Mathlib.Analysis.Complex.Basic
 import Mathlib.Analysis.Complex.Exponential
@@ -9,7 +9,7 @@ import Mathlib.Tactic.Linarith
 import Mathlib.Tactic.Positivity
 import Mathlib.Tactic.Ring
 
-namespace TorusModel.EW1
+namespace TorusModel.ElectroweakBreaking
 
 open Complex
 
@@ -86,4 +86,4 @@ theorem massForm_eq_zero_iff (g g' v W₁ W₂ W₃ B : ℝ) (hv : v ≠ 0) (hg 
     have : g * W₃ - g' * B = 0 := by linarith
     rw [this]; ring
 
-end TorusModel.EW1
+end TorusModel.ElectroweakBreaking

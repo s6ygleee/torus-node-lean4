@@ -28,7 +28,7 @@ gave:
 * (k=(2,1,0,0)): (0,9.4200199900,9.4200199900,9.4200199900).
 
 The (p\to0) ratio tends to \(\beta_W=3.643\), so the finite Wilson
-consumer has the correct massless transverse pole and no gauge-invariant
+sector has the correct massless transverse pole and no gauge-invariant
 constant mass term at quadratic level.
 
 ## Boundary

@@ -1,7 +1,7 @@
 /-
   Exact finite and analytic lemmas used by the finite completion.
 
-  This module does not assert that the original torus source supplies H1--H8.
+  This module does not assert that the original torus source supplies conditions 1--8 of the conditional source-to-continuum theorem.
   It proves only the consequences that follow once the measurable block maps
   or the stated geometric remainder bounds have been supplied.
 -/
@@ -26,7 +26,7 @@ open Matrix
 open scoped InnerProductSpace
 
 /-- Successive same-measure blockings compose to the push-forward by the
-    composite block map.  This is the exact semigroup identity in H4. -/
+    composite block map.  This is the exact semigroup identity of condition 4. -/
 theorem pushforward_comp
     {X Y Z : Type*} [MeasurableSpace X] [MeasurableSpace Y] [MeasurableSpace Z]
     (μ : Measure X) (π₁ : X → Y) (π₂ : Y → Z)
@@ -34,8 +34,8 @@ theorem pushforward_comp
     Measure.map π₂ (Measure.map π₁ μ) = Measure.map (π₂ ∘ π₁) μ := by
   exact Measure.map_map hπ₂ hπ₁
 
-/-- The scalar geometric budget appearing in the H5/H6 remainder estimates. -/
-theorem geometric_budget_hasSum
+/-- The scalar geometric majorant of the remainder estimates of conditions 5 and 6. -/
+theorem geometric_majorant_hasSum
     (C ρ : ℝ) (hρ₀ : 0 ≤ ρ) (hρ₁ : ρ < 1) :
     HasSum (fun n : ℕ => C * ρ ^ n) (C / (1 - ρ)) := by
   simpa [div_eq_mul_inv] using
@@ -52,8 +52,8 @@ theorem remainder_summable
   exact Summable.of_nonneg_of_le (fun n => norm_nonneg (R n)) hR
     ((summable_geometric_of_lt_one hρ₀ hρ₁).mul_left C)
 
-/-- The continuum remainder norm is bounded by the same geometric budget.
-    This is the rigorous conclusion justified by H6; exact vanishing needs a
+/-- The continuum remainder norm is bounded by the same geometric majorant.
+    This is the rigorous conclusion justified by condition 6; exact vanishing needs a
     separate cancellation/counterterm hypothesis. -/
 theorem remainder_tsum_norm_bound
     {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [CompleteSpace E]
@@ -68,15 +68,15 @@ theorem remainder_tsum_norm_bound
   calc
     ‖∑' n, R n‖ ≤ ∑' n, ‖R n‖ := norm_tsum_le_tsum_norm hnorm
     _ ≤ ∑' n, C * ρ ^ n := hnorm.tsum_le_tsum hR hgeom
-    _ = C / (1 - ρ) := (geometric_budget_hasSum C ρ hρ₀ hρ₁).tsum_eq
+    _ = C / (1 - ρ) := (geometric_majorant_hasSum C ρ hρ₀ hρ₁).tsum_eq
 
-/-- The scalar append-tail/Feshbach budget is nonnegative whenever the append
+/-- The scalar append-tail/Feshbach majorant is nonnegative whenever the append
     norm is strictly below one. -/
-theorem feshbach_budget_nonneg (α : ℝ) (hα : α < 1) :
+theorem feshbach_majorant_nonneg (α : ℝ) (hα : α < 1) :
     0 ≤ α ^ 2 / (1 - α) :=
   div_nonneg (sq_nonneg α) (sub_nonneg.mpr hα.le)
 
-/-- The reusable implication: if the scalar Feshbach budgets are
+/-- The reusable implication: if the scalar Feshbach majorants are
     summable and dominate the Banach-valued scale corrections, then the actual
     correction series is summable.  A source RG contraction supplying the
     hypotheses is intentionally not asserted here. -/
@@ -84,11 +84,11 @@ theorem feshbach_correction_summable
     {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E] [CompleteSpace E]
     (R : ℕ → E) (α : ℕ → ℝ)
     (_hα : ∀ n, α n < 1)
-    (hbudget : Summable (fun n => α n ^ 2 / (1 - α n)))
+    (hmajorant : Summable (fun n => α n ^ 2 / (1 - α n)))
     (hR : ∀ n, ‖R n‖ ≤ α n ^ 2 / (1 - α n)) :
     Summable R := by
   apply Summable.of_norm
-  exact Summable.of_nonneg_of_le (fun n => norm_nonneg (R n)) hR hbudget
+  exact Summable.of_nonneg_of_le (fun n => norm_nonneg (R n)) hR hmajorant
 
 /-- A normalized finite measure on a transitive finite action is uniform when
     the weights are invariant.  This is the abstract measure-selection step
@@ -140,7 +140,7 @@ theorem block_correction_zero
   intro n
   rw [hqp n, mul_zero]
 
-/-- Rectangular block-matrix version of the exact H5 decoupling statement. -/
+/-- Rectangular block-matrix version of the exact decoupling statement of condition 5. -/
 theorem matrix_block_correction_zero
     {P Q R : Type*} [Fintype Q] [Semiring R]
     (Bpq : Matrix P Q R) (BqqInv : Matrix Q Q R) (Bqp : Matrix Q P R)
@@ -170,7 +170,7 @@ theorem complement_projection_annihilates
   rw [Matrix.sub_mul, Matrix.one_mul, Matrix.mul_assoc, hCB, Matrix.mul_one, sub_self]
 
 /-- A factorisation `C = L Lᵀ` gives the finite-dimensional positivity input
-    used by the reflection split of the finite completion.  This is the Gram-matrix part of H3,
+    used by the reflection split of the finite completion.  This is the Gram-matrix part of condition 3,
     not reflection positivity of the original torus measure. -/
 theorem gram_quadratic_nonneg
     {m n : Type*} [Fintype m] [Fintype n]
@@ -227,7 +227,7 @@ theorem bath_memory_quadratic_nonneg
   exact gram_quadratic_nonneg (bathFactor G Ω ω ε) x
 
 /-- Real congruence preserves positive semidefiniteness.  Permutation
-    conjugation in the finite `S₄` consumer is the special case where `P` is a
+    conjugation in the finite `S₄` sector is the special case where `P` is a
     permutation matrix. -/
 theorem conjugate_posSemidef
     {I J : Type*} [Fintype I] [Fintype J]

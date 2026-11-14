@@ -5,6 +5,6 @@ import PaperVerifier.TorusModel.GravitationalNormalisation
 import PaperVerifier.TorusModel.IntegerVolumeLaplacian
 import PaperVerifier.TorusModel.VertexAdditionHomology
 
-/-! Section 5: gravity and the dynamical-metric model.
+/-! Gravity and the dynamical-metric model.
 
 Aggregator module: imports every Lean file formalising this part of the paper. -/

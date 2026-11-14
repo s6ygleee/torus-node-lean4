@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "module_count": 85,
+  "batch_size": 4,
+  "checked_batches": 22,
+  "report": "report/nanoda.txt"
+}

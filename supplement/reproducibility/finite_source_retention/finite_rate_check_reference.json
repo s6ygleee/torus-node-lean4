@@ -1,0 +1,11 @@
+{
+  "record": "finite_rate_check",
+  "transverse_floor": 401.6200759661959,
+  "spectral_radius": 0.6666666666666666,
+  "lambda": 0.4054651081081644,
+  "mu": 0.2027325540540822,
+  "q": 0.816496580927726,
+  "unmarked_amplitude": 1.0,
+  "marked_amplitude": 1.5,
+  "scope": "finite objective rows and conditional physical targets; physical rates and TES crossover remain open"
+}

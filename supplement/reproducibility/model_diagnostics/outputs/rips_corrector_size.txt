@@ -1,0 +1,18 @@
+## 1.8 1 4,5,6,7,8
+R=4 N=233: ratio=0.6866 rms(a)=0.1759 max|a|=1.034 rms(d1a)=0.1813 rms(a)/R=0.0440
+R=5 N=579: ratio=0.6259 rms(a)=0.2830 max|a|=2.711 rms(d1a)=0.1942 rms(a)/R=0.0566
+R=6 N=1297: ratio=0.6175 rms(a)=0.3179 max|a|=2.289 rms(d1a)=0.1944 rms(a)/R=0.0530
+R=7 N=2455: ratio=0.5991 rms(a)=0.3343 max|a|=3.553 rms(d1a)=0.1990 rms(a)/R=0.0478
+R=8 N=4133: ratio=0.6204 rms(a)=0.3004 max|a|=2.595 rms(d1a)=0.1927 rms(a)/R=0.0376
+## 1.8 2 4,5,6,7,8
+R=4 N=253: ratio=0.6634 rms(a)=0.1812 max|a|=0.886 rms(d1a)=0.1809 rms(a)/R=0.0453
+R=5 N=641: ratio=0.6271 rms(a)=0.3247 max|a|=1.859 rms(d1a)=0.1913 rms(a)/R=0.0649
+R=6 N=1274: ratio=0.5750 rms(a)=0.3623 max|a|=3.674 rms(d1a)=0.2028 rms(a)/R=0.0604
+R=7 N=2315: ratio=0.5690 rms(a)=0.3370 max|a|=3.558 rms(d1a)=0.2036 rms(a)/R=0.0481
+R=8 N=4027: ratio=0.6114 rms(a)=0.3352 max|a|=3.941 rms(d1a)=0.1952 rms(a)/R=0.0419
+## 1.8 3 4,5,6,7,8
+R=4 N=262: ratio=0.7091 rms(a)=0.1703 max|a|=0.938 rms(d1a)=0.1726 rms(a)/R=0.0426
+R=5 N=683: ratio=0.6683 rms(a)=0.2777 max|a|=1.563 rms(d1a)=0.1811 rms(a)/R=0.0555
+R=6 N=1315: ratio=0.6052 rms(a)=0.3313 max|a|=2.809 rms(d1a)=0.1977 rms(a)/R=0.0552
+R=7 N=2407: ratio=0.6051 rms(a)=0.3258 max|a|=2.488 rms(d1a)=0.1963 rms(a)/R=0.0465
+R=8 N=4040: ratio=0.6279 rms(a)=0.2989 max|a|=3.018 rms(d1a)=0.1919 rms(a)/R=0.0374

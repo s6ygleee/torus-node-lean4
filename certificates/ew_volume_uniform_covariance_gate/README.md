@@ -1,6 +1,6 @@
-# EW volume-uniform covariance gate
+# EW volume-uniform covariance test
 
-The Arb computation of `../ew_volume_uniform_covariance/ew_volume_uniform_l16.py` was replayed. For the constrained block
+The Arb computation of `../ew_volume_uniform_covariance/ew_volume_uniform_l16.py` was recomputed. For the constrained block
 covariance at \(L=16\), the outward error radius is
 
 \[
@@ -24,20 +24,20 @@ Combining the analytic zero-mean block gap, Combes–Thomas estimate, weighted
  \qquad \sup_{L\ge16}B_L\le8.464.
 \]
 
-The small even sizes \(L=2,4,6,8,10,12,14\) were replayed with the same
-Arb pipeline. The EW consumer criterion has
+The small even sizes \(L=2,4,6,8,10,12,14\) were recomputed with the same
+Arb pipeline. The EW sector criterion has
 
 \[
  B_{\rm crit}=13.4627,
  \qquad K_{\rm EW}=0.472<0.75.
 \]
 
-Thus the volume-uniform covariance/L3–L4 **consumer gate** closes for the
+Thus the volume-uniform covariance/L3–L4 **sector test** closes for the
 adopted the finite completion EW model.
 
 ## Scope boundary
 
-This closes the EW covariance consumer under the stated block covariance,
+This closes the EW covariance sector under the stated block covariance,
 gap, and Combes–Thomas hypotheses. It is not a derivation of those objects
 from the unrestricted raw torus measure, and it does not close the Wilson P1
 transfer or the four-dimensional SU(3) mass gap.

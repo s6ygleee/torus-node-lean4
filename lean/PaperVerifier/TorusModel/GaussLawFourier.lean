@@ -1,5 +1,5 @@
 /-
-  Fourier-analysis part of Lemma GL.
+  Fourier-analysis part of Lemma GaussLaw.
 
   The coefficient field is the lattice `Fin d -> Z`; `Summable` of the
   coefficient norm is the paper's absolute summability hypothesis.  The
@@ -13,7 +13,7 @@ import Mathlib.Analysis.Normed.Group.FunctionSeries
 import Mathlib.Analysis.SpecialFunctions.Exp
 import Mathlib.Data.Int.Cast.Lemmas
 
-namespace TorusModel.GL
+namespace TorusModel.GaussLaw
 
 abbrev Lattice (d : Type*) := d → ℤ
 abbrev Torus (d : Type*) := d → ℝ
@@ -53,4 +53,4 @@ theorem summable_fourierTerm {d : Type*} [Fintype d]
   apply Summable.of_norm
   simpa [fourierTerm, phase_exp_norm] using hc
 
-end TorusModel.GL
+end TorusModel.GaussLaw

@@ -1,0 +1,9 @@
+Command: python verify_wilson_all_volume_state.py
+
+{
+  "analytic_all_volume_state": "proved in the manuscript for the declared representative",
+  "checker_scope": "metadata consistency and finite arithmetic only",
+  "classification": "proved state theorem with conditional pole continuation",
+  "massless_pole_continuation": "conditional on a source-uniform signed connected bound",
+  "source_uniform_signed_connected_bound": "not established"
+}

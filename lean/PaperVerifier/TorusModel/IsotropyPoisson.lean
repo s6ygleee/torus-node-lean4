@@ -1,5 +1,5 @@
 /-
-  Measure-theoretic covariance step for Q2.
+  Measure-theoretic covariance step for Isotropy.
 
   A Poisson/isometry calculation supplies a measure-preserving measurable
   equivalence of configuration space.  Once that law-level fact is supplied,
@@ -13,7 +13,7 @@ import PaperVerifier.TorusModel.IsotropyConcrete
 
 open MeasureTheory
 
-namespace TorusModel.Q2
+namespace TorusModel.Isotropy
 
 noncomputable def expectation {Ω E : Type*} [MeasurableSpace Ω] [NormedAddCommGroup E]
     [NormedSpace ℝ E]
@@ -134,4 +134,4 @@ theorem isotropic_positive_of_poisson_symmetry
   rw [hc] at hpos
   simpa using hpos
 
-end TorusModel.Q2
+end TorusModel.Isotropy

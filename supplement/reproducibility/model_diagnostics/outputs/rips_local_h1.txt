@@ -1,0 +1,23 @@
+## 1.8 1 6,7
+R=6 N=1243 edges=31135 tri=198545 comps=1 rank_d2=29889 b1=4 excess(b1-4)=0 per volume=0.0000
+R=7 N=2345 edges=59569 tri=383844 comps=1 rank_d2=57221 b1=4 excess(b1-4)=0 per volume=0.0000
+## 1.8 2 6,7
+R=6 N=1290 edges=33082 tri=213772 comps=1 rank_d2=31789 b1=4 excess(b1-4)=0 per volume=0.0000
+R=7 N=2329 edges=58525 tri=377249 comps=1 rank_d2=56193 b1=4 excess(b1-4)=0 per volume=0.0000
+## 1.8 3 6,7
+R=6 N=1310 edges=34345 tri=228682 comps=1 rank_d2=33032 b1=4 excess(b1-4)=0 per volume=0.0000
+R=7 N=2336 edges=59134 tri=378509 comps=1 rank_d2=56795 b1=4 excess(b1-4)=0 per volume=0.0000
+## 1.4 1 6,7
+R=6 N=1243 edges=11281 tri=26275 comps=1 rank_d2=9914 b1=125 excess(b1-4)=121 per volume=0.0934
+R=7 N=2345 edges=21842 tri=51185 comps=1 rank_d2=19325 b1=173 excess(b1-4)=169 per volume=0.0704
+## 1.4 2 6,7
+R=6 N=1290 edges=12126 tri=28651 comps=1 rank_d2=10740 b1=97 excess(b1-4)=93 per volume=0.0718
+R=7 N=2329 edges=21823 tri=52863 comps=1 rank_d2=19310 b1=185 excess(b1-4)=181 per volume=0.0754
+## 1.5 1 6,7,8
+R=6 N=1243 edges=14980 tri=46223 comps=1 rank_d2=13721 b1=17 excess(b1-4)=13 per volume=0.0100
+R=7 N=2345 edges=28745 tri=88732 comps=1 rank_d2=26377 b1=24 excess(b1-4)=20 per volume=0.0083
+R=8 N=4059 edges=50503 tri=159696 comps=1 rank_d2=46406 b1=39 excess(b1-4)=35 per volume=0.0085
+## 1.5 2 6,7,8
+R=6 N=1290 edges=15945 tri=49553 comps=1 rank_d2=14645 b1=11 excess(b1-4)=7 per volume=0.0054
+R=7 N=2329 edges=28493 tri=89972 comps=1 rank_d2=26138 b1=27 excess(b1-4)=23 per volume=0.0096
+R=8 N=4025 edges=49343 tri=152178 comps=1 rank_d2=45273 b1=46 excess(b1-4)=42 per volume=0.0103

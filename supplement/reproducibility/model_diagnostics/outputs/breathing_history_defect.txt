@@ -1,0 +1,35 @@
+semigroup H(t)H(t) = H(2t) on the 24 histories: max rel. error 2.7e-16  (exact time blocking; B_QP = 0 in the word basis)
+a = (1,0.96,1.07,1.02),  J (x1e3) = 13.795 13.795 13.795 13.795 | 13.795 13.795 13.795 13.795 | 13.795 13.795 13.795 13.795 | 13.795 13.795 13.795 13.795
+PASS  lambda = 0 (one-step amplitudes only): eps_hist = 0 at every blocking step
+
+blocking flow t_n = heat_time * 2^n,  eps_hist(t_n) and ratio rho_n = eps(t_{n+1})/eps(t_n):
+  n    t_n      lambda=1                lambda=10               lambda=100              lambda=1000             
+   -4  1.25e-2  6.97e-3 (rho 1.272)     1.28e-3 (rho 1.840)     1.38e-4 (rho 1.982)     1.39e-5 (rho 1.998)     
+   -3  2.50e-2  8.87e-3 (rho 1.073)     2.35e-3 (rho 1.719)     2.74e-4 (rho 1.964)     2.78e-5 (rho 1.996)     
+   -2  5.00e-2  9.52e-3 (rho 0.901)     4.03e-3 (rho 1.546)     5.38e-4 (rho 1.930)     5.56e-5 (rho 1.993)     
+   -1  1.00e-1  8.57e-3 (rho 0.761)     6.24e-3 (rho 1.340)     1.04e-3 (rho 1.868)     1.11e-4 (rho 1.985)     
+    0  2.00e-1  6.52e-3 (rho 0.657)     8.36e-3 (rho 1.135)     1.94e-3 (rho 1.764)     2.20e-4 (rho 1.971)     
+    1  4.00e-1  4.29e-3 (rho 0.588)     9.49e-3 (rho 0.953)     3.42e-3 (rho 1.607)     4.33e-4 (rho 1.944)     
+    2  8.00e-1  2.52e-3 (rho 0.547)     9.04e-3 (rho 0.802)     5.50e-3 (rho 1.408)     8.42e-4 (rho 1.892)     
+    3  1.60e+0  1.38e-3 (rho 0.524)     7.25e-3 (rho 0.687)     7.74e-3 (rho 1.199)     1.59e-3 (rho 1.803)     
+    4  3.20e+0  7.23e-4 (rho 0.512)     4.98e-3 (rho 0.607)     9.28e-3 (rho 1.008)     2.87e-3 (rho 1.663)     
+    5  6.40e+0  3.71e-4 (rho 0.506)     3.02e-3 (rho 0.558)     9.36e-3 (rho 0.847)     4.78e-3 (rho 1.475)     
+    6  1.28e+1  1.88e-4 (rho 0.503)     1.68e-3 (rho 0.530)     7.92e-3 (rho 0.720)     7.05e-3 (rho 1.265)     
+    7  2.56e+1  9.44e-5 (rho 0.502)     8.93e-4 (rho 0.515)     5.70e-3 (rho 0.629)     8.92e-3 (rho 1.066)     
+    8  5.12e+1  4.73e-5 (rho 0.501)     4.60e-4 (rho 0.508)     3.59e-3 (rho 0.571)     9.51e-3 (rho 0.895)     
+    9  1.02e+2  2.37e-5 (rho 0.500)     2.34e-4 (rho 0.504)     2.05e-3 (rho 0.537)     8.52e-3 (rho 0.757)     
+   10  2.05e+2  1.19e-5 (rho 0.500)     1.18e-4 (rho 0.502)     1.10e-3 (rho 0.519)     6.45e-3 (rho 0.654)     
+   11  4.10e+2  5.94e-6 (rho 0.500)     5.91e-5 (rho 0.501)     5.71e-4 (rho 0.510)     4.22e-3 (rho 0.586)     
+   12  8.19e+2  2.97e-6 (rho 0.500)     2.96e-5 (rho 0.500)     2.91e-4 (rho 0.505)     2.47e-3 (rho 0.546)     
+   13  1.64e+3  1.48e-6 (rho 0.500)     1.48e-5 (rho 0.500)     1.47e-4 (rho 0.502)     1.35e-3 (rho 0.524)     
+   14  3.28e+3  7.42e-7 (rho 0.500)     7.42e-6 (rho 0.500)     7.39e-5 (rho 0.501)     7.07e-4 (rho 0.512)     
+   15  6.55e+3  3.71e-7 (rho 0.500)     3.71e-6 (rho 0.500)     3.70e-5 (rho 0.501)     3.62e-4 (rho 0.506)     
+   16  1.31e+4  1.86e-7 (rho 0.500)     1.86e-6 (rho 0.500)     1.85e-5 (rho 0.500)     1.83e-4 (rho 0.503)     
+   17  2.62e+4  9.28e-8 (rho 0.500)     9.28e-7 (rho 0.500)     9.27e-6 (rho 0.500)     9.22e-5 (rho 0.502)     
+   18  5.24e+4  4.64e-8 (rho 0.500)     4.64e-7 (rho 0.500)     4.64e-6 (rho 0.500)     4.62e-5 (rho 0.501)     
+FAIL  every blocking step contracts: rho_n < 1 for all scanned n and lambda
+PASS  IR: rho_n -> 1/2 (pair memory irrelevant, dimension 1 in time) once t >> lambda J / a^2
+  sup over t, lambda of eps_hist (pure J_{w1w2}J_{w3w4} pattern, lambda -> inf): 1.105e-15
+FAIL  UV: eps_hist is bounded uniformly in t and lambda by the pair-pattern defect
+
+SUMMARY: 2 PASS, 2 FAIL

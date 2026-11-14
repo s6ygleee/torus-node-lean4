@@ -1,11 +1,11 @@
 /-
   Exact general lemmas used by the source no-go theorem,
-  Theorem 3.12 (`thm:literal`).
+  The theorem "The unrestricted kernel does not define a source"..
 
   These declarations isolate the analytic divergence mechanism, the
   determinant-weight inverse asymmetry, the commutativity of scalar transport,
   and the state-measure non-identifiability witness.  They do not identify the
-  manuscript's unrestricted GL₂⁺(ℚ) kernel with a normalized source.
+  manuscript's unrestricted GaussLaw₂⁺(ℚ) kernel with a normalized source.
 -/
 import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.Analysis.SpecialFunctions.Exp
@@ -55,9 +55,9 @@ theorem distinct_dirac_state_measures
 
 /-- Pack the four exact algebraic/analytic cores used by the unrestricted
     source no-go discussion.  The theorem does not identify the displayed
-    `GL₂⁺(ℚ)` kernel with these abstractions; that model-level identification
+    `GaussLaw₂⁺(ℚ)` kernel with these abstractions; that model-level identification
     remains a separate obligation. -/
-theorem source_no_go_core
+theorem source_no_go
     (w : ℕ → ℝ) (hw : Tendsto w atTop (nhds 1))
     (β : ℝ)
     {G R : Type*} [CommMonoid R] (φ : G → R) (g h : G)

@@ -1,0 +1,8 @@
+## 1.5 1 5,6,7
+rc=1.5 R=5 N=588 edges=7013 tri=21514 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=1.2193e-2, next 2.826e-2, lambda*R^2=0.3048, lambda_max=34.03
+rc=1.5 R=6 N=1234 edges=14651 tri=44350 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=6.2332e-3, next 8.463e-3, lambda*R^2=0.2244, lambda_max=35.18
+rc=1.5 R=7 N=2466 edges=31536 tri=101766 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=8.4075e-3, next 1.890e-2, lambda*R^2=0.4120, lambda_max=36.24
+## 1.5 2 5,6,7
+rc=1.5 R=5 N=621 edges=7687 tri=23983 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=4.3571e-2, next 4.938e-2, lambda*R^2=1.0893, lambda_max=36.10
+rc=1.5 R=6 N=1308 edges=16580 tri=54345 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=9.1266e-3, next 1.306e-2, lambda*R^2=0.3286, lambda_max=39.09
+rc=1.5 R=7 N=2400 edges=29868 tri=93973 lanczos=300: kernel-leak Ritz 0, lambda_min(nonzero)=3.4864e-3, next 1.944e-2, lambda*R^2=0.1708, lambda_max=37.22

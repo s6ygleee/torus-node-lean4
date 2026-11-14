@@ -1,0 +1,19 @@
+{
+  "record": "history_blocking_retraction",
+  "naive_convolution": {
+    "support_before": 7,
+    "support_after_one_block": 18,
+    "support_after_two_blocks": 24,
+    "same_measure_l2_defect": 0.2178387102966407,
+    "fixed_point": false
+  },
+  "equivariant_retraction": {
+    "retained_support_mass": 0.7916666666666666,
+    "retracted_identity_mass": 0.5,
+    "fixed_point_defect": 0.0,
+    "idempotence_defect": 0.0,
+    "support_after_retraction": 7
+  },
+  "status": "PASS_NAIVE_BLOCKING_NO_GO_AND_FINITE_RETRACTION; SOURCE_DERIVATION_OPEN",
+  "scope": "finite central history sector; retraction is an additional RG rule until source-derived"
+}

@@ -1,0 +1,15 @@
+## 1.8 1 4,5,6,7
+rc=1.8 R=4: N=233 edges=5492 triangles=35166; eps_eff = E_min/Vol = 9.8959; naive = 14.4118; relaxation ratio = 0.6866 (CG residual rel 8.7e-10)
+rc=1.8 R=5: N=579 edges=13931 triangles=84964; eps_eff = E_min/Vol = 8.5734; naive = 13.6985; relaxation ratio = 0.6259 (CG residual rel 8.1e-10)
+rc=1.8 R=6: N=1297 edges=33268 triangles=214639; eps_eff = E_min/Vol = 10.1092; naive = 16.3712; relaxation ratio = 0.6175 (CG residual rel 9.4e-10)
+rc=1.8 R=7: N=2455 edges=65330 triangles=440535; eps_eff = E_min/Vol = 10.8599; naive = 18.1277; relaxation ratio = 0.5991 (CG residual rel 9.7e-10)
+## 1.8 2 4,5,6,7
+rc=1.8 R=4: N=253 edges=6562 triangles=46709; eps_eff = E_min/Vol = 11.7673; naive = 17.7385; relaxation ratio = 0.6634 (CG residual rel 8.0e-10)
+rc=1.8 R=5: N=641 edges=16883 triangles=110987; eps_eff = E_min/Vol = 10.9325; naive = 17.4344; relaxation ratio = 0.6271 (CG residual rel 7.4e-10)
+rc=1.8 R=6: N=1274 edges=32623 triangles=212657; eps_eff = E_min/Vol = 9.1343; naive = 15.8862; relaxation ratio = 0.5750 (CG residual rel 8.6e-10)
+rc=1.8 R=7: N=2315 edges=57581 triangles=364350; eps_eff = E_min/Vol = 8.3025; naive = 14.5924; relaxation ratio = 0.5690 (CG residual rel 9.3e-10)
+## 1.8 3 4,5,6,7
+rc=1.8 R=4: N=262 edges=6920 triangles=49482; eps_eff = E_min/Vol = 14.0273; naive = 19.7823; relaxation ratio = 0.7091 (CG residual rel 8.3e-10)
+rc=1.8 R=5: N=683 edges=19235 triangles=136204; eps_eff = E_min/Vol = 14.4003; naive = 21.5479; relaxation ratio = 0.6683 (CG residual rel 8.8e-10)
+rc=1.8 R=6: N=1315 edges=34707 triangles=232981; eps_eff = E_min/Vol = 10.7677; naive = 17.7906; relaxation ratio = 0.6052 (CG residual rel 1.0e-9)
+rc=1.8 R=7: N=2407 edges=62582 triangles=412346; eps_eff = E_min/Vol = 10.1444; naive = 16.7639; relaxation ratio = 0.6051 (CG residual rel 9.9e-10)

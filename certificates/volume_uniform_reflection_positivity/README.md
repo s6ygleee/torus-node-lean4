@@ -69,7 +69,7 @@ the links and this local Higgs bound imply tightness of finite-site marginals;
 a diagonal Prokhorov argument gives a locally weak subsequential limit. RP
 passes to bounded continuous cylinder functions.
 
-## Numerical audit of the stored the finite completion scales
+## Numerical check of the stored the finite completion scales
 
 The canonical 54 stored scales (the 53 RG steps plus the endpoint) satisfy
 
@@ -84,7 +84,7 @@ The canonical 54 stored scales (the 53 RG steps plus the endpoint) satisfy
 \]
 
 Thus the bound is finite at every stored scale. This numerical check is only
-an audit of the declared contract; it is not a derivation of the contract
+an check of the declared completion; it is not a derivation of the completion
 from the archived literal torus source.
 
 ## Boundary
@@ -98,5 +98,5 @@ removal or the volume-uniform interacting EW polymer bound.
 \boxed{\text{the finite completion finite/subsequential RP, uniform in volume: PROVED}}
 \]
 \[
-\boxed{\text{literal-source RP pullback and continuum EW gate: OPEN}}
+\boxed{\text{literal-source RP pullback and continuum EW test: OPEN}}
 \]

@@ -29,7 +29,7 @@ theorem reflection_gram_kernel_posSemidef
       A * (1 : Matrix Mark Mark Real) * A.transpose := by
     ext i j
     simp [reflectionGramKernel, A, Matrix.mul_apply, Matrix.transpose_apply,
-      Matrix.diagonal_apply, Finset.mul_sum, Finset.sum_mul, mul_assoc,
+      Matrix.diagonal_apply, Finset.mul_sum,
       mul_left_comm, mul_comm]
   rw [hEq]
   simpa only [Matrix.conjTranspose_eq_transpose_of_trivial] using hA

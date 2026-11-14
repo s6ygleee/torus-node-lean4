@@ -1,0 +1,45 @@
+{
+  "relative_hessian_bounds": {
+    "m": 0.029954516598324314,
+    "M": 0.03496247292804013
+  },
+  "vertex_coefficients": {
+    "c1": 0.014973701404728331,
+    "c2": 2.9834719529990944e-05
+  },
+  "two_sided_bound_lam1_d3": [
+    1.0,
+    1.0305440972000566
+  ],
+  "homogenised_interval_lam1": [
+    1.0299545165983244,
+    1.0349624729280402
+  ],
+  "hmc_lam100_predicted_interval": [
+    3.9954516598324314,
+    4.496247292804013
+  ],
+  "hmc_lam100": {
+    "d=1,L=8": {
+      "Z": 3.7859594891823094,
+      "error_estimate": 0.2927990030378616,
+      "acceptance": 0.9295
+    },
+    "d=1,L=16": {
+      "Z": 4.137441493384954,
+      "error_estimate": 0.3125526235043138,
+      "acceptance": 0.8375
+    },
+    "d=3,L=8": {
+      "Z": 3.959623298614965,
+      "error_estimate": 0.1785432366112714,
+      "acceptance": 0.869
+    },
+    "d=3,L=16": {
+      "Z": 4.061566018623222,
+      "error_estimate": 0.1742757576120146,
+      "acceptance": 0.748
+    }
+  },
+  "evidence_class": "exact formulas for the bounds; numerical for the Monte Carlo estimates"
+}

@@ -1,0 +1,11 @@
+{
+  "classification": "finite resolvent and tail estimates",
+  "coarse_geometric_prefactor": 57.30244116708214,
+  "double_exponential_sum": 1.3491851742850076,
+  "finite_signed_floor": 0.199760813595,
+  "inverse_bound": 0.38410487377173347,
+  "projected_ratio": 0.125090184782223,
+  "scalar_ratio": 0.1429749473676738,
+  "source_uniform_signed_bound": "not established",
+  "tail_after_ten": 4.415049947979909e-11
+}

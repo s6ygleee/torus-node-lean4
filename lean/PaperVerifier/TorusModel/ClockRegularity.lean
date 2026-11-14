@@ -23,7 +23,7 @@ theorem clock_continuum_energy_nonuniform
   rintro ⟨B, hB⟩
   have hB0 : 0 ≤ B := by
     have hzero := hB 0
-    simp [clockContinuumEnergy, hkappa.ne'] at hzero
+    simp [clockContinuumEnergy] at hzero
     exact le_trans (by norm_num) hzero
   obtain ⟨L, hL⟩ := exists_nat_gt (B * kappa + 1)
   have hLreal : B * kappa + 1 < (L : Real) := by

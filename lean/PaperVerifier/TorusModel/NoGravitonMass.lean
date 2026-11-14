@@ -12,7 +12,7 @@ import Mathlib.Tactic.Linarith
 
 namespace TorusModel
 
-theorem no_mass_from_shift_invariance_core
+theorem no_mass_from_shift_invariance
     (m : Real)
     (hshift : forall h xi : Real, m * (h + xi) ^ 2 = m * h ^ 2) :
     m = 0 := by

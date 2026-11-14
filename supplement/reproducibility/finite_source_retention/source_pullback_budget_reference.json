@@ -1,0 +1,17 @@
+{
+  "record": "source_pullback_budget_reference",
+  "WP": {
+    "certified_floor_after_tail": 0.19976081359496434
+  },
+  "EW": {
+    "q_total": 0.9825487365041257,
+    "uniform_margin": 0.0174512634958743
+  },
+  "gravity": {
+    "min_effective_hessian_eigenvalue": 0.442906574394463
+  },
+  "Ward": {
+    "max_q_defect": 1.7763568394002505e-13,
+    "max_vertex_defect": 9.094947017729282e-12
+  }
+}

@@ -1,7 +1,7 @@
 /-
   Concrete coordinate-permutation action on the six basis 2-subsets of Fin 4.
 
-  The earlier Q2 file proves the sign-flip part on an explicit Fin 6 encoding.
+  The file Isotropy.lean proves the sign-flip part on an explicit Fin 6 encoding.
   This file keeps the index-free formulation as a finite set of two coordinates,
   so that the permutation step is the actual induced action of Equiv.Perm (Fin 4),
   rather than an abstract transitivity hypothesis.
@@ -12,7 +12,7 @@ import Mathlib.Logic.Equiv.Fintype
 import Mathlib.Tactic.FinCases
 import PaperVerifier.TorusModel.Isotropy
 
-namespace TorusModel.Q2
+namespace TorusModel.Isotropy
 
 abbrev Pair := {s : Finset (Fin 4) // s.card = 2}
 
@@ -31,7 +31,7 @@ noncomputable def pairEquiv : Fin 6 ≃ Pair := Equiv.ofBijective pairIndex pair
 
 def pairAction (σ : Equiv.Perm (Fin 4)) (p : Pair) : Pair :=
   ⟨p.1.map σ.toEmbedding, by
-    simpa [p.2] using Finset.card_map σ.toEmbedding⟩
+    simp [p.2]⟩
 
 def pairFlipSign (k : Fin 4) (p : Pair) : ℝ :=
   if k ∈ p.1 then -1 else 1
@@ -39,7 +39,7 @@ def pairFlipSign (k : Fin 4) (p : Pair) : ℝ :=
 theorem pair_exists_separating (p q : Pair) (hpq : p ≠ q) :
     ∃ k : Fin 4, (k ∈ p.1) ≠ (k ∈ q.1) := by
   by_contra h
-  push_neg at h
+  push Not at h
   apply hpq
   apply Subtype.ext
   ext k
@@ -74,7 +74,7 @@ theorem pair_scalar_of_invariant (M : Pair → Pair → ℝ)
 
 theorem pairAction_transitive (p q : Pair) :
     ∃ σ : Equiv.Perm (Fin 4), pairAction σ p = q := by
-  obtain ⟨σ, hσ⟩ := Equiv.Perm.exists_map_finset_eq p.1 q.1 (by simpa [p.2, q.2])
+  obtain ⟨σ, hσ⟩ := Equiv.Perm.exists_map_finset_eq p.1 q.1 (by simp [p.2, q.2])
   exact ⟨σ, Subtype.ext hσ⟩
 
 noncomputable def finAction (σ : Equiv.Perm (Fin 4)) (a : Fin 6) : Fin 6 :=
@@ -126,4 +126,4 @@ theorem equal_diagonal_of_pair_permutation {M : Pair → Pair → ℝ}
   rw [hσ] at h
   exact h.symm
 
-end TorusModel.Q2
+end TorusModel.Isotropy

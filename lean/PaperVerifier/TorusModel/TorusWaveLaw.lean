@@ -27,8 +27,8 @@ theorem poisson_lorentz
     [NormedAddCommGroup E] [NormedSpace ℝ E]
     (μ : Measure Ω) (T : Ω ≃ᵐ Ω) (F : Ω → E)
     (hμ : MeasurePreserving T μ μ) :
-    Q2.expectation μ (fun ω => F (T ω)) = Q2.expectation μ F := by
-  exact Q2.expectation_comp_measurableEquiv μ T F hμ
+    Isotropy.expectation μ (fun ω => F (T ω)) = Isotropy.expectation μ F := by
+  exact Isotropy.expectation_comp_measurableEquiv μ T F hμ
 
 /- The relational-diffeomorphism core is the same measurable change of
    variables, stated with an explicit measurable equivalence.  The geometric
@@ -39,8 +39,8 @@ theorem relational_diff
     [NormedAddCommGroup E] [NormedSpace ℝ E]
     (μ : Measure Ω) (ψ : Ω ≃ᵐ Ω) (F : Ω → E)
     (hμ : MeasurePreserving ψ μ μ) :
-    Q2.expectation μ (fun x => F (ψ x)) = Q2.expectation μ F := by
-  exact Q2.expectation_comp_measurableEquiv μ ψ F hμ
+    Isotropy.expectation μ (fun x => F (ψ x)) = Isotropy.expectation μ F := by
+  exact Isotropy.expectation_comp_measurableEquiv μ ψ F hμ
 
 /- The two induced-action functionals in the paper are invariant under the
    same explicit measure-preserving change of variables.  The hypothesis
@@ -50,12 +50,12 @@ theorem relational_diff
 noncomputable def quenchedInducedAction
     {Omega : Type*} [MeasurableSpace Omega]
     (measure : Measure Omega) (Z : Omega -> Real) : Real :=
-  Q2.expectation measure (fun omega => -Real.log (Z omega))
+  Isotropy.expectation measure (fun omega => -Real.log (Z omega))
 
 noncomputable def annealedInducedAction
     {Omega : Type*} [MeasurableSpace Omega]
     (measure : Measure Omega) (Z : Omega -> Real) : Real :=
-  -Real.log (Q2.expectation measure Z)
+  -Real.log (Isotropy.expectation measure Z)
 
 theorem relational_diff_actions
     {Omega : Type*} [MeasurableSpace Omega]
@@ -67,34 +67,34 @@ theorem relational_diff_actions
         quenchedInducedAction measure Z /\
       annealedInducedAction measure (fun omega => Z (psi omega)) =
         annealedInducedAction measure Z := by
-  have hq := Q2.expectation_comp_measurableEquiv measure psi
+  have hq := Isotropy.expectation_comp_measurableEquiv measure psi
     (fun omega => -Real.log (Z omega)) hmeasure
-  have ha := Q2.expectation_comp_measurableEquiv measure psi Z hmeasure
+  have ha := Isotropy.expectation_comp_measurableEquiv measure psi Z hmeasure
   constructor
   · unfold quenchedInducedAction
-    simpa [hZ] using hq
+    simp [hZ]
   · unfold annealedInducedAction
-    have hmean : Q2.expectation measure (fun omega => Z (psi omega)) =
-        Q2.expectation measure Z := by
+    have hmean : Isotropy.expectation measure (fun omega => Z (psi omega)) =
+        Isotropy.expectation measure Z := by
       simpa using ha
     rw [hmean]
 
-theorem EWC_gaussian
-    {V : Type*} (g : EWC.QuadraticOperatorGapData V) (x : V) :
+theorem gaussian_gap
+    {V : Type*} (g : ElectroweakCovariance.QuadraticOperatorGapData V) (x : V) :
     (g.gap.mass ^ 2 - 2 * g.gap.charge * g.gap.fieldStrength) *
         g.normSq x ≤ g.totalQuadratic x := by
-  exact EWC.QuadraticOperatorGapData.total_lower g x
+  exact ElectroweakCovariance.QuadraticOperatorGapData.total_lower g x
 
 /- A single explicit certificate for the finite pieces of the Gaussian
    electroweak estimate.  Every analytic input is carried by one of the
    four structures; this theorem only assembles their machine-checked
    consequences and does not construct an operator or a cluster expansion.
 -/
-theorem EWC_gaussian_certificate
-    {V : Type*} (g : EWC.QuadraticOperatorGapData V)
-    (pert : EWC.FieldPerturbationBound V)
-    (ct : EWC.CombesThomasCertificate)
-    (cl : EWC.ClusterExpansionCertificate) :
+theorem gaussian_gap_certificate
+    {V : Type*} (g : ElectroweakCovariance.QuadraticOperatorGapData V)
+    (pert : ElectroweakCovariance.FieldPerturbationBound V)
+    (ct : ElectroweakCovariance.CombesThomasCertificate)
+    (cl : ElectroweakCovariance.ClusterExpansionCertificate) :
     (forall x,
       (g.gap.mass ^ 2 - 2 * g.gap.charge * g.gap.fieldStrength) *
           g.normSq x <= g.totalQuadratic x) /\
@@ -107,13 +107,13 @@ theorem EWC_gaussian_certificate
         (1 - ct.decayFactor)⁻¹ * ct.denominator⁻¹) /\
       Summable (fun n => |cl.activity n|) /\
       (tsum (fun n => |cl.activity n|) <= (1 - cl.contraction)⁻¹) := by
-  refine ⟨fun x => EWC.QuadraticOperatorGapData.total_lower g x,
-    fun x => EWC.QuadraticOperatorGapData.total_nonneg g x,
-    fun x => EWC.FieldPerturbationBound.lower pert x,
-    EWC.CombesThomasCertificate.kernel_abs_summable ct,
-    EWC.CombesThomasCertificate.kernel_abs_tsum_bound ct,
-    EWC.ClusterExpansionCertificate.activity_abs_summable cl,
-    EWC.ClusterExpansionCertificate.activity_abs_tsum_bound cl⟩
+  refine ⟨fun x => ElectroweakCovariance.QuadraticOperatorGapData.total_lower g x,
+    fun x => ElectroweakCovariance.QuadraticOperatorGapData.total_nonneg g x,
+    fun x => ElectroweakCovariance.FieldPerturbationBound.lower pert x,
+    ElectroweakCovariance.CombesThomasCertificate.kernel_abs_summable ct,
+    ElectroweakCovariance.CombesThomasCertificate.kernel_abs_tsum_bound ct,
+    ElectroweakCovariance.ClusterExpansionCertificate.activity_abs_summable cl,
+    ElectroweakCovariance.ClusterExpansionCertificate.activity_abs_tsum_bound cl⟩
 
 noncomputable def wave_law (b A : ℝ) (τ : ℂ) (r s : ℤ) : ℝ :=
   b * ‖(r : ℂ) * τ - (s : ℂ)‖ / Real.sqrt (A * τ.im)

@@ -32,7 +32,7 @@ theorem ward_decay_sq_summable : Summable wardDecaySq := by
   unfold wardDecaySq
   exact (summable_nat_add_iff 1).2 ward_decay_summable
 
-theorem ward_tail_norm_core
+theorem ward_tail_norm
     {E : Type*} [NormedAddCommGroup E] [NormedSpace Real E]
     [CompleteSpace E]
     (R : Nat -> E) (C : Real)

@@ -1,0 +1,10 @@
+{
+ "weak_rho2": {
+  "max_rel_err_vs_additive_generator": 0.1533566373043265,
+  "mean_|G|/|normalised prediction|": 1.9990193926488167
+ },
+ "colour_rho3": {
+  "max_rel_err_vs_additive_generator": 0.02494500366213908,
+  "mean_|G|/|normalised prediction|": 1.9999544023817184
+ }
+}

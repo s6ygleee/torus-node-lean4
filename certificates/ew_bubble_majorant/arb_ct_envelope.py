@@ -32,7 +32,7 @@ for r in itertools.product(range(9), repeat=4):
     if val.upper() > worst.upper():
         worst, worst_r = val, r
 
-# Deliberately rounded rational consumers isolate the certified margins from
+# Deliberately rounded rational sectors isolate the certified margins from
 # insignificant last digits of the FFT midpoint pipeline.
 periodic_data = json.loads((HERE / "class_max_periodic.json").read_text(encoding="utf-8"))
 fft_error = arb(str(periodic_data["fft_plus_ball_error"]))

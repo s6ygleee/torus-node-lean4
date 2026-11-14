@@ -13,7 +13,7 @@ J_{ij}(\omega)=\epsilon^2\sum_b
 
 For every \(\omega\), this is a sum of positive rank-one matrices, hence
 \(J(\omega)\succeq0\) analytically (the numerical eigenvalue table below is
-an audit).  The D4 scalar symbol used for the spatial lift is
+an check).  The D4 scalar symbol used for the spatial lift is
 
 \[
 K_{D_4}(k)=m^2+2\sum_{r\in R_+}(1-\cos(k\cdot r)),

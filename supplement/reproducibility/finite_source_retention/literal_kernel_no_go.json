@@ -1,0 +1,45 @@
+{
+  "record": "literal_kernel_no_go",
+  "divergent_shear_subsequence": [
+    {
+      "beta": 0.2,
+      "mu": 0.1,
+      "nu": 0.3,
+      "W_10000": 0.999999999,
+      "tail_min_n9001_10000": 0.9999999987657064,
+      "partial_sum_100": 99.84909849520216,
+      "partial_sum_10000": 9999.848113482414
+    },
+    {
+      "beta": 1.0,
+      "mu": 1.0,
+      "nu": 1.0,
+      "W_10000": 0.9999999900000001,
+      "tail_min_n9001_10000": 0.999999987657064,
+      "partial_sum_100": 98.80491665157635,
+      "partial_sum_10000": 9998.795066671455
+    },
+    {
+      "beta": 2.0,
+      "mu": 7.0,
+      "nu": 3.0,
+      "W_10000": 0.9999999300000025,
+      "tail_min_n9001_10000": 0.999999913599452,
+      "partial_sum_100": 95.89542101516662,
+      "partial_sum_10000": 9995.82647804885
+    }
+  ],
+  "inverse_weight_ratios": {
+    "0.2": 0.757858283255199,
+    "1.0": 0.25,
+    "2.0": 0.0625
+  },
+  "state_measure_nonidentifiability": true,
+  "conclusion": {
+    "unrestricted_GL2_kernel_normalizable": false,
+    "finite_or_summable_domain_required": true,
+    "inverse_evenness_missing_for_beta_nonzero": true,
+    "raw_tuple_cannot_select_state_measure": true
+  },
+  "status": "NO_GO_UNRESTRICTED_LITERAL_KERNEL;_CUTOFF_OR_SUMMABLE_RULE_REQUIRED"
+}

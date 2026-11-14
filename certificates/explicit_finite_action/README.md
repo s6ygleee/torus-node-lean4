@@ -39,7 +39,7 @@ For finite \(L\), compact Haar/history factors and the massive Gaussian
 coframe factor make the partition function finite. The relation push-forward,
 RP Gram factorization, and same-measure temporal semigroup are exactly the
 identities certified in the `finite_source_pushforward` record. Thus this is an explicit finite
-source-to-consumer action, not merely a list of observables.
+source-to-sector action, not merely a list of observables.
 
 Scope: the coefficients \(\beta_1,\beta_2,\beta_3,m_e,\kappa_e\) and the
 chiral action are part of the declared (H1_{\rm real}) rule. Their derivation

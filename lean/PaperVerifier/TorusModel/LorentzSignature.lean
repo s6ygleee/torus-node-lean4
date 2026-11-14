@@ -15,7 +15,7 @@ open QuadraticForm
 noncomputable def lorentzWeights : Fin 4 -> Real :=
   fun i => if i = 0 then -1 else 1
 
-theorem lorentz_signature_core :
+theorem lorentz_signature :
     sigPos (QuadraticMap.weightedSumSquares Real lorentzWeights) = 3 /\
       sigNeg (QuadraticMap.weightedSumSquares Real lorentzWeights) = 1 := by
   have hpos : {i : Fin 4 | 0 < lorentzWeights i} = ({1, 2, 3} : Set (Fin 4)) := by

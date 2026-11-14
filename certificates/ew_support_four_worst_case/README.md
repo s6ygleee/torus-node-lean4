@@ -54,7 +54,7 @@ adds
 \]
 
 and enlarges every absolute eigenvalue by \(15\times10^{-30}\), as permitted
-by Weyl's inequality.  All 28 interval certificates pass both gates.
+by Weyl's inequality.  All 28 interval certificates pass both tests.
 
 The 29th numerical candidate drops to \(0.0091383696\), well below the
 maximal class, but the remaining 17,604 fields have not each been evaluated

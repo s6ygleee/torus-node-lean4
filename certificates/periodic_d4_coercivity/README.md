@@ -25,7 +25,7 @@ L=32: \lambda_{\min}=0.038429439193,
 \]
 and the rescaled values increase to \(4\pi^2=39.4784176044\).
 
-Thus the periodic (D_4) consumer has an exact volume-scaled coexact
-Poincare/coercivity bound. This strengthens the finite bounded-geometry gate.
+Thus the periodic (D_4) sector has an exact volume-scaled coexact
+Poincare/coercivity bound. This strengthens the finite bounded-geometry test.
 It does not overcome the unrestricted Poisson isolated-vertex obstruction,
-and it is not yet a source-native interacting continuum compactness theorem.
+and it is not yet a source-derived interacting continuum compactness theorem.

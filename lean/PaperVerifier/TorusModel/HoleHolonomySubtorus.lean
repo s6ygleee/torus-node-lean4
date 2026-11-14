@@ -1,5 +1,5 @@
 /-
-  Explicit integer-matrix torus maps for the HC subtorus step.
+  Explicit integer-matrix torus maps for the HoleHolonomy subtorus step.
 
   The remaining measure disintegration theorem is deliberately not hidden in
   this file.  What is proved here is the concrete topological input used by
@@ -15,7 +15,7 @@ import Mathlib.Tactic.FunProp
 import Mathlib.Tactic.Positivity
 import PaperVerifier.TorusModel.HoleHolonomyCompact
 
-namespace TorusModel.HC
+namespace TorusModel.HoleHolonomy
 
 open scoped BigOperators
 open Matrix
@@ -93,4 +93,4 @@ theorem rational_kernel_subtorus_in_kernel
   exact integer_torus_map_comp_eq_zero (l := m) (m := n) (n := r)
     D K.basis K.relation x
 
-end TorusModel.HC
+end TorusModel.HoleHolonomy

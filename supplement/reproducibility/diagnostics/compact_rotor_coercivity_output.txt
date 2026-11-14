@@ -1,0 +1,15 @@
+Command: python verify_compact_rotor_coercivity.py
+
+{
+  "classification": "finite exact obstruction with low-mode diagnostic",
+  "compact_rotor_uniform_gap": false,
+  "low_modes": {
+    "16": 0.15224093497742647,
+    "32": 0.038429439193539104,
+    "4": 2.0000000000000004,
+    "8": 0.585786437626905
+  },
+  "projected_hessian_unchanged": true,
+  "projection_idempotent": true,
+  "surviving_quotient_eigenvalue": "-3/2 with multiplicity 2"
+}

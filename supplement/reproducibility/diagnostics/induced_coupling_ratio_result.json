@@ -1,0 +1,23 @@
+{
+  "induced_prediction": {
+    "alpha3_over_alpha2": 1.0416666666666667,
+    "sin2_thetaW": 0.37878787878787873
+  },
+  "one_loop_SM_at_cutoff": {
+    "alpha3_over_alpha2": 0.9757141024866497,
+    "sin2_thetaW": 0.45023093580504003
+  },
+  "relative_differences": {
+    "alpha3_over_alpha2": 0.06759414874903835,
+    "sin2_thetaW": -0.15868091536050677
+  },
+  "green_schwarz_mixing_change_of_Y_coefficient": 0.0,
+  "matching_scale_for_sin2_equal_3_8_GeV": 10339597334329.355,
+  "required_extra_Y_neutral_weights": {
+    "SU3": 1.7354177823911154,
+    "SU2": 1.4294613472650513,
+    "U1": 0.0
+  },
+  "scope": "universal (block-independent) loop coefficient only; block-dependent weights, as in the wrapped-volume matching, are not constrained by this check",
+  "evidence_class": "exact arithmetic; one-loop running"
+}
