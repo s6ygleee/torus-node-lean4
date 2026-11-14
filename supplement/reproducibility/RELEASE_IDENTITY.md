@@ -8,5 +8,6 @@ The ZIP digest is kept in a detached sidecar because putting it inside the ZIP
 would create a circular hash. The in-archive manifest covers every payload
 file and is regenerated after the final build.
 
-Zenodo archived the v1.0.0 release under doi:10.5281/zenodo.23863514; the concept DOI
+Zenodo archived the v1.0.0 release under doi:10.5281/zenodo.23863514 and the v1.1.0
+release (tag v1.1.0, commit 9774e56) under doi:10.5281/zenodo.24229820; the concept DOI
 10.5281/zenodo.23863513 resolves to the latest version.

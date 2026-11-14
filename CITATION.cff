@@ -6,6 +6,7 @@ authors:
   - family-names: "Lee"
     given-names: "Youngik (Tom)"
 version: "1.1.0"
+doi: "10.5281/zenodo.24229820"
 date-released: "2026-11-15"
 license: MIT
 repository-code: "https://github.com/s6ygleee/torus-node-lean4"
