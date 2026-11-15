@@ -5,6 +5,19 @@ needed to reproduce the finite calculations associated with the torus-node
 model. The English manuscript is distributed separately as an arXiv source
 package.
 
+## Releases
+
+All dates and times are UTC.
+
+| Version | Tag | Commit | Released (UTC) | DOI |
+|---|---|---|---|---|
+| 1.1.0 (latest) | [v1.1.0](https://github.com/s6ygleee/torus-node-lean4/releases/tag/v1.1.0) | 9774e56 | 2026-11-14 20:31 | [10.5281/zenodo.24229820](https://doi.org/10.5281/zenodo.24229820) |
+| 1.0.0 | [v1.0.0](https://github.com/s6ygleee/torus-node-lean4/releases/tag/v1.0.0) | 1d3252b | 2026-11-01 17:18 | [10.5281/zenodo.23863514](https://doi.org/10.5281/zenodo.23863514) |
+
+The concept DOI [10.5281/zenodo.23863513](https://doi.org/10.5281/zenodo.23863513)
+resolves to the latest version. Each release keeps its own manifest and
+records; a later release does not overwrite an earlier one.
+
 ## Contents
 
 - `lean/`: the Lean 4 source tree;
@@ -89,6 +102,7 @@ mixed-carrier representation boundary are recorded in
 
 ## Citation
 
-Please cite the archived release, doi:[10.5281/zenodo.23863514](https://doi.org/10.5281/zenodo.23863514); the
-citation metadata are in `CITATION.cff`. The DOI [10.5281/zenodo.23863513](https://doi.org/10.5281/zenodo.23863513) always resolves to the latest
+Please cite the release you used by its version DOI (see Releases above);
+the current release is v1.1.0, doi:[10.5281/zenodo.24229820](https://doi.org/10.5281/zenodo.24229820).
+The citation metadata are in `CITATION.cff`. The DOI [10.5281/zenodo.23863513](https://doi.org/10.5281/zenodo.23863513) always resolves to the latest
 version. The repository is `https://github.com/s6ygleee/torus-node-lean4`.
