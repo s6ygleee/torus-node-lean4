@@ -5,6 +5,8 @@ needed to reproduce the finite calculations associated with the torus-node
 model. The English manuscript is distributed separately as an arXiv source
 package.
 
+Project website — Torus Node Research Initiative: [https://s6ygleee.github.io/torus-node/](https://s6ygleee.github.io/torus-node/)
+
 ## Contents
 
 - `lean/`: the Lean 4 source tree;
